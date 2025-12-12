@@ -978,6 +978,16 @@ proxies:
     path: /vn
     headers:
       Host: vn.yxzbp.click
+- name: OpenRay Dynamic-7802
+  type: vless
+  server: www.visa.com.sg
+  port: 2052
+  uuid: cdec8542-a21f-4377-9da3-ea60bb6d3a30
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: chosenflyesqt-q3y28ipf-v2.chosen-fly-esqt.workers.dev
 - name: OpenRay  DE-1889
   type: vless
   server: 89.19.44.48
@@ -1479,6 +1489,20 @@ proxies:
     path: /
     headers:
       Host: seoul03.zgjok.com
+- name: OpenRay  KR-3
+  type: vmess
+  server: seoul03.zgjok.com
+  port: 443
+  uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  servername: seoul03.zgjok.com
+  ws-opts:
+    path: /
+    headers:
+      Host: seoul03.zgjok.com
 - name: OpenRay  NL-8
   type: vless
   server: 151.101.205.194
@@ -1513,6 +1537,19 @@ proxies:
 - name: OpenRay  NL-15
   type: vless
   server: 87.239.129.83
+  port: 443
+  uuid: bf92bdef-ab8d-4481-8798-2d39023357b2
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  servername: video.intfreed.ru
+  reality-opts:
+    public-key: JxwG7rAbNCd_C82p9K69AZDWh51fri2nm3wLHHrfyiw
+    short-id: 7755e972daf8eec8
+  client-fingerprint: chrome
+- name: OpenRay  NL-16
+  type: vless
+  server: 185.21.13.88
   port: 443
   uuid: bf92bdef-ab8d-4481-8798-2d39023357b2
   network: tcp
@@ -1586,19 +1623,29 @@ proxies:
       Host: 8.218.199.111
 - name: OpenRay  HK-3
   type: vmess
-  server: 156.238.238.194
-  port: 47296
-  uuid: 0524236a-e217-4cf3-9223-968a290ffce7
+  server: 47.244.120.197
+  port: 44867
+  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
   alterId: 0
   cipher: auto
   network: ws
   ws-opts:
-    path: /
+    path: /arki?ed=2048
     headers:
-      Host: 156.238.238.194
+      Host: 47.244.120.197
+- name: OpenRay  IT-1
+  type: vless
+  server: 151.101.241.242
+  port: 80
+  uuid: 47ab07bb-442b-453d-a418-759516aecb23
+  network: ws
+  ws-opts:
+    path: /telegeam-@v2_city--?ed=2048
+    headers:
+      Host: mojhsjd.global.ssl.fastly.net
 - name: OpenRay  IL-1
   type: vless
-  server: 20.217.83.255
+  server: 20.217.80.201
   port: 443
   uuid: 0e8a6896-ad90-4a3b-89a3-77d64aa409e2
   network: tcp
@@ -1609,30 +1656,6 @@ proxies:
     public-key: YVDo7U4O-AT2fa5H9E7hyYHKgfZd1vB6UdbAf2ggWQE
     short-id: 55e6af1a35e64a98
   client-fingerprint: chrome
-- name: OpenRay  BR-1
-  type: vmess
-  server: 95.164.4.88
-  port: 80
-  uuid: c04c3b34-70fd-4fec-963e-c12d09f36bef
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /vmess/
-    headers:
-      Host: pq-brazil1.09vpn.com
-- name: OpenRay  BR-2
-  type: vmess
-  server: 95.164.4.88
-  port: 80
-  uuid: c04c3b34-70fd-4fec-963e-c12d09f36bef
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /vmess/
-    headers:
-      Host: 95.164.4.88
 
 proxy-groups:
 - name: AUTO
@@ -1718,6 +1741,7 @@ proxy-groups:
   - OpenRay Dynamic-16
   - OpenRay Dynamic-17
   - OpenRay Dynamic-7797
+  - OpenRay Dynamic-7802
   - OpenRay  DE-1889
   - OpenRay  DE-2272
   - OpenRay  DE-2523
@@ -1769,19 +1793,20 @@ proxy-groups:
   - OpenRay  RU-44
   - OpenRay  KR-1
   - OpenRay  KR-2
+  - OpenRay  KR-3
   - OpenRay  NL-8
   - OpenRay  NL-13
   - OpenRay  NL-14
   - OpenRay  NL-15
+  - OpenRay  NL-16
   - OpenRay  AM-1
   - OpenRay  FI-2
   - OpenRay  FI-3
   - OpenRay  HK-1
   - OpenRay  HK-2
   - OpenRay  HK-3
+  - OpenRay  IT-1
   - OpenRay  IL-1
-  - OpenRay  BR-1
-  - OpenRay  BR-2
 - name: PROXY
   type: select
   proxies:
@@ -1863,6 +1888,7 @@ proxy-groups:
   - OpenRay Dynamic-16
   - OpenRay Dynamic-17
   - OpenRay Dynamic-7797
+  - OpenRay Dynamic-7802
   - OpenRay  DE-1889
   - OpenRay  DE-2272
   - OpenRay  DE-2523
@@ -1914,19 +1940,20 @@ proxy-groups:
   - OpenRay  RU-44
   - OpenRay  KR-1
   - OpenRay  KR-2
+  - OpenRay  KR-3
   - OpenRay  NL-8
   - OpenRay  NL-13
   - OpenRay  NL-14
   - OpenRay  NL-15
+  - OpenRay  NL-16
   - OpenRay  AM-1
   - OpenRay  FI-2
   - OpenRay  FI-3
   - OpenRay  HK-1
   - OpenRay  HK-2
   - OpenRay  HK-3
+  - OpenRay  IT-1
   - OpenRay  IL-1
-  - OpenRay  BR-1
-  - OpenRay  BR-2
 rules:
 - DOMAIN-SUFFIX,ir,DIRECT
 - DOMAIN-SUFFIX,aparat.com,DIRECT
