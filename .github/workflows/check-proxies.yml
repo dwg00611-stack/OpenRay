@@ -72,15 +72,15 @@ jobs:
       run: python -m src.main
 
     # Reset state if proxy count is below threshold
-    - name: Reset state when proxy count < 100
+    - name: Reset state when proxy count < 500
       run: |
         COUNT=$(wc -l < ./output/all_valid_proxies.txt 2>/dev/null || echo 0)
         echo "Detected proxy count: $COUNT"
-        if [ "$COUNT" -lt 100 ]; then
-          echo "Proxy count below 100. Removing state files."
+        if [ "$COUNT" -lt 500 ]; then
+          echo "Proxy count below 500. Removing state files."
           rm -f .state/streaks.json .state/tested.txt.bin
         else
-          echo "Proxy count >= 100. Keeping state files."
+          echo "Proxy count >= 500. Keeping state files."
         fi
 
     # Run the converter scripts
