@@ -123,9 +123,9 @@ proxies:
     path: /?ed=2560
     headers:
       Host: sni.111000.dynv6.net
-- name: OpenRay Dynamic-7609
+- name: OpenRay Dynamic-7608
   type: vless
-  server: www.gco.gov.qa
+  server: www.garuda-indonesia.com
   port: 2053
   uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
   network: ws
@@ -147,9 +147,9 @@ proxies:
     path: /?ed=2560
     headers:
       Host: sni.111000.dynv6.net
-- name: OpenRay Dynamic-7608
+- name: OpenRay Dynamic-7609
   type: vless
-  server: www.garuda-indonesia.com
+  server: www.gco.gov.qa
   port: 2053
   uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
   network: ws
@@ -171,9 +171,9 @@ proxies:
     path: /?ed=2560
     headers:
       Host: sni.111000.dynv6.net
-- name: OpenRay Dynamic-7726
+- name: OpenRay Dynamic-7727
   type: vless
-  server: quick-edit.devprod.cloudflare.dev
+  server: www.aapanel.com
   port: 2053
   uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
   network: ws
@@ -183,9 +183,9 @@ proxies:
     path: /?ed=2560
     headers:
       Host: sni.111000.dynv6.net
-- name: OpenRay Dynamic-7727
+- name: OpenRay Dynamic-7726
   type: vless
-  server: www.aapanel.com
+  server: quick-edit.devprod.cloudflare.dev
   port: 2053
   uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
   network: ws
@@ -213,26 +213,6 @@ proxies:
     path: /
     headers:
       Host: private.digikala.lat
-- name: OpenRay  CA-9513
-  type: vless
-  server: 104.19.39.244
-  port: 8880
-  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-  network: ws
-  ws-opts:
-    path: /?ed=2560&Telegram🇨🇳+@WangCai2
-    headers:
-      Host: sni.x86.de5.net
-- name: OpenRay  CA-9438
-  type: vless
-  server: 104.19.39.81
-  port: 8880
-  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-  network: ws
-  ws-opts:
-    path: /?ed=2560&Telegram🇨🇳+@WangCai2
-    headers:
-      Host: sni.x86.de5.net
 - name: OpenRay  CA-9432
   type: vless
   server: 104.19.39.17
@@ -253,9 +233,19 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳+@WangCai2
     headers:
       Host: sni.x86.de5.net
-- name: OpenRay  CA-9444
+- name: OpenRay  CA-9513
   type: vless
-  server: 104.19.39.202
+  server: 104.19.39.244
+  port: 8880
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  network: ws
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳+@WangCai2
+    headers:
+      Host: sni.x86.de5.net
+- name: OpenRay  CA-9438
+  type: vless
+  server: 104.19.39.81
   port: 8880
   uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
   network: ws
@@ -266,6 +256,16 @@ proxies:
 - name: OpenRay  CA-9480
   type: vless
   server: 104.19.39.170
+  port: 8880
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  network: ws
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳+@WangCai2
+    headers:
+      Host: sni.x86.de5.net
+- name: OpenRay  CA-9444
+  type: vless
+  server: 104.19.39.202
   port: 8880
   uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
   network: ws
@@ -335,32 +335,6 @@ proxies:
     path: /?ed=2560&Telegram@freecodes
     headers:
       Host: snip.062797.xyz
-- name: OpenRay  US-9814
-  type: vless
-  server: 15.204.97.148
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  client-fingerprint: chrome
-- name: OpenRay  US-9817
-  type: vless
-  server: 15.204.97.159
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  client-fingerprint: chrome
 - name: OpenRay  US-9818
   type: vless
   server: 15.204.97.164
@@ -374,9 +348,35 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
   client-fingerprint: chrome
+- name: OpenRay  US-9814
+  type: vless
+  server: 15.204.97.148
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  client-fingerprint: chrome
 - name: OpenRay  US-9820
   type: vless
   server: 15.204.97.226
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  client-fingerprint: chrome
+- name: OpenRay  US-9817
+  type: vless
+  server: 15.204.97.159
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   network: tcp
@@ -452,18 +452,6 @@ proxies:
       /eyJqdW5rIjoidDZLaDRBMWhpIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==?ed=2560
     headers:
       Host: digikalaa.dpdns.org
-- name: OpenRay  JP-137
-  type: vless
-  server: 45.142.166.146
-  port: 8443
-  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-  network: ws
-  tls: true
-  servername: sni.111000.cc.cd
-  ws-opts:
-    path: /?ed=2560&Telegram🇨🇳+@WangCai2
-    headers:
-      Host: sni.111000.cc.cd
 - name: OpenRay  JP-138
   type: vless
   server: 91.200.242.118
@@ -476,10 +464,22 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳+@WangCai2
     headers:
       Host: sni.111000.cc.cd
-- name: OpenRay  KR-20
+- name: OpenRay  JP-137
   type: vless
-  server: 129.154.222.63
+  server: 45.142.166.146
   port: 8443
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  network: ws
+  tls: true
+  servername: sni.111000.cc.cd
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳+@WangCai2
+    headers:
+      Host: sni.111000.cc.cd
+- name: OpenRay  KR-15
+  type: vless
+  server: 152.70.239.74
+  port: 443
   uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
   network: ws
   tls: true
@@ -488,9 +488,9 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳 @WangCai2
     headers:
       Host: sni.111000.cc.cd
-- name: OpenRay  KR-19
+- name: OpenRay  KR-13
   type: vless
-  server: 168.107.29.97
+  server: 144.24.71.78
   port: 8443
   uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
   network: ws
@@ -512,9 +512,9 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳 @WangCai2
     headers:
       Host: sni.111000.cc.cd
-- name: OpenRay  KR-9
+- name: OpenRay  KR-19
   type: vless
-  server: 144.24.92.117
+  server: 168.107.29.97
   port: 8443
   uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
   network: ws
@@ -524,10 +524,10 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳 @WangCai2
     headers:
       Host: sni.111000.cc.cd
-- name: OpenRay  KR-13
+- name: OpenRay  KR-10
   type: vless
-  server: 144.24.71.78
-  port: 8443
+  server: 144.24.90.107
+  port: 443
   uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
   network: ws
   tls: true
@@ -548,10 +548,10 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳 @WangCai2
     headers:
       Host: sni.111000.cc.cd
-- name: OpenRay  KR-15
+- name: OpenRay  KR-20
   type: vless
-  server: 152.70.239.74
-  port: 443
+  server: 129.154.222.63
+  port: 8443
   uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
   network: ws
   tls: true
@@ -560,10 +560,10 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳 @WangCai2
     headers:
       Host: sni.111000.cc.cd
-- name: OpenRay  KR-10
+- name: OpenRay  KR-9
   type: vless
-  server: 144.24.90.107
-  port: 443
+  server: 144.24.92.117
+  port: 8443
   uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
   network: ws
   tls: true
@@ -619,6 +619,18 @@ proxies:
     public-key: 5t7fY--rTZaEDvoEI_3A0uPlBQmFaZe8frAarvzdazM
     short-id: 79a5e503d227e5c4
   client-fingerprint: chrome
+- name: OpenRay  DE-2852
+  type: vless
+  server: 57.129.47.42
+  port: 8443
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  network: ws
+  tls: true
+  servername: sni.111000.de5.net
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳+@WangCai2
+    headers:
+      Host: sni.111000.de5.net
 - name: OpenRay  DE-2847
   type: vless
   server: 51.75.67.84
@@ -655,21 +667,149 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳+@WangCai2
     headers:
       Host: sni.111000.de5.net
-- name: OpenRay  DE-2852
+- name: OpenRay  CA-9615
   type: vless
-  server: 57.129.47.42
-  port: 8443
+  server: 104.19.39.155
+  port: 8880
   uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
   network: ws
-  tls: true
-  servername: sni.111000.de5.net
   ws-opts:
     path: /?ed=2560&Telegram🇨🇳+@WangCai2
     headers:
-      Host: sni.111000.de5.net
-- name: OpenRay  CA-9537
+      Host: sni.x86.de5.net
+- name: OpenRay  CA-9488
   type: vless
-  server: 104.19.39.203
+  server: 104.19.39.239
+  port: 8880
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  network: ws
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳+@WangCai2
+    headers:
+      Host: sni.x86.de5.net
+- name: OpenRay  CA-9458
+  type: vless
+  server: 104.19.39.184
+  port: 8880
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  network: ws
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳+@WangCai2
+    headers:
+      Host: sni.x86.de5.net
+- name: OpenRay  CA-9521
+  type: vless
+  server: 104.19.39.47
+  port: 8880
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  network: ws
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳+@WangCai2
+    headers:
+      Host: sni.x86.de5.net
+- name: OpenRay  CA-9496
+  type: vless
+  server: 104.19.39.181
+  port: 8880
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  network: ws
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳+@WangCai2
+    headers:
+      Host: sni.x86.de5.net
+- name: OpenRay  CA-9606
+  type: vless
+  server: 104.19.39.163
+  port: 8880
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  network: ws
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳+@WangCai2
+    headers:
+      Host: sni.x86.de5.net
+- name: OpenRay  CA-9467
+  type: vless
+  server: 104.19.39.189
+  port: 8880
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  network: ws
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳+@WangCai2
+    headers:
+      Host: sni.x86.de5.net
+- name: OpenRay  CA-9622
+  type: vless
+  server: 104.19.39.106
+  port: 8880
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  network: ws
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳+@WangCai2
+    headers:
+      Host: sni.x86.de5.net
+- name: OpenRay  CA-9512
+  type: vless
+  server: 104.19.39.77
+  port: 8880
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  network: ws
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳+@WangCai2
+    headers:
+      Host: sni.x86.de5.net
+- name: OpenRay  CA-9553
+  type: vless
+  server: 104.19.39.49
+  port: 8880
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  network: ws
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳+@WangCai2
+    headers:
+      Host: sni.x86.de5.net
+- name: OpenRay  CA-9481
+  type: vless
+  server: 104.19.39.36
+  port: 8880
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  network: ws
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳+@WangCai2
+    headers:
+      Host: sni.x86.de5.net
+- name: OpenRay  CA-9560
+  type: vless
+  server: 104.19.39.151
+  port: 8880
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  network: ws
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳+@WangCai2
+    headers:
+      Host: sni.x86.de5.net
+- name: OpenRay  CA-9476
+  type: vless
+  server: 104.19.39.154
+  port: 8880
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  network: ws
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳+@WangCai2
+    headers:
+      Host: sni.x86.de5.net
+- name: OpenRay  CA-9503
+  type: vless
+  server: 104.19.39.177
+  port: 8880
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  network: ws
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳+@WangCai2
+    headers:
+      Host: sni.x86.de5.net
+- name: OpenRay  CA-9534
+  type: vless
+  server: 104.19.39.16
   port: 8880
   uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
   network: ws
@@ -687,9 +827,9 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳+@WangCai2
     headers:
       Host: sni.x86.de5.net
-- name: OpenRay  CA-9541
+- name: OpenRay  CA-9510
   type: vless
-  server: 104.19.39.18
+  server: 104.19.39.128
   port: 8880
   uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
   network: ws
@@ -697,9 +837,9 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳+@WangCai2
     headers:
       Host: sni.x86.de5.net
-- name: OpenRay  CA-9601
+- name: OpenRay  CA-9554
   type: vless
-  server: 104.19.39.19
+  server: 104.19.39.134
   port: 8880
   uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
   network: ws
@@ -707,9 +847,9 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳+@WangCai2
     headers:
       Host: sni.x86.de5.net
-- name: OpenRay  CA-9629
+- name: OpenRay  CA-9565
   type: vless
-  server: 104.19.39.86
+  server: 104.19.39.159
   port: 8880
   uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
   network: ws
@@ -717,9 +857,9 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳+@WangCai2
     headers:
       Host: sni.x86.de5.net
-- name: OpenRay  CA-9579
+- name: OpenRay  CA-9518
   type: vless
-  server: 104.19.39.48
+  server: 104.19.39.190
   port: 8880
   uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
   network: ws
@@ -727,9 +867,9 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳+@WangCai2
     headers:
       Host: sni.x86.de5.net
-- name: OpenRay  CA-9617
+- name: OpenRay  CA-9511
   type: vless
-  server: 104.19.39.80
+  server: 104.19.39.208
   port: 8880
   uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
   network: ws
@@ -737,149 +877,9 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳+@WangCai2
     headers:
       Host: sni.x86.de5.net
-- name: OpenRay  CA-9473
+- name: OpenRay  CA-9508
   type: vless
-  server: 104.19.39.95
-  port: 8880
-  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-  network: ws
-  ws-opts:
-    path: /?ed=2560&Telegram🇨🇳+@WangCai2
-    headers:
-      Host: sni.x86.de5.net
-- name: OpenRay  CA-9498
-  type: vless
-  server: 104.19.39.61
-  port: 8880
-  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-  network: ws
-  ws-opts:
-    path: /?ed=2560&Telegram🇨🇳+@WangCai2
-    headers:
-      Host: sni.x86.de5.net
-- name: OpenRay  CA-9499
-  type: vless
-  server: 104.19.39.133
-  port: 8880
-  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-  network: ws
-  ws-opts:
-    path: /?ed=2560&Telegram🇨🇳+@WangCai2
-    headers:
-      Host: sni.x86.de5.net
-- name: OpenRay  CA-9505
-  type: vless
-  server: 104.19.39.89
-  port: 8880
-  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-  network: ws
-  ws-opts:
-    path: /?ed=2560&Telegram🇨🇳+@WangCai2
-    headers:
-      Host: sni.x86.de5.net
-- name: OpenRay  CA-9452
-  type: vless
-  server: 104.19.39.50
-  port: 8880
-  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-  network: ws
-  ws-opts:
-    path: /?ed=2560&Telegram🇨🇳+@WangCai2
-    headers:
-      Host: sni.x86.de5.net
-- name: OpenRay  CA-9461
-  type: vless
-  server: 104.19.39.114
-  port: 8880
-  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-  network: ws
-  ws-opts:
-    path: /?ed=2560&Telegram🇨🇳+@WangCai2
-    headers:
-      Host: sni.x86.de5.net
-- name: OpenRay  CA-9548
-  type: vless
-  server: 104.19.39.12
-  port: 8880
-  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-  network: ws
-  ws-opts:
-    path: /?ed=2560&Telegram🇨🇳+@WangCai2
-    headers:
-      Host: sni.x86.de5.net
-- name: OpenRay  CA-9493
-  type: vless
-  server: 104.19.39.220
-  port: 8880
-  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-  network: ws
-  ws-opts:
-    path: /?ed=2560&Telegram🇨🇳+@WangCai2
-    headers:
-      Host: sni.x86.de5.net
-- name: OpenRay  CA-9474
-  type: vless
-  server: 104.19.39.179
-  port: 8880
-  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-  network: ws
-  ws-opts:
-    path: /?ed=2560&Telegram🇨🇳+@WangCai2
-    headers:
-      Host: sni.x86.de5.net
-- name: OpenRay  CA-9439
-  type: vless
-  server: 104.19.39.55
-  port: 8880
-  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-  network: ws
-  ws-opts:
-    path: /?ed=2560&Telegram🇨🇳+@WangCai2
-    headers:
-      Host: sni.x86.de5.net
-- name: OpenRay  CA-9562
-  type: vless
-  server: 104.19.39.66
-  port: 8880
-  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-  network: ws
-  ws-opts:
-    path: /?ed=2560&Telegram🇨🇳+@WangCai2
-    headers:
-      Host: sni.x86.de5.net
-- name: OpenRay  CA-9460
-  type: vless
-  server: 104.19.39.162
-  port: 8880
-  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-  network: ws
-  ws-opts:
-    path: /?ed=2560&Telegram🇨🇳+@WangCai2
-    headers:
-      Host: sni.x86.de5.net
-- name: OpenRay  CA-9494
-  type: vless
-  server: 104.19.39.249
-  port: 8880
-  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-  network: ws
-  ws-opts:
-    path: /?ed=2560&Telegram🇨🇳+@WangCai2
-    headers:
-      Host: sni.x86.de5.net
-- name: OpenRay  CA-9593
-  type: vless
-  server: 104.19.39.165
-  port: 8880
-  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
-  network: ws
-  ws-opts:
-    path: /?ed=2560&Telegram🇨🇳+@WangCai2
-    headers:
-      Host: sni.x86.de5.net
-- name: OpenRay  CA-9603
-  type: vless
-  server: 104.19.39.201
+  server: 104.19.39.206
   port: 8880
   uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
   network: ws
@@ -899,20 +899,20 @@ proxy-groups:
   - OpenRay  US-10162
   - OpenRay Dynamic-2395
   - OpenRay Dynamic-9711
-  - OpenRay Dynamic-7609
-  - OpenRay Dynamic-7606
   - OpenRay Dynamic-7608
+  - OpenRay Dynamic-7606
+  - OpenRay Dynamic-7609
   - OpenRay Dynamic-7646
-  - OpenRay Dynamic-7726
   - OpenRay Dynamic-7727
+  - OpenRay Dynamic-7726
   - OpenRay  DE-2600
   - OpenRay  CA-9417
-  - OpenRay  CA-9513
-  - OpenRay  CA-9438
   - OpenRay  CA-9432
   - OpenRay  CA-9483
-  - OpenRay  CA-9444
+  - OpenRay  CA-9513
+  - OpenRay  CA-9438
   - OpenRay  CA-9480
+  - OpenRay  CA-9444
   - OpenRay  US-5058
   - OpenRay  US-9434
   - OpenRay Dynamic-7280
@@ -920,55 +920,55 @@ proxy-groups:
   - OpenRay Dynamic-7997
   - OpenRay  CA-8143
   - OpenRay  CA-8149
-  - OpenRay  US-9814
-  - OpenRay  US-9817
   - OpenRay  US-9818
+  - OpenRay  US-9814
   - OpenRay  US-9820
+  - OpenRay  US-9817
   - OpenRay  US-9867
   - OpenRay  US-10095
   - OpenRay  US-10094
   - OpenRay  CA-8598
   - OpenRay  CA-8629
-  - OpenRay  JP-137
   - OpenRay  JP-138
-  - OpenRay  KR-20
-  - OpenRay  KR-19
-  - OpenRay  KR-12
-  - OpenRay  KR-9
-  - OpenRay  KR-13
-  - OpenRay  KR-11
+  - OpenRay  JP-137
   - OpenRay  KR-15
+  - OpenRay  KR-13
+  - OpenRay  KR-12
+  - OpenRay  KR-19
   - OpenRay  KR-10
+  - OpenRay  KR-11
+  - OpenRay  KR-20
+  - OpenRay  KR-9
   - OpenRay  SG-13
   - OpenRay  JP-195
   - OpenRay Dynamic-9125
   - OpenRay  RU-406
+  - OpenRay  DE-2852
   - OpenRay  DE-2847
   - OpenRay  DE-2854
   - OpenRay  DE-2851
-  - OpenRay  DE-2852
-  - OpenRay  CA-9537
+  - OpenRay  CA-9615
+  - OpenRay  CA-9488
+  - OpenRay  CA-9458
+  - OpenRay  CA-9521
+  - OpenRay  CA-9496
+  - OpenRay  CA-9606
+  - OpenRay  CA-9467
+  - OpenRay  CA-9622
+  - OpenRay  CA-9512
+  - OpenRay  CA-9553
+  - OpenRay  CA-9481
+  - OpenRay  CA-9560
+  - OpenRay  CA-9476
+  - OpenRay  CA-9503
+  - OpenRay  CA-9534
   - OpenRay  CA-9464
-  - OpenRay  CA-9541
-  - OpenRay  CA-9601
-  - OpenRay  CA-9629
-  - OpenRay  CA-9579
-  - OpenRay  CA-9617
-  - OpenRay  CA-9473
-  - OpenRay  CA-9498
-  - OpenRay  CA-9499
-  - OpenRay  CA-9505
-  - OpenRay  CA-9452
-  - OpenRay  CA-9461
-  - OpenRay  CA-9548
-  - OpenRay  CA-9493
-  - OpenRay  CA-9474
-  - OpenRay  CA-9439
-  - OpenRay  CA-9562
-  - OpenRay  CA-9460
-  - OpenRay  CA-9494
-  - OpenRay  CA-9593
-  - OpenRay  CA-9603
+  - OpenRay  CA-9510
+  - OpenRay  CA-9554
+  - OpenRay  CA-9565
+  - OpenRay  CA-9518
+  - OpenRay  CA-9511
+  - OpenRay  CA-9508
 - name: PROXY
   type: select
   proxies:
@@ -977,20 +977,20 @@ proxy-groups:
   - OpenRay  US-10162
   - OpenRay Dynamic-2395
   - OpenRay Dynamic-9711
-  - OpenRay Dynamic-7609
-  - OpenRay Dynamic-7606
   - OpenRay Dynamic-7608
+  - OpenRay Dynamic-7606
+  - OpenRay Dynamic-7609
   - OpenRay Dynamic-7646
-  - OpenRay Dynamic-7726
   - OpenRay Dynamic-7727
+  - OpenRay Dynamic-7726
   - OpenRay  DE-2600
   - OpenRay  CA-9417
-  - OpenRay  CA-9513
-  - OpenRay  CA-9438
   - OpenRay  CA-9432
   - OpenRay  CA-9483
-  - OpenRay  CA-9444
+  - OpenRay  CA-9513
+  - OpenRay  CA-9438
   - OpenRay  CA-9480
+  - OpenRay  CA-9444
   - OpenRay  US-5058
   - OpenRay  US-9434
   - OpenRay Dynamic-7280
@@ -998,55 +998,55 @@ proxy-groups:
   - OpenRay Dynamic-7997
   - OpenRay  CA-8143
   - OpenRay  CA-8149
-  - OpenRay  US-9814
-  - OpenRay  US-9817
   - OpenRay  US-9818
+  - OpenRay  US-9814
   - OpenRay  US-9820
+  - OpenRay  US-9817
   - OpenRay  US-9867
   - OpenRay  US-10095
   - OpenRay  US-10094
   - OpenRay  CA-8598
   - OpenRay  CA-8629
-  - OpenRay  JP-137
   - OpenRay  JP-138
-  - OpenRay  KR-20
-  - OpenRay  KR-19
-  - OpenRay  KR-12
-  - OpenRay  KR-9
-  - OpenRay  KR-13
-  - OpenRay  KR-11
+  - OpenRay  JP-137
   - OpenRay  KR-15
+  - OpenRay  KR-13
+  - OpenRay  KR-12
+  - OpenRay  KR-19
   - OpenRay  KR-10
+  - OpenRay  KR-11
+  - OpenRay  KR-20
+  - OpenRay  KR-9
   - OpenRay  SG-13
   - OpenRay  JP-195
   - OpenRay Dynamic-9125
   - OpenRay  RU-406
+  - OpenRay  DE-2852
   - OpenRay  DE-2847
   - OpenRay  DE-2854
   - OpenRay  DE-2851
-  - OpenRay  DE-2852
-  - OpenRay  CA-9537
+  - OpenRay  CA-9615
+  - OpenRay  CA-9488
+  - OpenRay  CA-9458
+  - OpenRay  CA-9521
+  - OpenRay  CA-9496
+  - OpenRay  CA-9606
+  - OpenRay  CA-9467
+  - OpenRay  CA-9622
+  - OpenRay  CA-9512
+  - OpenRay  CA-9553
+  - OpenRay  CA-9481
+  - OpenRay  CA-9560
+  - OpenRay  CA-9476
+  - OpenRay  CA-9503
+  - OpenRay  CA-9534
   - OpenRay  CA-9464
-  - OpenRay  CA-9541
-  - OpenRay  CA-9601
-  - OpenRay  CA-9629
-  - OpenRay  CA-9579
-  - OpenRay  CA-9617
-  - OpenRay  CA-9473
-  - OpenRay  CA-9498
-  - OpenRay  CA-9499
-  - OpenRay  CA-9505
-  - OpenRay  CA-9452
-  - OpenRay  CA-9461
-  - OpenRay  CA-9548
-  - OpenRay  CA-9493
-  - OpenRay  CA-9474
-  - OpenRay  CA-9439
-  - OpenRay  CA-9562
-  - OpenRay  CA-9460
-  - OpenRay  CA-9494
-  - OpenRay  CA-9593
-  - OpenRay  CA-9603
+  - OpenRay  CA-9510
+  - OpenRay  CA-9554
+  - OpenRay  CA-9565
+  - OpenRay  CA-9518
+  - OpenRay  CA-9511
+  - OpenRay  CA-9508
 rules:
 - DOMAIN-SUFFIX,ir,DIRECT
 - DOMAIN-SUFFIX,aparat.com,DIRECT
