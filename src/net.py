@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import os
+import random
 import socket
 import subprocess
 import sys
@@ -391,26 +392,44 @@ def validate_with_v2ray_core(uri: str, timeout_s: int = 10) -> Optional[bool]:
             'https://www.google.com/generate_204',
             'https://cp.cloudflare.com/generate_204',
         ]
+        
+        # Perform up to 3 real-delay tests per proxy with retry logic
+        max_retries = 3
         ok = False
-        # Time budget
-        deadline = start + max(2.0, float(timeout_s))
-        for url in test_urls:
-            if time.time() >= deadline:
+        
+        for attempt in range(max_retries):
+            # Time budget for this attempt
+            attempt_start = time.time()
+            deadline = attempt_start + max(2.0, float(timeout_s))
+            
+            # Try each test URL
+            for url in test_urls:
+                if time.time() >= deadline:
+                    break
+                try:
+                    opener = build_opener(ProxyHandler({
+                        'http': f'http://127.0.0.1:{http_port}',
+                        'https': f'http://127.0.0.1:{http_port}',
+                    }))
+                    req = Request(url, headers={'User-Agent': USER_AGENT, 'Accept': '*/*'})
+                    rem = max(0.5, deadline - time.time())
+                    with opener.open(req, timeout=rem) as resp:
+                        code = getattr(resp, 'status', None) or getattr(resp, 'code', None)
+                        if isinstance(code, int) and code in (200, 204):
+                            ok = True
+                            break
+                except Exception:
+                    continue
+            
+            # Stop early if one test succeeds
+            if ok:
                 break
-            try:
-                opener = build_opener(ProxyHandler({
-                    'http': f'http://127.0.0.1:{http_port}',
-                    'https': f'http://127.0.0.1:{http_port}',
-                }))
-                req = Request(url, headers={'User-Agent': USER_AGENT, 'Accept': '*/*'})
-                rem = max(0.5, deadline - time.time())
-                with opener.open(req, timeout=rem) as resp:
-                    code = getattr(resp, 'status', None) or getattr(resp, 'code', None)
-                    if isinstance(code, int) and code in (200, 204):
-                        ok = True
-                        break
-            except Exception:
-                continue
+            
+            # Sleep between retries (2-5 seconds) to avoid anti-probe or rate-limit issues
+            # Only sleep if this isn't the last attempt
+            if attempt < max_retries - 1:
+                sleep_duration = random.uniform(2.0, 5.0)
+                time.sleep(sleep_duration)
 
         # Cleanup
         try:
