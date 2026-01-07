@@ -293,7 +293,7 @@ def quick_protocol_probe(uri: str, host: str, port: int, timeout_ms: int = PROBE
 
 # ---------- Stage 3: V2Ray core validation (stub) ----------
 
-def validate_with_v2ray_core(uri: str, timeout_s: int = 60) -> Optional[bool]:
+def validate_with_v2ray_core(uri: str, timeout_s: int = 180) -> Optional[bool]:
     """Validate proxy by spinning up Xray and fetching via a local HTTP proxy.
 
     Returns:
