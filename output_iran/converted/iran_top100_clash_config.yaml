@@ -143,9 +143,9 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
   client-fingerprint: chrome
-- name: OpenRay  US-10095
+- name: OpenRay  US-10094
   type: vless
-  server: 15.204.97.167
+  server: 15.204.97.155
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   network: tcp
@@ -156,9 +156,9 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
   client-fingerprint: chrome
-- name: OpenRay  US-10094
+- name: OpenRay  US-10095
   type: vless
-  server: 15.204.97.155
+  server: 15.204.97.167
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   network: tcp
@@ -257,6 +257,19 @@ proxies:
     path: /?ed=2560&Telegram@freecodes
     headers:
       Host: snip.062797.xyz
+- name: OpenRay  US-9818
+  type: vless
+  server: 15.204.97.164
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  client-fingerprint: chrome
 - name: OpenRay  US-9820
   type: vless
   server: 15.204.97.226
@@ -273,19 +286,6 @@ proxies:
 - name: OpenRay  US-9813
   type: vless
   server: 15.204.97.146
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  client-fingerprint: chrome
-- name: OpenRay  US-9818
-  type: vless
-  server: 15.204.97.164
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   network: tcp
@@ -484,18 +484,6 @@ proxies:
     public-key: WvNaAxI0W__qfUKbtysH4IwF155YENlv3PG6crCmPkA
     short-id: ''
   client-fingerprint: chrome
-- name: OpenRay Dynamic-10143
-  type: vless
-  server: cdnjs.com
-  port: 443
-  uuid: 67cf43da-d94c-4d93-b073-ac9305b16ec3
-  network: ws
-  tls: true
-  servername: rAyAn-cOnFiG-ca-1.pArSa.dPdNs.oRg
-  ws-opts:
-    path: /ws
-    headers:
-      Host: rAyAn-cOnFiG-ca-1.pArSa.dPdNs.oRg
 - name: OpenRay  US-10579
   type: vless
   server: 15.204.97.177
@@ -521,9 +509,21 @@ proxies:
     public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA
     short-id: e8ab71d0
   client-fingerprint: chrome
-- name: OpenRay  CA-10261
+- name: OpenRay Dynamic-10143
   type: vless
-  server: 172.67.66.177
+  server: cdnjs.com
+  port: 443
+  uuid: 67cf43da-d94c-4d93-b073-ac9305b16ec3
+  network: ws
+  tls: true
+  servername: rAyAn-cOnFiG-ca-1.pArSa.dPdNs.oRg
+  ws-opts:
+    path: /ws
+    headers:
+      Host: rAyAn-cOnFiG-ca-1.pArSa.dPdNs.oRg
+- name: OpenRay  CA-10259
+  type: vless
+  server: 104.24.196.20
   port: 443
   uuid: 67cf43da-d94c-4d93-b073-ac9305b16ec3
   network: ws
@@ -545,9 +545,9 @@ proxies:
     path: /ws
     headers:
       Host: rAyAn-cOnFiG-ca-1.pAriSa.dPdNs.oRg
-- name: OpenRay  CA-10259
+- name: OpenRay  CA-10261
   type: vless
-  server: 104.24.196.20
+  server: 172.67.66.177
   port: 443
   uuid: 67cf43da-d94c-4d93-b073-ac9305b16ec3
   network: ws
@@ -615,8 +615,8 @@ proxy-groups:
   - OpenRay  DE-2600
   - OpenRay  US-9814
   - OpenRay  US-9817
-  - OpenRay  US-10095
   - OpenRay  US-10094
+  - OpenRay  US-10095
   - OpenRay  CA-8598
   - OpenRay  CA-8629
   - OpenRay  US-5058
@@ -626,9 +626,9 @@ proxy-groups:
   - OpenRay Dynamic-7997
   - OpenRay  CA-8143
   - OpenRay  CA-8149
+  - OpenRay  US-9818
   - OpenRay  US-9820
   - OpenRay  US-9813
-  - OpenRay  US-9818
   - OpenRay  US-9824
   - OpenRay  US-9823
   - OpenRay  US-9821
@@ -646,12 +646,12 @@ proxy-groups:
   - OpenRay  NL-89
   - OpenRay  US-10539
   - OpenRay  US-10555
-  - OpenRay Dynamic-10143
   - OpenRay  US-10579
   - OpenRay  US-10586
-  - OpenRay  CA-10261
-  - OpenRay  CA-10260
+  - OpenRay Dynamic-10143
   - OpenRay  CA-10259
+  - OpenRay  CA-10260
+  - OpenRay  CA-10261
   - OpenRay  JP-343
   - OpenRay  JP-357
   - OpenRay Dynamic-10618
@@ -666,8 +666,8 @@ proxy-groups:
   - OpenRay  DE-2600
   - OpenRay  US-9814
   - OpenRay  US-9817
-  - OpenRay  US-10095
   - OpenRay  US-10094
+  - OpenRay  US-10095
   - OpenRay  CA-8598
   - OpenRay  CA-8629
   - OpenRay  US-5058
@@ -677,9 +677,9 @@ proxy-groups:
   - OpenRay Dynamic-7997
   - OpenRay  CA-8143
   - OpenRay  CA-8149
+  - OpenRay  US-9818
   - OpenRay  US-9820
   - OpenRay  US-9813
-  - OpenRay  US-9818
   - OpenRay  US-9824
   - OpenRay  US-9823
   - OpenRay  US-9821
@@ -697,12 +697,12 @@ proxy-groups:
   - OpenRay  NL-89
   - OpenRay  US-10539
   - OpenRay  US-10555
-  - OpenRay Dynamic-10143
   - OpenRay  US-10579
   - OpenRay  US-10586
-  - OpenRay  CA-10261
-  - OpenRay  CA-10260
+  - OpenRay Dynamic-10143
   - OpenRay  CA-10259
+  - OpenRay  CA-10260
+  - OpenRay  CA-10261
   - OpenRay  JP-343
   - OpenRay  JP-357
   - OpenRay Dynamic-10618
