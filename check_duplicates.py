@@ -1,7 +1,10 @@
 from src.common import normalize_proxy_uri, get_openray_dedup_key
 proxies = [
-"trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@cf.090227.xyz:443?path=%2F&security=tls&host=_acme-challenge.2go.cloudns.be&type=ws&sni=_acme-challenge.2go.cloudns.be&allowInsecure=1#%5BOpenRay%5D%20Dynamic-8530",
-"trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@cf.090227.xyz:443?security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws&path=/?ed=2560&Host=_acme-challenge.2go.cloudns.be#%5BOpenRay%5D%20Dynamic-7591"
+"vless://TELEGRAM-NUFiLTER-3@nufilter.fastlynew.hosting-ip.com:80?encryption=none&type=ws&host=barayekhoda.global.ssl.fastly.net&path=%2Ftelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%3Fed%3D1024&security=none#%5BOpenRay%5D%20Dynamic-4",
+"vless://TELEGRAM-NUFiLTER-3@NUFiLTER.fastlynew.hosting-ip.com:80?path=%2Ftelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%3Fed%3D1024&security=none&encryption=none&host=barayekhoda.global.ssl.fastly.net&type=ws#%5BOpenRay%5D%20Dynamic-10798"
+
+
+
 
 
 ]

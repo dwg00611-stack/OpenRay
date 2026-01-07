@@ -350,6 +350,12 @@ def _normalize_trojan(uri: str, parsed) -> str:
                     continue
                 value = base_path
 
+            # Normalize type: treat missing or explicit "tcp" as the same
+            if param == 'type':
+                # Empty, "tcp" or default should not distinguish connections
+                if not value or value.lower() == 'tcp':
+                    continue
+
             # If host header equals SNI, treat as redundant
             if param == 'host' and sni_value and value == sni_value:
                 continue
@@ -541,10 +547,21 @@ def get_openray_dedup_key(uri: str) -> str:
             return f"vmess|{normalized}"
 
         if scheme == 'vless':
-            # Take substring after scheme up to '?', then remove all '/'
+            # Take substring after scheme up to '?'
             after_scheme = base_uri.split('://', 1)[1]
             before_query = after_scheme.split('?', 1)[0]
-            normalized = before_query.replace('/', '')
+
+            # Normalize host:port to lowercase (DNS is case-insensitive)
+            user_host = before_query.split('@', 1)
+            if len(user_host) == 2:
+                user, hostport = user_host
+                normalized_core = f"{user}@{hostport.lower()}"
+            else:
+                # Fallback: lowercase everything if we can't split
+                normalized_core = before_query.lower()
+
+            # Remove all '/' characters (as per original rule)
+            normalized = normalized_core.replace('/', '')
             return f"vless|{normalized}"
 
         if scheme == 'trojan':
