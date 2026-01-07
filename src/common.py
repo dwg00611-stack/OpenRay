@@ -336,6 +336,9 @@ def _normalize_trojan(uri: str, parsed) -> str:
         for param in connection_params:
             if param in query_params and query_params[param]:
                 value = query_params[param][0]
+                # Treat path "/" as empty (no meaningful difference)
+                if param == 'path' and value in ('', '/'):
+                    continue
                 if value:  # Only include non-empty values
                     conn_params[param] = value
 
