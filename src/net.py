@@ -293,7 +293,7 @@ def quick_protocol_probe(uri: str, host: str, port: int, timeout_ms: int = PROBE
 
 # ---------- Stage 3: V2Ray core validation (stub) ----------
 
-def validate_with_v2ray_core(uri: str, timeout_s: int = 30) -> Optional[bool]:
+def validate_with_v2ray_core(uri: str, timeout_s: int = 10) -> Optional[bool]:
     """Validate proxy by spinning up Xray and fetching via a local HTTP proxy.
 
     Returns:
@@ -415,7 +415,7 @@ def validate_with_v2ray_core(uri: str, timeout_s: int = 30) -> Optional[bool]:
                 continue
 
             # Give it a brief moment to start
-            time.sleep(1)
+            time.sleep(0.25)
             
             # Check if process is still alive
             if proc.poll() is not None:
