@@ -918,18 +918,6 @@ proxies:
     path: /?ed=2560&PROT_TYPE=vless
     headers:
       Host: a.azadnet003.ddns-ip.net
-- name: OpenRay  CA-10830
-  type: vless
-  server: 104.16.16.16
-  port: 443
-  uuid: f5837d40-b8ce-45ea-8b1a-dfda963cee9b
-  network: ws
-  tls: true
-  servername: hhgy7370.2288888.xyz
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: hhgy7370.2288888.xyz
 - name: OpenRay  CA-10831
   type: vmess
   server: 51.79.102.253
@@ -2479,54 +2467,6 @@ proxies:
     path: /proxyip=sjc.o00o.ooo
     headers:
       Host: cfly.de5.net
-- name: 'OpenRay Dynamic-10824 #2'
-  type: vless
-  server: cf.130519.xyz
-  port: 443
-  uuid: f5837d40-b8ce-45ea-8b1a-dfda963cee9b
-  network: ws
-  tls: true
-  servername: n151.h2333.ggff.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: n151.h2333.ggff.net
-- name: 'OpenRay Dynamic-10825 #2'
-  type: vless
-  server: cf.877774.xyz
-  port: 443
-  uuid: f5837d40-b8ce-45ea-8b1a-dfda963cee9b
-  network: ws
-  tls: true
-  servername: hhgy7370.2288888.xyz
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: hhgy7370.2288888.xyz
-- name: 'OpenRay Dynamic-10826 #3'
-  type: vless
-  server: saas.sin.fan
-  port: 443
-  uuid: f5837d40-b8ce-45ea-8b1a-dfda963cee9b
-  network: ws
-  tls: true
-  servername: hhgy7370.2288888.xyz
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: hhgy7370.2288888.xyz
-- name: 'OpenRay Dynamic-10827 #2'
-  type: vless
-  server: sub.danfeng.eu.org
-  port: 443
-  uuid: f5837d40-b8ce-45ea-8b1a-dfda963cee9b
-  network: ws
-  tls: true
-  servername: hhgy7370.2288888.xyz
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: hhgy7370.2288888.xyz
 - name: OpenRay Dynamic-10828
   type: vless
   server: nrt.xxxxxxxx.nyc.mn
@@ -2563,42 +2503,6 @@ proxies:
     path: /proxyip=sjc.o00o.ooo
     headers:
       Host: cfly.de5.net
-- name: OpenRay Dynamic-10833
-  type: vless
-  server: cf.008500.xyz
-  port: 443
-  uuid: f5837d40-b8ce-45ea-8b1a-dfda963cee9b
-  network: ws
-  tls: true
-  servername: n151.h2333.ggff.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: n151.h2333.ggff.net
-- name: 'OpenRay Dynamic-10834 #2'
-  type: vless
-  server: cloudflare.seeck.cn
-  port: 443
-  uuid: f5837d40-b8ce-45ea-8b1a-dfda963cee9b
-  network: ws
-  tls: true
-  servername: n151.h2333.ggff.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: n151.h2333.ggff.net
-- name: OpenRay Dynamic-10835
-  type: vless
-  server: nexusmods.com
-  port: 443
-  uuid: f5837d40-b8ce-45ea-8b1a-dfda963cee9b
-  network: ws
-  tls: true
-  servername: n151.h2333.ggff.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: n151.h2333.ggff.net
 - name: OpenRay Dynamic-10838
   type: vless
   server: ir.fast.hosting-ip.com
@@ -3050,6 +2954,12 @@ proxies:
   alterId: 0
   cipher: auto
   network: raw
+- name: OpenRay  DE-3223
+  type: vless
+  server: 91.99.218.107
+  port: 51269
+  uuid: 0341d8f2-99e0-4f6c-af0a-345ac26815cf
+  network: grpc
 - name: OpenRay  US-2325
   type: vless
   server: 104.17.134.117
@@ -3809,18 +3719,6 @@ proxies:
     public-key: EOGaNdtC53VnpdRI5hQkGE1JKqVeGRGSZDwi-0q8jyU
     short-id: ''
   client-fingerprint: chrome
-- name: OpenRay  US-10839
-  type: vless
-  server: 154.26.188.178
-  port: 8443
-  uuid: f5837d40-b8ce-45ea-8b1a-dfda963cee9b
-  network: ws
-  tls: true
-  servername: n151.h2333.ggff.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: n151.h2333.ggff.net
 - name: OpenRay  US-10840
   type: vless
   server: ashley.kosmolet.xyz
@@ -4681,6 +4579,18 @@ proxies:
     public-key: XY8doX6twfJ6qzioiuOzQCxHyiLWiv8YpKA-lD01AjI
     short-id: 9c
   client-fingerprint: edge
+- name: OpenRay  NL-227
+  type: vless
+  server: 146.103.119.122
+  port: 443
+  uuid: f2f81e0d-9486-493a-b207-248fd797c10b
+  network: tcp
+  tls: true
+  servername: cloudflare.com
+  reality-opts:
+    public-key: 5XFauKpaZm1A8vVcgem9ybFmbdTbXSAy7w2_LxTt_XE
+    short-id: aa44aac8
+  client-fingerprint: chrome
 - name: OpenRay  FI-47
   type: vless
   server: 171.22.114.248
@@ -5656,18 +5566,6 @@ proxies:
     path: /?ed=2560&Telegram🇨🇳 @WangCai2
     headers:
       Host: sni.111000.cc.cd
-- name: OpenRay  KR-45
-  type: vmess
-  server: 54.180.248.144
-  port: 8686
-  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: end-gfw.com
 - name: OpenRay  JP-343
   type: vmess
   server: n1753598445.74qxv.top
@@ -5904,18 +5802,6 @@ proxies:
     path: /
     headers:
       Host: n1753598448.74qxv.top
-- name: OpenRay  JP-400
-  type: vmess
-  server: 57.180.54.85
-  port: 8686
-  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: end-gfw.com
 - name: OpenRay  JP-401
   type: vmess
   server: 172.111.146.64
@@ -8212,54 +8098,6 @@ proxies:
     path: /
     headers:
       Host: 150.109.11.193
-- name: OpenRay  SG-5
-  type: vless
-  server: 139.162.62.223
-  port: 443
-  uuid: f5837d40-b8ce-45ea-8b1a-dfda963cee9b
-  network: ws
-  tls: true
-  servername: n151.h2333.ggff.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: n151.h2333.ggff.net
-- name: OpenRay  SG-6
-  type: vless
-  server: 139.162.8.21
-  port: 444
-  uuid: f5837d40-b8ce-45ea-8b1a-dfda963cee9b
-  network: ws
-  tls: true
-  servername: hhgy7370.2288888.xyz
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: hhgy7370.2288888.xyz
-- name: OpenRay  SG-7
-  type: vless
-  server: 159.223.68.162
-  port: 443
-  uuid: f5837d40-b8ce-45ea-8b1a-dfda963cee9b
-  network: ws
-  tls: true
-  servername: hhgy7370.2288888.xyz
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: hhgy7370.2288888.xyz
-- name: OpenRay  SG-8
-  type: vless
-  server: 178.128.59.95
-  port: 2053
-  uuid: f5837d40-b8ce-45ea-8b1a-dfda963cee9b
-  network: ws
-  tls: true
-  servername: n151.h2333.ggff.net
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: n151.h2333.ggff.net
 - name: OpenRay  SG-9
   type: vless
   server: 52.77.208.165
@@ -8515,18 +8353,6 @@ proxies:
     path: /
     headers:
       Host: n1761214919.mv7wh.tech
-- name: OpenRay  HK-20
-  type: vless
-  server: 68.64.179.199
-  port: 443
-  uuid: f5837d40-b8ce-45ea-8b1a-dfda963cee9b
-  network: ws
-  tls: true
-  servername: hhgy7370.2288888.xyz
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: hhgy7370.2288888.xyz
 - name: OpenRay  HK-21
   type: vmess
   server: 47.244.120.197
@@ -9329,7 +9155,6 @@ proxy-groups:
   - OpenRay  CA-10806
   - OpenRay  CA-10818
   - OpenRay  CA-10822
-  - OpenRay  CA-10830
   - OpenRay  CA-10831
   - OpenRay  CA-10836
   - OpenRay  CA-10837
@@ -9459,16 +9284,9 @@ proxy-groups:
   - 'OpenRay Dynamic-10826 #2'
   - OpenRay Dynamic-10823
   - OpenRay Dynamic-3208
-  - 'OpenRay Dynamic-10824 #2'
-  - 'OpenRay Dynamic-10825 #2'
-  - 'OpenRay Dynamic-10826 #3'
-  - 'OpenRay Dynamic-10827 #2'
   - OpenRay Dynamic-10828
   - OpenRay Dynamic-144
   - OpenRay Dynamic-10829
-  - OpenRay Dynamic-10833
-  - 'OpenRay Dynamic-10834 #2'
-  - OpenRay Dynamic-10835
   - OpenRay Dynamic-10838
   - OpenRay Dynamic-10841
   - OpenRay Dynamic-1
@@ -9509,6 +9327,7 @@ proxy-groups:
   - OpenRay  DE-3210
   - OpenRay  DE-3220
   - OpenRay  DE-3222
+  - OpenRay  DE-3223
   - OpenRay  US-2325
   - OpenRay  US-2737
   - OpenRay  US-2744
@@ -9578,7 +9397,6 @@ proxy-groups:
   - OpenRay  US-10836
   - OpenRay  US-10837
   - OpenRay  US-10838
-  - OpenRay  US-10839
   - OpenRay  US-10840
   - OpenRay  US-10841
   - OpenRay  US-10842
@@ -9659,6 +9477,7 @@ proxy-groups:
   - OpenRay  NL-223
   - OpenRay  NL-225
   - OpenRay  NL-226
+  - OpenRay  NL-227
   - OpenRay  FI-47
   - OpenRay  FI-56
   - OpenRay  FI-57
@@ -9735,7 +9554,6 @@ proxy-groups:
   - OpenRay  KR-42
   - OpenRay  KR-43
   - OpenRay  KR-44
-  - OpenRay  KR-45
   - OpenRay  JP-343
   - OpenRay  JP-357
   - OpenRay  JP-366
@@ -9754,7 +9572,6 @@ proxy-groups:
   - OpenRay  JP-397
   - OpenRay  JP-398
   - OpenRay  JP-399
-  - OpenRay  JP-400
   - OpenRay  JP-401
   - OpenRay  JP-402
   - OpenRay  FR-5
@@ -9978,10 +9795,6 @@ proxy-groups:
   - OpenRay  SG-2
   - OpenRay  SG-3
   - OpenRay  SG-4
-  - OpenRay  SG-5
-  - OpenRay  SG-6
-  - OpenRay  SG-7
-  - OpenRay  SG-8
   - OpenRay  SG-9
   - OpenRay  BR-12
   - OpenRay  BR-14
@@ -10004,7 +9817,6 @@ proxy-groups:
   - OpenRay  HK-17
   - OpenRay  HK-18
   - OpenRay  HK-19
-  - OpenRay  HK-20
   - OpenRay  HK-21
   - OpenRay  HK-22
   - OpenRay  HK-23
@@ -10143,7 +9955,6 @@ proxy-groups:
   - OpenRay  CA-10806
   - OpenRay  CA-10818
   - OpenRay  CA-10822
-  - OpenRay  CA-10830
   - OpenRay  CA-10831
   - OpenRay  CA-10836
   - OpenRay  CA-10837
@@ -10273,16 +10084,9 @@ proxy-groups:
   - 'OpenRay Dynamic-10826 #2'
   - OpenRay Dynamic-10823
   - OpenRay Dynamic-3208
-  - 'OpenRay Dynamic-10824 #2'
-  - 'OpenRay Dynamic-10825 #2'
-  - 'OpenRay Dynamic-10826 #3'
-  - 'OpenRay Dynamic-10827 #2'
   - OpenRay Dynamic-10828
   - OpenRay Dynamic-144
   - OpenRay Dynamic-10829
-  - OpenRay Dynamic-10833
-  - 'OpenRay Dynamic-10834 #2'
-  - OpenRay Dynamic-10835
   - OpenRay Dynamic-10838
   - OpenRay Dynamic-10841
   - OpenRay Dynamic-1
@@ -10323,6 +10127,7 @@ proxy-groups:
   - OpenRay  DE-3210
   - OpenRay  DE-3220
   - OpenRay  DE-3222
+  - OpenRay  DE-3223
   - OpenRay  US-2325
   - OpenRay  US-2737
   - OpenRay  US-2744
@@ -10392,7 +10197,6 @@ proxy-groups:
   - OpenRay  US-10836
   - OpenRay  US-10837
   - OpenRay  US-10838
-  - OpenRay  US-10839
   - OpenRay  US-10840
   - OpenRay  US-10841
   - OpenRay  US-10842
@@ -10473,6 +10277,7 @@ proxy-groups:
   - OpenRay  NL-223
   - OpenRay  NL-225
   - OpenRay  NL-226
+  - OpenRay  NL-227
   - OpenRay  FI-47
   - OpenRay  FI-56
   - OpenRay  FI-57
@@ -10549,7 +10354,6 @@ proxy-groups:
   - OpenRay  KR-42
   - OpenRay  KR-43
   - OpenRay  KR-44
-  - OpenRay  KR-45
   - OpenRay  JP-343
   - OpenRay  JP-357
   - OpenRay  JP-366
@@ -10568,7 +10372,6 @@ proxy-groups:
   - OpenRay  JP-397
   - OpenRay  JP-398
   - OpenRay  JP-399
-  - OpenRay  JP-400
   - OpenRay  JP-401
   - OpenRay  JP-402
   - OpenRay  FR-5
@@ -10792,10 +10595,6 @@ proxy-groups:
   - OpenRay  SG-2
   - OpenRay  SG-3
   - OpenRay  SG-4
-  - OpenRay  SG-5
-  - OpenRay  SG-6
-  - OpenRay  SG-7
-  - OpenRay  SG-8
   - OpenRay  SG-9
   - OpenRay  BR-12
   - OpenRay  BR-14
@@ -10818,7 +10617,6 @@ proxy-groups:
   - OpenRay  HK-17
   - OpenRay  HK-18
   - OpenRay  HK-19
-  - OpenRay  HK-20
   - OpenRay  HK-21
   - OpenRay  HK-22
   - OpenRay  HK-23
