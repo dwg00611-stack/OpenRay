@@ -293,7 +293,7 @@ def quick_protocol_probe(uri: str, host: str, port: int, timeout_ms: int = PROBE
 
 # ---------- Stage 3: V2Ray core validation (stub) ----------
 
-def validate_with_v2ray_core(uri: str, timeout_s: int = 10) -> Optional[bool]:
+def validate_with_v2ray_core(uri: str, timeout_s: int = 60) -> Optional[bool]:
     """Validate proxy by spinning up Xray and fetching via a local HTTP proxy.
 
     Returns:
@@ -411,11 +411,11 @@ def validate_with_v2ray_core(uri: str, timeout_s: int = 10) -> Optional[bool]:
                     pass
                 tmp_path = None
                 if attempt < max_retries - 1:
-                    time.sleep(random.uniform(2, 5))
+                    time.sleep(random.uniform(0.2, 0.5))
                 continue
 
-            # # Give it a brief moment to start
-            # time.sleep(0.25)
+            # Give it a brief moment to start
+            time.sleep(0.25)
             
             # Check if process is still alive
             if proc.poll() is not None:
@@ -433,7 +433,7 @@ def validate_with_v2ray_core(uri: str, timeout_s: int = 10) -> Optional[bool]:
             # Time budget for this attempt: divide total timeout by number of retries, but ensure minimum reasonable timeout
             # Each retry gets timeout_s / max_retries, but at least 6 seconds to allow proper connection (process start + test)
             attempt_start = time.time()
-            attempt_timeout = max(6.0, float(timeout_s) / float(max_retries))
+            attempt_timeout = max(15, float(timeout_s) / float(max_retries))
             deadline = attempt_start + attempt_timeout
             
             # Try each test URL
