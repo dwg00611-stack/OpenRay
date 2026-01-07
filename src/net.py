@@ -293,7 +293,7 @@ def quick_protocol_probe(uri: str, host: str, port: int, timeout_ms: int = PROBE
 
 # ---------- Stage 3: V2Ray core validation (stub) ----------
 
-def validate_with_v2ray_core(uri: str, timeout_s: int = 180) -> Optional[bool]:
+def validate_with_v2ray_core(uri: str, timeout_s: int = 60) -> Optional[bool]:
     """Validate proxy by spinning up Xray and fetching via a local HTTP proxy.
 
     Returns:
@@ -322,20 +322,25 @@ def validate_with_v2ray_core(uri: str, timeout_s: int = 180) -> Optional[bool]:
         import time
         import json as _json
 
+        # Robust port selection: try up to 5 times to find a free port
         http_port = None
-        s = None
-        try:
-            s = _sock.socket(_sock.AF_INET, _sock.SOCK_STREAM)
-            s.bind(('127.0.0.1', 0))
-            http_port = s.getsockname()[1]
-        except Exception:
-            http_port = 10809
-        finally:
+        for _ in range(5):
+            s = None
             try:
-                if s:
-                    s.close()
+                s = _sock.socket(_sock.AF_INET, _sock.SOCK_STREAM)
+                s.bind(('127.0.0.1', 0))
+                http_port = s.getsockname()[1]
+                s.close()
+                # Verify port is actually closed and likely available
+                with _sock.socket(_sock.AF_INET, _sock.SOCK_STREAM) as check_s:
+                    check_s.settimeout(0.1)
+                    if check_s.connect_ex(('127.0.0.1', http_port)) != 0:
+                        break # Port is free
             except Exception:
-                pass
+                continue
+        
+        if http_port is None:
+            http_port = random.randint(20000, 60000)
 
         try:
             inb = cfg.get('inbounds') or []
@@ -367,6 +372,9 @@ def validate_with_v2ray_core(uri: str, timeout_s: int = 180) -> Optional[bool]:
             'https://cp.cloudflare.com/generate_204',
         ]
         
+        # Add a small initial jitter to avoid thundering herd when starting many validations at once
+        time.sleep(random.uniform(0.01, 0.5))
+
         # Perform up to 3 real-delay tests per proxy with retry logic
         # Each retry gets a fresh xray process to avoid issues with crashed/stale processes
         max_retries = 3
@@ -382,7 +390,7 @@ def validate_with_v2ray_core(uri: str, timeout_s: int = 180) -> Optional[bool]:
                 except Exception:
                     pass
                 try:
-                    proc.wait(timeout=0.2)
+                    proc.wait(timeout=0.5)
                 except Exception:
                     if hasattr(proc, 'kill'):
                         proc.kill()
@@ -411,15 +419,35 @@ def validate_with_v2ray_core(uri: str, timeout_s: int = 180) -> Optional[bool]:
                     pass
                 tmp_path = None
                 if attempt < max_retries - 1:
-                    time.sleep(random.uniform(0.2, 0.5))
+                    time.sleep(random.uniform(0.5, 1.0))
                 continue
 
-            # Give it a brief moment to start
-            time.sleep(0.25)
+            # Give it a bit more time to start, especially under load
+            # We wait up to 2 seconds, checking every 0.2s if the process is still alive and port is open
+            start_wait = time.time()
+            ready = False
+            while time.time() - start_wait < 2.0:
+                if proc.poll() is not None:
+                    break # Process died
+                
+                # Try to connect to the local port to see if it's ready
+                try:
+                    with _sock.socket(_sock.AF_INET, _sock.SOCK_STREAM) as test_s:
+                        test_s.settimeout(0.1)
+                        if test_s.connect_ex(('127.0.0.1', http_port)) == 0:
+                            ready = True
+                            break
+                except Exception:
+                    pass
+                time.sleep(0.2)
             
-            # Check if process is still alive
-            if proc.poll() is not None:
-                # Process died immediately, try next retry
+            # Check if process is still alive and ready
+            if not ready or proc.poll() is not None:
+                # Process died or didn't start listening, try next retry
+                try:
+                    proc.terminate()
+                except Exception:
+                    pass
                 try:
                     os.unlink(tmp_path)
                 except Exception:
@@ -427,11 +455,11 @@ def validate_with_v2ray_core(uri: str, timeout_s: int = 180) -> Optional[bool]:
                 tmp_path = None
                 proc = None
                 if attempt < max_retries - 1:
-                    time.sleep(random.uniform(0.2, 0.5))
+                    time.sleep(random.uniform(0.5, 1.5))
                 continue
             
             # Time budget for this attempt: divide total timeout by number of retries, but ensure minimum reasonable timeout
-            # Each retry gets timeout_s / max_retries, but at least 6 seconds to allow proper connection (process start + test)
+            # Each retry gets timeout_s / max_retries, but at least 15 seconds to allow proper connection (process start + test)
             attempt_start = time.time()
             attempt_timeout = max(15, float(timeout_s) / float(max_retries))
             deadline = attempt_start + attempt_timeout
@@ -446,7 +474,7 @@ def validate_with_v2ray_core(uri: str, timeout_s: int = 180) -> Optional[bool]:
                         'https': f'http://127.0.0.1:{http_port}',
                     }))
                     req = Request(url, headers={'User-Agent': USER_AGENT, 'Accept': '*/*'})
-                    rem = max(1.0, deadline - time.time())  # At least 1 second for request
+                    rem = max(2.0, deadline - time.time())  # At least 2 seconds for request
                     with opener.open(req, timeout=rem) as resp:
                         code = getattr(resp, 'status', None) or getattr(resp, 'code', None)
                         if isinstance(code, int) and code in (200, 204):
@@ -457,26 +485,6 @@ def validate_with_v2ray_core(uri: str, timeout_s: int = 180) -> Optional[bool]:
             
             # Stop early if one test succeeds
             if ok:
-                # Clean up process and config file before returning success
-                if proc is not None:
-                    try:
-                        proc.terminate()
-                    except Exception:
-                        pass
-                    try:
-                        proc.wait(timeout=0.2)
-                    except Exception:
-                        if hasattr(proc, 'kill'):
-                            proc.kill()
-                    except Exception:
-                        pass
-                    proc = None
-                if tmp_path:
-                    try:
-                        os.unlink(tmp_path)
-                    except Exception:
-                        pass
-                    tmp_path = None
                 break
             
             # Clean up config file for failed attempt
@@ -487,10 +495,10 @@ def validate_with_v2ray_core(uri: str, timeout_s: int = 180) -> Optional[bool]:
                     pass
                 tmp_path = None
             
-            # Sleep between retries (0.2-1.0 seconds) to avoid anti-probe or rate-limit issues
+            # Sleep between retries (0.5-2.0 seconds) to avoid anti-probe or rate-limit issues
             # Only sleep if this isn't the last attempt
             if attempt < max_retries - 1:
-                sleep_duration = random.uniform(0.2, min(1.0, timeout_s / 3))
+                sleep_duration = random.uniform(0.5, min(2.0, timeout_s / 3))
                 time.sleep(sleep_duration)
 
         # Final cleanup
