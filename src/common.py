@@ -139,7 +139,12 @@ def _normalize_vmess(uri: str, parsed) -> str:
         aid = normalize_value(obj.get('aid')) or '0'
         scy = normalize_value(obj.get('scy')) or 'auto'
         net = normalize_value(obj.get('net')) or 'tcp'
-        type_val = normalize_value(obj.get('type')) or 'none'
+        # Normalize type: empty, "---", or None should all become "none"
+        type_val_raw = normalize_value(obj.get('type'))
+        if not type_val_raw or type_val_raw == '---':
+            type_val = 'none'
+        else:
+            type_val = type_val_raw
         host = normalize_value(obj.get('host'))
         path = normalize_value(obj.get('path'))
         def canonicalize_tls(value: str | None) -> str | None:
@@ -153,7 +158,7 @@ def _normalize_vmess(uri: str, parsed) -> str:
         tls = canonicalize_tls(normalize_value(obj.get('tls')))
         sni = normalize_value(obj.get('sni'))
         alpn = normalize_value(obj.get('alpn'))
-        fp = normalize_value(obj.get('fp'))
+        # Note: 'fp' (fingerprint) and 'insecure' are excluded as they're not connection parameters
 
         # Build normalized dict - only include non-empty optional fields
         normalized = {
@@ -181,8 +186,7 @@ def _normalize_vmess(uri: str, parsed) -> str:
             normalized['sni'] = sni
         if alpn:
             normalized['alpn'] = alpn
-        if fp:
-            normalized['fp'] = fp
+        # Note: 'fp' (fingerprint) and 'insecure' are excluded - they're not connection parameters
 
         # Reconstruct VMess JSON
         json_str = json.dumps(normalized, separators=(',', ':'), ensure_ascii=False, sort_keys=True)
@@ -285,8 +289,10 @@ def _normalize_trojan(uri: str, parsed) -> str:
         server_host, server_port = host_port.rsplit(':', 1)
 
         # Connection-defining query parameters
+        # Note: 'fp' (fingerprint) is excluded as it's a TLS fingerprint, not a connection parameter
+        # 'insecure' and 'allowInsecure' are also excluded as they're validation settings, not connection parameters
         connection_params = [
-            'security', 'type', 'path', 'host', 'sni', 'alpn', 'fp', 'pbk', 'sid', 'flow'
+            'security', 'type', 'path', 'host', 'sni', 'alpn', 'pbk', 'sid', 'flow'
         ]
 
         for param in connection_params:
