@@ -359,7 +359,7 @@ def _adaptive_stage3_workers() -> int:
 
 # Stage 3 adaptive workers (maximum performance)
 STAGE3_WORKERS = _env_int('OPENRAY_STAGE3_WORKERS',
-                         max(_adaptive_stage3_workers(), 12), 4, 512)
+                         max(_adaptive_stage3_workers(), 48), 4, 512)
 
 # Limit for number of new URIs processed per run (overridable)
 NEW_URIS_LIMIT_ENABLED = _env_int('OPENRAY_NEW_URIS_LIMIT_ENABLED', 1, 0, 1)
