@@ -2563,6 +2563,12 @@ proxies:
     path: /?ed=2560
     headers:
       Host: l.ayovo.netlib.re
+- name: OpenRay  US-10806
+  type: vless
+  server: 45.82.251.126
+  port: 8880
+  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
+  network: grpc
 - name: OpenRay  NL-4
   type: vless
   server: 51.158.206.96
@@ -2938,19 +2944,6 @@ proxies:
     public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
     short-id: d1579a8745398e34
   client-fingerprint: qq
-- name: OpenRay  NL-173
-  type: vless
-  server: 84.32.188.1
-  port: 443
-  uuid: 983aaabb-27e2-4e15-bbef-b553f23ec8cf
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.google.com
-  reality-opts:
-    public-key: RCV3ZwtxG18Koo5AOj_wD7aefYG4bRnyqRBtiqrqtzE
-    short-id: c38076aa
-  client-fingerprint: chrome
 - name: OpenRay  FI-47
   type: vless
   server: 171.22.114.248
@@ -5758,6 +5751,7 @@ proxy-groups:
   - OpenRay  US-10802
   - OpenRay  US-10804
   - OpenRay  US-10805
+  - OpenRay  US-10806
   - OpenRay  NL-4
   - OpenRay  NL-6
   - OpenRay  NL-7
@@ -5788,7 +5782,6 @@ proxy-groups:
   - OpenRay  NL-170
   - OpenRay  NL-171
   - OpenRay  NL-172
-  - OpenRay  NL-173
   - OpenRay  FI-47
   - OpenRay  FI-56
   - OpenRay  RU-615
@@ -6255,6 +6248,7 @@ proxy-groups:
   - OpenRay  US-10802
   - OpenRay  US-10804
   - OpenRay  US-10805
+  - OpenRay  US-10806
   - OpenRay  NL-4
   - OpenRay  NL-6
   - OpenRay  NL-7
@@ -6285,7 +6279,6 @@ proxy-groups:
   - OpenRay  NL-170
   - OpenRay  NL-171
   - OpenRay  NL-172
-  - OpenRay  NL-173
   - OpenRay  FI-47
   - OpenRay  FI-56
   - OpenRay  RU-615
