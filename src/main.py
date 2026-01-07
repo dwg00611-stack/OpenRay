@@ -68,6 +68,20 @@ def _has_connectivity() -> bool:
     return False
 
 
+def _deduplicate_proxies(proxies: List[str]) -> List[str]:
+    """Deduplicate proxies using OpenRay dedup key, preserving first occurrence."""
+    seen_keys: Set[str] = set()
+    deduplicated: List[str] = []
+    for u in proxies:
+        if not u:
+            continue
+        conn_key = get_openray_dedup_key(u)
+        if conn_key not in seen_keys:
+            seen_keys.add(conn_key)
+            deduplicated.append(u)
+    return deduplicated
+
+
 # Check counts functionality for main.py
 CHECK_COUNTS_FILE = os.path.join(STATE_DIR, 'check_counts.json')
 TOP100_FILE = os.path.join(os.path.dirname(AVAILABLE_FILE), 'main_top100_checked.txt')
@@ -446,18 +460,23 @@ def main() -> int:
                     # Merge: replace subset portion with validated ones
                     alive = kept_subset + alive[len(subset):]
 
-            if len(alive) != len(existing_lines):
+            # Deduplicate alive list before saving to ensure no duplicates
+            alive_deduplicated = _deduplicate_proxies(alive)
+            if len(alive_deduplicated) != len(alive):
+                log(f"Deduplicated alive proxies: {len(alive_deduplicated)} unique out of {len(alive)} total")
+            
+            if len(alive_deduplicated) != len(existing_lines):
                 # Outage-safe guard: avoid purging available file if connectivity appears down
-                if len(existing_lines) > 0 and len(alive) == 0 and not _has_connectivity():
+                if len(existing_lines) > 0 and len(alive_deduplicated) == 0 and not _has_connectivity():
                     log("Suspected Internet outage during revalidation; keeping existing available proxies file unchanged.")
                 else:
                     tmp_path = AVAILABLE_FILE + '.tmp'
                     with open(tmp_path, 'w', encoding='utf-8', errors='ignore') as f:
-                        for u in alive:
+                        for u in alive_deduplicated:
                             f.write(u)
                             f.write('\n')
                     os.replace(tmp_path, AVAILABLE_FILE)
-                    log(f"Revalidated existing available proxies: kept {len(alive)} of {len(existing_lines)}")
+                    log(f"Revalidated existing available proxies: kept {len(alive_deduplicated)} of {len(existing_lines)}")
             else:
                 log("Revalidated existing available proxies: all still reachable")
 
@@ -685,6 +704,20 @@ def main() -> int:
             formatted_to_append.append(new_u)
         append_lines(AVAILABLE_FILE, formatted_to_append)
         log(f"Appended {len(formatted_to_append)} new available proxies to {AVAILABLE_FILE} with formatted remarks")
+        
+        # Deduplicate entire file after appending to ensure no duplicates exist
+        all_lines = [ln.strip() for ln in read_lines(AVAILABLE_FILE) if ln.strip()]
+        all_deduplicated = _deduplicate_proxies(all_lines)
+        if len(all_deduplicated) != len(all_lines):
+            log(f"Deduplicated entire file: {len(all_deduplicated)} unique out of {len(all_lines)} total")
+            tmp_path = AVAILABLE_FILE + '.tmp'
+            with open(tmp_path, 'w', encoding='utf-8', errors='ignore') as f:
+                for u in all_deduplicated:
+                    f.write(u)
+                    f.write('\n')
+            os.replace(tmp_path, AVAILABLE_FILE)
+            log(f"Saved deduplicated file with {len(all_deduplicated)} unique proxies")
+        
         _sync_check_counts_with_available_file()
     else:
         log("No new available proxies to append (all duplicates)")

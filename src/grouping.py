@@ -4,7 +4,7 @@ import os
 from typing import Dict, List, Set
 
 from .constants import AVAILABLE_FILE, KIND_DIR, COUNTRY_DIR
-from .common import log
+from .common import log, get_openray_dedup_key
 from .io_ops import read_lines, write_text_file_atomic
 from .parsing import _extract_our_cc_and_num_from_uri
 
@@ -98,12 +98,27 @@ def regroup_available_by_country() -> None:
         lines = read_lines(AVAILABLE_FILE)
         if not lines:
             return
-        order: List[str] = []
-        groups: Dict[str, List[str]] = {}
+        
+        # Deduplicate before regrouping to ensure no duplicates
+        seen_keys: Set[str] = set()
+        deduplicated_lines: List[str] = []
+        original_count = 0
         for line in lines:
             s = line.strip()
             if not s:
                 continue
+            original_count += 1
+            conn_key = get_openray_dedup_key(s)
+            if conn_key not in seen_keys:
+                seen_keys.add(conn_key)
+                deduplicated_lines.append(s)
+        
+        if len(deduplicated_lines) != original_count:
+            log(f"Deduplicated before regrouping: {len(deduplicated_lines)} unique out of {original_count} total")
+        
+        order: List[str] = []
+        groups: Dict[str, List[str]] = {}
+        for s in deduplicated_lines:
             parsed = _extract_our_cc_and_num_from_uri(s)
             cc = parsed[0] if parsed else 'XX'
             if cc not in groups:
