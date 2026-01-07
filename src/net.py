@@ -411,11 +411,11 @@ def validate_with_v2ray_core(uri: str, timeout_s: int = 10) -> Optional[bool]:
                     pass
                 tmp_path = None
                 if attempt < max_retries - 1:
-                    time.sleep(random.uniform(0.2, 0.5))
+                    time.sleep(random.uniform(2, 5))
                 continue
 
-            # Give it a brief moment to start
-            time.sleep(0.25)
+            # # Give it a brief moment to start
+            # time.sleep(0.25)
             
             # Check if process is still alive
             if proc.poll() is not None:
