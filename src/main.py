@@ -445,13 +445,13 @@ def main() -> int:
                     kept_subset: List[str] = []
 
                     def _core_check_with_retry(u: str) -> Optional[str]:
-                        # For existing proxies, we are more lenient and try up to 5 times
+                        # For existing proxies, we are more lenient and try up to 10 times
                         # to avoid dropping them due to transient issues.
-                        max_attempts = 5
+                        max_attempts = 10
                         for attempt in range(max_attempts):
                             try:
                                 # Slightly longer timeout for existing proxies to be sure
-                                res = validate_with_v2ray_core(u, timeout_s=15)
+                                res = validate_with_v2ray_core(u, timeout_s=30)
                                 if res is True:
                                     return u
                             except Exception:
