@@ -452,7 +452,7 @@ def main() -> int:
                     def _core_check_with_retry(u: str) -> Optional[str]:
                         # For existing proxies, we are more lenient and try up to 5 times
                         # to avoid dropping them due to transient issues.
-                        max_attempts = 3
+                        max_attempts = 1
                         for attempt in range(max_attempts):
                             try:
                                 # Slightly longer timeout for existing proxies to be sure
