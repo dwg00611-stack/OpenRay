@@ -415,21 +415,21 @@ def main() -> int:
 
 
             # Skip Stage 2 for existing proxies - keep all existing proxies without revalidation
-            # with concurrent.futures.ThreadPoolExecutor(max_workers=PING_WORKERS) as pool:
-            #     print("Start Stage 2 for existing proxies")
-            #     for res in progress(pool.map(check_existing, items), total=len(items)):
-            #         if res is not None:
-            #             alive.append(res)
-            #             h = host_map_existing.get(res)
-            #             if h:
-            #                 host_success_run[h] = True
+            with concurrent.futures.ThreadPoolExecutor(max_workers=PING_WORKERS) as pool:
+                print("Start Stage 2 for existing proxies")
+                for res in progress(pool.map(check_existing, items), total=len(items)):
+                    if res is not None:
+                        alive.append(res)
+                        h = host_map_existing.get(res)
+                        if h:
+                            host_success_run[h] = True
             
             # Keep all existing proxies without Stage 2 revalidation
-            for u in existing_lines:
-                alive.append(u)
-                h = host_map_existing.get(u)
-                if h:
-                    host_success_run[h] = True
+            # for u in existing_lines:
+            #     alive.append(u)
+            #     h = host_map_existing.get(u)
+            #     if h:
+            #         host_success_run[h] = True
 
             # Optional Stage 3: validate revalidated existing proxies with V2Ray core (if configured)
             if int(ENABLE_STAGE3) == 1 and alive:
