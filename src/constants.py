@@ -325,7 +325,7 @@ USER_AGENT = (
 )
 
 # Stage 2/3 controls (overridable by environment)
-ENABLE_STAGE2 = _env_int('OPENRAY_ENABLE_STAGE2', 0, 0, 1)  # 0=enable TLS probe after TCP
+ENABLE_STAGE2 = _env_int('OPENRAY_ENABLE_STAGE2', 1, 0, 1)  # 1=enable TLS probe after TCP
 PROBE_TIMEOUT_MS = _env_int('OPENRAY_PROBE_TIMEOUT_MS', min(_opt_probe_timeout, 450), 50, 10000)
 ENABLE_STAGE3 = _env_int('OPENRAY_ENABLE_STAGE3', 1, 0, 1)  # default enable
 # Validate up to many proxies with core by default (can be reduced via env)
