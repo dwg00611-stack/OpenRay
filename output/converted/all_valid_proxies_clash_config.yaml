@@ -4673,19 +4673,6 @@ proxies:
     public-key: wuev4Ui4vOUl43k_O9pB0i6W6IuGvoM13lTBcI_DGkk
     short-id: '0600'
   client-fingerprint: chrome
-- name: OpenRay  NL-266
-  type: vless
-  server: 88.210.9.149
-  port: 8080
-  uuid: c96dba81-e136-403b-b2e4-06404a6db6b1
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  servername: isharing.us
-  reality-opts:
-    public-key: jRReXVS85X0Qm7jovHgNSOyz7BuS7p3iMPE4EfUHRlk
-    short-id: 1ae2fd1e1ace9935
-  client-fingerprint: chrome
 - name: OpenRay  NL-267
   type: vless
   server: 194.87.219.24
@@ -5766,6 +5753,18 @@ proxies:
     public-key: G7LvWyxJWO4f-YKZM-Nf7n3hd3AHfThLX3aOIC2qKXg
     short-id: d6cd
   client-fingerprint: chrome
+- name: OpenRay  KR-54
+  type: vmess
+  server: 43.200.254.208
+  port: 8686
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: end-gfw.com
 - name: OpenRay  JP-343
   type: vmess
   server: n1753598445.74qxv.top
@@ -6006,26 +6005,6 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: OpenRay  JP-421
-  type: vmess
-  server: 103.160.100.140
-  port: 53046
-  uuid: d0bfd418-0575-49a8-de55-38dd7fa72b6f
-  alterId: 0
-  cipher: auto
-  network: none
-- name: OpenRay  JP-422
-  type: vmess
-  server: 54.238.189.22
-  port: 8686
-  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: end-gfw.com
 - name: OpenRay  FR-5
   type: vless
   server: 141.101.120.232
@@ -8789,19 +8768,6 @@ proxies:
     public-key: HLFSR9-jdtfNAwTx3Sf5JKR4cuuhZqUcOlzjPzIsvXQ
     short-id: 9cb177f23e2edd
   client-fingerprint: chrome
-- name: OpenRay  SE-8
-  type: vless
-  server: 62.60.149.108
-  port: 443
-  uuid: eea14931-e72a-47c8-bc00-68069729e91a
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  servername: st.ozone.ru
-  reality-opts:
-    public-key: LR_lcmXBa0mcl4EBhsk52JrEbOjgh9zaxpqiuR2UiW8
-    short-id: 0e4ac0d87e3977e3
-  client-fingerprint: chrome
 - name: OpenRay  BG-3
   type: vless
   server: nasnet-146198073-direct.iranpress.co
@@ -10268,7 +10234,6 @@ proxy-groups:
   - OpenRay  NL-254
   - OpenRay  NL-256
   - OpenRay  NL-265
-  - OpenRay  NL-266
   - OpenRay  NL-267
   - OpenRay  NL-268
   - OpenRay  FI-47
@@ -10354,6 +10319,7 @@ proxy-groups:
   - OpenRay  KR-51
   - OpenRay  KR-52
   - OpenRay  KR-53
+  - OpenRay  KR-54
   - OpenRay  JP-343
   - OpenRay  JP-371
   - OpenRay  JP-372
@@ -10373,8 +10339,6 @@ proxy-groups:
   - OpenRay  JP-418
   - OpenRay  JP-419
   - OpenRay  JP-420
-  - OpenRay  JP-421
-  - OpenRay  JP-422
   - OpenRay  FR-5
   - OpenRay  FR-6
   - OpenRay  FR-11
@@ -10646,7 +10610,6 @@ proxy-groups:
   - OpenRay  IS-1
   - OpenRay  SE-6
   - OpenRay  SE-7
-  - OpenRay  SE-8
   - OpenRay  BG-3
   - OpenRay  SG-1
   - OpenRay  SG-9
@@ -11143,7 +11106,6 @@ proxy-groups:
   - OpenRay  NL-254
   - OpenRay  NL-256
   - OpenRay  NL-265
-  - OpenRay  NL-266
   - OpenRay  NL-267
   - OpenRay  NL-268
   - OpenRay  FI-47
@@ -11229,6 +11191,7 @@ proxy-groups:
   - OpenRay  KR-51
   - OpenRay  KR-52
   - OpenRay  KR-53
+  - OpenRay  KR-54
   - OpenRay  JP-343
   - OpenRay  JP-371
   - OpenRay  JP-372
@@ -11248,8 +11211,6 @@ proxy-groups:
   - OpenRay  JP-418
   - OpenRay  JP-419
   - OpenRay  JP-420
-  - OpenRay  JP-421
-  - OpenRay  JP-422
   - OpenRay  FR-5
   - OpenRay  FR-6
   - OpenRay  FR-11
@@ -11521,7 +11482,6 @@ proxy-groups:
   - OpenRay  IS-1
   - OpenRay  SE-6
   - OpenRay  SE-7
-  - OpenRay  SE-8
   - OpenRay  BG-3
   - OpenRay  SG-1
   - OpenRay  SG-9
