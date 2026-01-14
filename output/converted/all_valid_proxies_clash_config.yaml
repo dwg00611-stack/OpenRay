@@ -3015,18 +3015,6 @@ proxies:
     path: /proxyip=sjc.o00o.ooo
     headers:
       Host: 22.netlib.ccwu.cc
-- name: 'OpenRay Dynamic-11183 #3'
-  type: vless
-  server: blackshadow.dpdns.org
-  port: 443
-  uuid: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
-  network: ws
-  tls: true
-  servername: blackshadow.dpdns.org
-  ws-opts:
-    path: /44.209.52.7-443
-    headers:
-      Host: blackshadow.dpdns.org
 - name: 'OpenRay Dynamic-11186 #2'
   type: vless
   server: tgju.org
@@ -4857,6 +4845,14 @@ proxies:
     path: /?ed=2560
     headers:
       Host: ww20.allxniu.qzz.io
+- name: OpenRay  US-11094
+  type: vmess
+  server: 47.253.197.26
+  port: 12056
+  uuid: dd7be7f1-38ff-45e6-f1e5-b20c2190f527
+  alterId: 0
+  cipher: auto
+  network: none
 - name: OpenRay  NL-4
   type: vless
   server: 51.158.206.96
@@ -6086,7 +6082,7 @@ proxies:
       Host: dv4.789900.xyz
 - name: OpenRay  KR-53
   type: vmess
-  server: 43.201.254.106
+  server: 13.124.129.79
   port: 8686
   uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
   alterId: 0
@@ -9263,6 +9259,19 @@ proxies:
     public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg
     short-id: 8453e5fd9af927
   client-fingerprint: chrome
+- name: OpenRay  TR-8
+  type: vless
+  server: 185.39.204.27
+  port: 443
+  uuid: db1b43f3-7af5-4b5e-b89b-453abcd7680f
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  servername: sun1-90.userapi.com
+  reality-opts:
+    public-key: fsQFwBuDqsc-AylhF85Yu4jI81hn7LkYtNQCT5FFyiw
+    short-id: ''
+  client-fingerprint: chrome
 - name: OpenRay  HK-13
   type: vmess
   server: n1761214918.74qxv.top
@@ -9624,16 +9633,6 @@ proxies:
   port: 8080
   uuid: 2a169761-88b9-410d-8d8c-6f2f9ca73b73
   network: tcp
-- name: OpenRay  IR-31
-  type: vless
-  server: 45.131.4.11
-  port: 80
-  uuid: 8b478ea5-826d-45b5-bea2-4bdacf71a0e6
-  network: ws
-  ws-opts:
-    path: /kvgxxTpIKowHI0ZGTE
-    headers:
-      Host: dry-bonus-2744.jenewed462.workers.dev
 - name: OpenRay  AM-1
   type: vless
   server: api.dark-coffe.com
@@ -10436,7 +10435,6 @@ proxy-groups:
   - 'OpenRay Dynamic-11182 #2'
   - 'OpenRay Dynamic-11183 #2'
   - 'OpenRay Dynamic-11184 #2'
-  - 'OpenRay Dynamic-11183 #3'
   - 'OpenRay Dynamic-11186 #2'
   - OpenRay  DE-2600
   - OpenRay  DE-2971
@@ -10603,6 +10601,7 @@ proxy-groups:
   - OpenRay  US-11091
   - OpenRay  US-11092
   - OpenRay  US-11093
+  - OpenRay  US-11094
   - OpenRay  NL-4
   - OpenRay  NL-6
   - OpenRay  NL-7
@@ -11004,6 +11003,7 @@ proxy-groups:
   - OpenRay  TR-5
   - OpenRay  TR-6
   - OpenRay  TR-7
+  - OpenRay  TR-8
   - OpenRay  HK-13
   - OpenRay  HK-19
   - OpenRay  HK-36
@@ -11034,7 +11034,6 @@ proxy-groups:
   - OpenRay  IR-28
   - OpenRay  IR-29
   - OpenRay  IR-30
-  - OpenRay  IR-31
   - OpenRay  AM-1
   - OpenRay  AM-2
   - OpenRay  AM-4
@@ -11333,7 +11332,6 @@ proxy-groups:
   - 'OpenRay Dynamic-11182 #2'
   - 'OpenRay Dynamic-11183 #2'
   - 'OpenRay Dynamic-11184 #2'
-  - 'OpenRay Dynamic-11183 #3'
   - 'OpenRay Dynamic-11186 #2'
   - OpenRay  DE-2600
   - OpenRay  DE-2971
@@ -11500,6 +11498,7 @@ proxy-groups:
   - OpenRay  US-11091
   - OpenRay  US-11092
   - OpenRay  US-11093
+  - OpenRay  US-11094
   - OpenRay  NL-4
   - OpenRay  NL-6
   - OpenRay  NL-7
@@ -11901,6 +11900,7 @@ proxy-groups:
   - OpenRay  TR-5
   - OpenRay  TR-6
   - OpenRay  TR-7
+  - OpenRay  TR-8
   - OpenRay  HK-13
   - OpenRay  HK-19
   - OpenRay  HK-36
@@ -11931,7 +11931,6 @@ proxy-groups:
   - OpenRay  IR-28
   - OpenRay  IR-29
   - OpenRay  IR-30
-  - OpenRay  IR-31
   - OpenRay  AM-1
   - OpenRay  AM-2
   - OpenRay  AM-4
