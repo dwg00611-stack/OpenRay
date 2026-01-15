@@ -5862,7 +5862,7 @@ proxies:
   client-fingerprint: chrome
 - name: OpenRay  JP-422
   type: vmess
-  server: 18.181.175.253
+  server: 3.112.45.50
   port: 8686
   uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
   alterId: 0
@@ -8652,18 +8652,6 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   servername: nasnet-146198073-direct.iranpress.co
-- name: OpenRay  SG-1
-  type: vless
-  server: 178.239.123.216
-  port: 24443
-  uuid: aa7f42cc-616f-4550-9a87-4b85bb409121
-  network: ws
-  tls: true
-  servername: vless3.datatestvless.click
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vless3.datatestvless.click
 - name: OpenRay  SG-9
   type: vless
   server: 52.77.208.165
@@ -8999,14 +8987,6 @@ proxies:
   alterId: 0
   cipher: auto
   network: none
-- name: OpenRay  HK-75
-  type: vmess
-  server: 8.218.208.153
-  port: 55976
-  uuid: c6d17e35-b57c-42b1-e8a4-5d05effc0d23
-  alterId: 0
-  cipher: auto
-  network: none
 - name: OpenRay  HK-78
   type: vmess
   server: 8.218.45.250
@@ -9021,14 +9001,6 @@ proxies:
     path: /
     headers:
       Host: n1761214905.wpg27.xyz
-- name: OpenRay  HK-80
-  type: vmess
-  server: 8.218.208.153
-  port: 55976
-  uuid: c6d17e35-b57c-42b1-e8a4-5d05effc0d23
-  alterId: 0
-  cipher: auto
-  network: tcp
 - name: OpenRay  HK-81
   type: vmess
   server: n1761214915.mv7wh.tech
@@ -9388,6 +9360,19 @@ proxies:
   reality-opts:
     public-key: vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng
     short-id: 69a2
+  client-fingerprint: chrome
+- name: OpenRay  KZ-12
+  type: vless
+  server: 91.217.10.166
+  port: 9443
+  uuid: fc596c18-ddc1-46b7-a6f3-9f336845b4bd
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  servername: api.avito.ru
+  reality-opts:
+    public-key: WvNaAxI0W__qfUKbtysH4IwF155YENlv3PG6crCmPkA
+    short-id: ''
   client-fingerprint: chrome
 - name: OpenRay  AT-1
   type: vless
@@ -10397,7 +10382,6 @@ proxy-groups:
   - OpenRay  SE-7
   - OpenRay  SE-8
   - OpenRay  BG-3
-  - OpenRay  SG-1
   - OpenRay  SG-9
   - OpenRay  SG-13
   - OpenRay  SG-15
@@ -10426,9 +10410,7 @@ proxy-groups:
   - OpenRay  HK-71
   - OpenRay  HK-73
   - OpenRay  HK-74
-  - OpenRay  HK-75
   - OpenRay  HK-78
-  - OpenRay  HK-80
   - OpenRay  HK-81
   - OpenRay  HK-82
   - OpenRay  HK-83
@@ -10459,6 +10441,7 @@ proxy-groups:
   - OpenRay  IL-4
   - OpenRay  KZ-9
   - OpenRay  KZ-11
+  - OpenRay  KZ-12
   - OpenRay  AT-1
   - OpenRay  AT-2
   - OpenRay  AT-3
@@ -11253,7 +11236,6 @@ proxy-groups:
   - OpenRay  SE-7
   - OpenRay  SE-8
   - OpenRay  BG-3
-  - OpenRay  SG-1
   - OpenRay  SG-9
   - OpenRay  SG-13
   - OpenRay  SG-15
@@ -11282,9 +11264,7 @@ proxy-groups:
   - OpenRay  HK-71
   - OpenRay  HK-73
   - OpenRay  HK-74
-  - OpenRay  HK-75
   - OpenRay  HK-78
-  - OpenRay  HK-80
   - OpenRay  HK-81
   - OpenRay  HK-82
   - OpenRay  HK-83
@@ -11315,6 +11295,7 @@ proxy-groups:
   - OpenRay  IL-4
   - OpenRay  KZ-9
   - OpenRay  KZ-11
+  - OpenRay  KZ-12
   - OpenRay  AT-1
   - OpenRay  AT-2
   - OpenRay  AT-3
