@@ -3365,6 +3365,12 @@ proxies:
     public-key: J1HIxQSniHBlaSUXTLTWyUUpiaeyE8MWmA2evyFZbFQ
     short-id: 9d32c1
   client-fingerprint: chrome
+- name: OpenRay  DE-3508
+  type: vless
+  server: 91.107.130.76
+  port: 41647
+  uuid: e50fa46f-20c6-4c0d-fa0e-d9ffd92df36f
+  network: grpc
 - name: OpenRay  US-2325
   type: vless
   server: 104.17.134.117
@@ -5249,32 +5255,6 @@ proxies:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
     short-id: ''
   client-fingerprint: chrome
-- name: OpenRay  RU-1002
-  type: vless
-  server: 84.201.164.23
-  port: 443
-  uuid: 07095332-84b5-4d94-a259-9a0d13ba108f
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  servername: cdnv-img.perekrestok.ru
-  reality-opts:
-    public-key: 6MBskgCzwyJi9_G1EnoUJOj8ZHU8HkvhIchQ3OIl1mQ
-    short-id: c66077b9e0825624
-  client-fingerprint: chrome
-- name: OpenRay  RU-1004
-  type: vless
-  server: 51.250.16.78
-  port: 443
-  uuid: 07095332-84b5-4d94-a259-9a0d13ba108f
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.yandex.ru
-  reality-opts:
-    public-key: MS65bqOY_SgSw67G9gj5a_5v6GzaVRlC1EDSdYEy1lg
-    short-id: f7c0a11edbdb07f2
-  client-fingerprint: chrome
 - name: OpenRay  RU-1006
   type: vless
   server: 217.16.20.134
@@ -5351,19 +5331,6 @@ proxies:
     public-key: BTkKaFt2xac4xAHn3EXrBKV0d8ItHSfciMFnxg57BGA
     short-id: fd88bd27db4cc661
   client-fingerprint: random
-- name: OpenRay  RU-1032
-  type: vless
-  server: ru2.catconnect.ru
-  port: 8443
-  uuid: 00e3aa57-aad0-4b7c-90ef-8fbdc2175ddb
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  servername: ozon.ru
-  reality-opts:
-    public-key: 1L89euUftEWspViGKdG7Ivwj-k1ySPROZEfZWaL5Hhw
-    short-id: 9c9e61aa
-  client-fingerprint: randomized
 - name: OpenRay  KR-39
   type: vmess
   server: seoul03.zgjok.com
@@ -5558,6 +5525,18 @@ proxies:
     public-key: PPZbDAYSwCYnPCF8BxguTFfAAZTnLnzpsHePCkGZYxo
     short-id: '34'
   client-fingerprint: chrome
+- name: OpenRay  KR-55
+  type: vmess
+  server: 43.202.48.124
+  port: 8686
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: end-gfw.com
 - name: OpenRay  JP-343
   type: vmess
   server: n1753598445.74qxv.top
@@ -5804,7 +5783,7 @@ proxies:
   client-fingerprint: chrome
 - name: OpenRay  JP-422
   type: vmess
-  server: 52.68.192.218
+  server: 18.183.220.83
   port: 8686
   uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
   alterId: 0
@@ -7262,6 +7241,16 @@ proxies:
 - name: OpenRay  FR-374
   type: vless
   server: 141.101.121.43
+  port: 8880
+  uuid: 8a13ed66-d70a-4d32-8052-cbd8e0c5f7f4
+  network: ws
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/HK
+    headers:
+      Host: joss.gvpn2.web.id
+- name: OpenRay  FR-375
+  type: vless
+  server: 141.101.121.177
   port: 8880
   uuid: 8a13ed66-d70a-4d32-8052-cbd8e0c5f7f4
   network: ws
@@ -8986,6 +8975,12 @@ proxies:
     path: /?ed=2560
     headers:
       Host: sg.aniuge.qzz.io
+- name: OpenRay  HK-85
+  type: vless
+  server: 43.161.253.78
+  port: 9527
+  uuid: d4a23188-85b0-4b46-b84b-f1d36d66c03e
+  network: tcp
 - name: OpenRay  CH-2
   type: vless
   server: 208.69.78.5
@@ -9222,19 +9217,6 @@ proxies:
   reality-opts:
     public-key: KX1PfrASrflF1Ra1TcjujnOAK-4sPiEVDSfAPS1DAl8
     short-id: e33013f4
-  client-fingerprint: chrome
-- name: OpenRay  LV-15
-  type: vless
-  server: 62.192.174.198
-  port: 25262
-  uuid: b468008c-c1dd-4ab0-9a6e-85bd3e022ef8
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  servername: sba.yandex.net
-  reality-opts:
-    public-key: HkLK62c3szw51gYtORRnPlO0v6kxOSd_aCd0J4rTKzo
-    short-id: 9792f748
   client-fingerprint: chrome
 - name: OpenRay  LV-16
   type: vless
@@ -9808,6 +9790,7 @@ proxy-groups:
   - OpenRay  DE-3505
   - OpenRay  DE-3506
   - OpenRay  DE-3507
+  - OpenRay  DE-3508
   - OpenRay  US-2325
   - OpenRay  US-2737
   - OpenRay  US-2744
@@ -9970,15 +9953,12 @@ proxy-groups:
   - OpenRay  RU-981
   - OpenRay  RU-996
   - OpenRay  RU-999
-  - OpenRay  RU-1002
-  - OpenRay  RU-1004
   - OpenRay  RU-1006
   - OpenRay  RU-1013
   - OpenRay  RU-1014
   - OpenRay  RU-1029
   - OpenRay  RU-1030
   - OpenRay  RU-1031
-  - OpenRay  RU-1032
   - OpenRay  KR-39
   - OpenRay  KR-40
   - OpenRay  KR-41
@@ -9994,6 +9974,7 @@ proxy-groups:
   - OpenRay  KR-52
   - OpenRay  KR-53
   - OpenRay  KR-54
+  - OpenRay  KR-55
   - OpenRay  JP-343
   - OpenRay  JP-371
   - OpenRay  JP-372
@@ -10157,6 +10138,7 @@ proxy-groups:
   - OpenRay  FR-371
   - OpenRay  FR-372
   - OpenRay  FR-374
+  - OpenRay  FR-375
   - OpenRay  PL-1
   - OpenRay  PL-2
   - OpenRay  PL-3
@@ -10320,6 +10302,7 @@ proxy-groups:
   - OpenRay  HK-82
   - OpenRay  HK-83
   - OpenRay  HK-84
+  - OpenRay  HK-85
   - OpenRay  CH-2
   - OpenRay  CH-4
   - OpenRay  IR-25
@@ -10340,7 +10323,6 @@ proxy-groups:
   - OpenRay  LV-11
   - OpenRay  LV-12
   - OpenRay  LV-14
-  - OpenRay  LV-15
   - OpenRay  LV-16
   - OpenRay  IL-4
   - OpenRay  KZ-9
@@ -10655,6 +10637,7 @@ proxy-groups:
   - OpenRay  DE-3505
   - OpenRay  DE-3506
   - OpenRay  DE-3507
+  - OpenRay  DE-3508
   - OpenRay  US-2325
   - OpenRay  US-2737
   - OpenRay  US-2744
@@ -10817,15 +10800,12 @@ proxy-groups:
   - OpenRay  RU-981
   - OpenRay  RU-996
   - OpenRay  RU-999
-  - OpenRay  RU-1002
-  - OpenRay  RU-1004
   - OpenRay  RU-1006
   - OpenRay  RU-1013
   - OpenRay  RU-1014
   - OpenRay  RU-1029
   - OpenRay  RU-1030
   - OpenRay  RU-1031
-  - OpenRay  RU-1032
   - OpenRay  KR-39
   - OpenRay  KR-40
   - OpenRay  KR-41
@@ -10841,6 +10821,7 @@ proxy-groups:
   - OpenRay  KR-52
   - OpenRay  KR-53
   - OpenRay  KR-54
+  - OpenRay  KR-55
   - OpenRay  JP-343
   - OpenRay  JP-371
   - OpenRay  JP-372
@@ -11004,6 +10985,7 @@ proxy-groups:
   - OpenRay  FR-371
   - OpenRay  FR-372
   - OpenRay  FR-374
+  - OpenRay  FR-375
   - OpenRay  PL-1
   - OpenRay  PL-2
   - OpenRay  PL-3
@@ -11167,6 +11149,7 @@ proxy-groups:
   - OpenRay  HK-82
   - OpenRay  HK-83
   - OpenRay  HK-84
+  - OpenRay  HK-85
   - OpenRay  CH-2
   - OpenRay  CH-4
   - OpenRay  IR-25
@@ -11187,7 +11170,6 @@ proxy-groups:
   - OpenRay  LV-11
   - OpenRay  LV-12
   - OpenRay  LV-14
-  - OpenRay  LV-15
   - OpenRay  LV-16
   - OpenRay  IL-4
   - OpenRay  KZ-9
