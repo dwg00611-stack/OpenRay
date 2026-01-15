@@ -2734,6 +2734,18 @@ proxies:
     path: /asdfghjkjhgfrsg?ed=2048
     headers:
       Host: filishia.freedomefortecme.com
+- name: 'OpenRay Dynamic-6 #4'
+  type: vmess
+  server: gtm1.ktmwan.net
+  port: 12901
+  uuid: 1ec49aaf-2990-4c7b-a45c-d190e6ea5438
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: gtm1.ktmwan.net
 - name: OpenRay  DE-2600
   type: vless
   server: 85.195.101.122
@@ -3417,6 +3429,20 @@ proxies:
     path: /asdfghjkjhgfrsg?ed=2048
     headers:
       Host: filishia.freedomefortecme.com
+- name: OpenRay  DE-3510
+  type: vmess
+  server: frankfurt01.zgjok.com
+  port: 443
+  uuid: b71579b1-6593-426d-90ac-f002fa96ade1
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  servername: frankfurt01.zgjok.com
+  ws-opts:
+    path: /
+    headers:
+      Host: frankfurt01.zgjok.com
 - name: OpenRay  US-2325
   type: vless
   server: 104.17.134.117
@@ -4879,18 +4905,6 @@ proxies:
     path: /?ed=2560
     headers:
       Host: all.aniuge.qzz.io
-- name: OpenRay  NL-273
-  type: vless
-  server: 194.117.64.91
-  port: 1501
-  uuid: fee3426d-a866-4c0c-ab39-196956df35ef
-  network: tcp
-  tls: true
-  servername: docker.com
-  reality-opts:
-    public-key: BMlkiqYu98c4-u_7G1c9W744OA8A9yi-i75A9VlDczc
-    short-id: ed87c1018eed
-  client-fingerprint: chrome
 - name: OpenRay  FI-47
   type: vless
   server: 171.22.114.248
@@ -5647,7 +5661,7 @@ proxies:
   client-fingerprint: safari
 - name: OpenRay  KR-56
   type: vmess
-  server: 43.201.35.135
+  server: 54.180.140.217
   port: 8686
   uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
   alterId: 0
@@ -5888,6 +5902,18 @@ proxies:
     public-key: R2gKMF0Tetlnesc1pPkZH9NaOeehw-f5_U9JKG_cLjU
     short-id: c588
   client-fingerprint: chrome
+- name: OpenRay  JP-422
+  type: vmess
+  server: 13.192.183.1
+  port: 8686
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: end-gfw.com
 - name: OpenRay  FR-5
   type: vless
   server: 141.101.120.232
@@ -9794,6 +9820,7 @@ proxy-groups:
   - OpenRay Dynamic-14
   - 'OpenRay Dynamic-6 #3'
   - 'OpenRay Dynamic-11198 #2'
+  - 'OpenRay Dynamic-6 #4'
   - OpenRay  DE-2600
   - OpenRay  DE-2971
   - OpenRay  DE-2975
@@ -9857,6 +9884,7 @@ proxy-groups:
   - OpenRay  DE-3507
   - OpenRay  DE-3508
   - OpenRay  DE-3509
+  - OpenRay  DE-3510
   - OpenRay  US-2325
   - OpenRay  US-2737
   - OpenRay  US-2744
@@ -9985,7 +10013,6 @@ proxy-groups:
   - OpenRay  NL-269
   - OpenRay  NL-270
   - OpenRay  NL-272
-  - OpenRay  NL-273
   - OpenRay  FI-47
   - OpenRay  FI-56
   - OpenRay  FI-57
@@ -10065,6 +10092,7 @@ proxy-groups:
   - OpenRay  JP-419
   - OpenRay  JP-420
   - OpenRay  JP-421
+  - OpenRay  JP-422
   - OpenRay  FR-5
   - OpenRay  FR-6
   - OpenRay  FR-11
@@ -10647,6 +10675,7 @@ proxy-groups:
   - OpenRay Dynamic-14
   - 'OpenRay Dynamic-6 #3'
   - 'OpenRay Dynamic-11198 #2'
+  - 'OpenRay Dynamic-6 #4'
   - OpenRay  DE-2600
   - OpenRay  DE-2971
   - OpenRay  DE-2975
@@ -10710,6 +10739,7 @@ proxy-groups:
   - OpenRay  DE-3507
   - OpenRay  DE-3508
   - OpenRay  DE-3509
+  - OpenRay  DE-3510
   - OpenRay  US-2325
   - OpenRay  US-2737
   - OpenRay  US-2744
@@ -10838,7 +10868,6 @@ proxy-groups:
   - OpenRay  NL-269
   - OpenRay  NL-270
   - OpenRay  NL-272
-  - OpenRay  NL-273
   - OpenRay  FI-47
   - OpenRay  FI-56
   - OpenRay  FI-57
@@ -10918,6 +10947,7 @@ proxy-groups:
   - OpenRay  JP-419
   - OpenRay  JP-420
   - OpenRay  JP-421
+  - OpenRay  JP-422
   - OpenRay  FR-5
   - OpenRay  FR-6
   - OpenRay  FR-11
