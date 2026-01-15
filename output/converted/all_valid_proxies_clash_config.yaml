@@ -3276,18 +3276,6 @@ proxies:
     public-key: 8OsJx6xuHcpL_5e1w0U4bMBa-icevDgvvzNwPwZbORQ
     short-id: 5540e44a53c3d01c
   client-fingerprint: chrome
-- name: OpenRay  DE-3499
-  type: vless
-  server: ftp.spaceofcars.org
-  port: 443
-  uuid: 93034045-9669-4470-802f-63b8a256e9f9
-  network: ws
-  tls: true
-  servername: ftp.spaceofcars.org
-  ws-opts:
-    path: /luxvpn
-    headers:
-      Host: ftp.spaceofcars.org
 - name: OpenRay  DE-3500
   type: vless
   server: 193.233.254.154
@@ -3314,18 +3302,6 @@ proxies:
     public-key: cZsRvk8pr8wfYiX1CNxdDjR38tow3HuL6IpBj8P82l8
     short-id: e18eda8458cab0d7
   client-fingerprint: chrome
-- name: OpenRay  DE-3504
-  type: vless
-  server: 87.174.244.251
-  port: 443
-  uuid: 93034045-9669-4470-802f-63b8a256e9f9
-  network: ws
-  tls: true
-  servername: ftp.spaceofcars.org
-  ws-opts:
-    path: /luxvpn
-    headers:
-      Host: ftp.spaceofcars.org
 - name: OpenRay  DE-3505
   type: vless
   server: 57.129.49.1
@@ -4441,6 +4417,19 @@ proxies:
     path: /?ed=2560
     headers:
       Host: all.aniuge.qzz.io
+- name: OpenRay  US-11104
+  type: vless
+  server: sakura.bunnywaffle.org
+  port: 26978
+  uuid: 9042affd-0ad3-4014-adbc-e52f00891ea2
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  servername: tesla.com
+  reality-opts:
+    public-key: n2w4hj7Q7wN6P21LSJJwIPitfYZbwWh5a2seJHH58SE
+    short-id: 28bf
+  client-fingerprint: chrome
 - name: OpenRay  NL-4
   type: vless
   server: 51.158.206.96
@@ -4719,18 +4708,6 @@ proxies:
   reality-opts:
     public-key: 5XB_N3ATilH-6tp_MXht-84_y5YaJnx_Z7MbuY2otHE
     short-id: aa7e96542880027a
-  client-fingerprint: chrome
-- name: OpenRay  NL-265
-  type: vless
-  server: 194.87.219.24
-  port: 28723
-  uuid: 26c4884d-e265-4507-94bf-83f6a144fedc
-  network: grpc
-  tls: true
-  servername: dev.max.ru
-  reality-opts:
-    public-key: wuev4Ui4vOUl43k_O9pB0i6W6IuGvoM13lTBcI_DGkk
-    short-id: '0600'
   client-fingerprint: chrome
 - name: OpenRay  NL-267
   type: vless
@@ -5527,7 +5504,7 @@ proxies:
   client-fingerprint: chrome
 - name: OpenRay  KR-55
   type: vmess
-  server: 43.202.48.124
+  server: 43.203.206.42
   port: 8686
   uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
   alterId: 0
@@ -5783,7 +5760,7 @@ proxies:
   client-fingerprint: chrome
 - name: OpenRay  JP-422
   type: vmess
-  server: 18.183.220.83
+  server: 52.193.5.161
   port: 8686
   uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
   alterId: 0
@@ -8761,20 +8738,6 @@ proxies:
     path: /
     headers:
       Host: n1761214918.74qxv.top
-- name: OpenRay  HK-19
-  type: vmess
-  server: n1761214919.mv7wh.tech
-  port: 443
-  uuid: c592f040-faff-47dc-a464-9bccf2dd4e7b
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  servername: n1761214919.mv7wh.tech
-  ws-opts:
-    path: /
-    headers:
-      Host: n1761214919.mv7wh.tech
 - name: OpenRay  HK-36
   type: vless
   server: 38.22.92.72
@@ -9783,10 +9746,8 @@ proxy-groups:
   - OpenRay  DE-3459
   - OpenRay  DE-3477
   - OpenRay  DE-3498
-  - OpenRay  DE-3499
   - OpenRay  DE-3500
   - OpenRay  DE-3503
-  - OpenRay  DE-3504
   - OpenRay  DE-3505
   - OpenRay  DE-3506
   - OpenRay  DE-3507
@@ -9888,6 +9849,7 @@ proxy-groups:
   - OpenRay  US-11099
   - OpenRay  US-11102
   - OpenRay  US-11103
+  - OpenRay  US-11104
   - OpenRay  NL-4
   - OpenRay  NL-6
   - OpenRay  NL-7
@@ -9910,7 +9872,6 @@ proxy-groups:
   - OpenRay  NL-248
   - OpenRay  NL-249
   - OpenRay  NL-254
-  - OpenRay  NL-265
   - OpenRay  NL-267
   - OpenRay  NL-268
   - OpenRay  NL-269
@@ -10285,7 +10246,6 @@ proxy-groups:
   - OpenRay  TR-5
   - OpenRay  TR-6
   - OpenRay  HK-13
-  - OpenRay  HK-19
   - OpenRay  HK-36
   - OpenRay  HK-43
   - OpenRay  HK-47
@@ -10630,10 +10590,8 @@ proxy-groups:
   - OpenRay  DE-3459
   - OpenRay  DE-3477
   - OpenRay  DE-3498
-  - OpenRay  DE-3499
   - OpenRay  DE-3500
   - OpenRay  DE-3503
-  - OpenRay  DE-3504
   - OpenRay  DE-3505
   - OpenRay  DE-3506
   - OpenRay  DE-3507
@@ -10735,6 +10693,7 @@ proxy-groups:
   - OpenRay  US-11099
   - OpenRay  US-11102
   - OpenRay  US-11103
+  - OpenRay  US-11104
   - OpenRay  NL-4
   - OpenRay  NL-6
   - OpenRay  NL-7
@@ -10757,7 +10716,6 @@ proxy-groups:
   - OpenRay  NL-248
   - OpenRay  NL-249
   - OpenRay  NL-254
-  - OpenRay  NL-265
   - OpenRay  NL-267
   - OpenRay  NL-268
   - OpenRay  NL-269
@@ -11132,7 +11090,6 @@ proxy-groups:
   - OpenRay  TR-5
   - OpenRay  TR-6
   - OpenRay  HK-13
-  - OpenRay  HK-19
   - OpenRay  HK-36
   - OpenRay  HK-43
   - OpenRay  HK-47
