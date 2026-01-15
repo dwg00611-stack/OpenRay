@@ -818,6 +818,16 @@ proxies:
     path: /
     headers:
       Host: private.digikala.lat
+- name: OpenRay  CA-11196
+  type: vless
+  server: 104.17.254.236
+  port: 80
+  uuid: f929cc78-e2a1-4ce3-8051-3e9538405144
+  network: ws
+  ws-opts:
+    path: /@WireXnet?ed=2048
+    headers:
+      Host: netherlands.padoamu.workers.dev
 - name: OpenRay Dynamic-95
   type: vless
   server: www.udemy.com
@@ -5532,18 +5542,6 @@ proxies:
     public-key: PPZbDAYSwCYnPCF8BxguTFfAAZTnLnzpsHePCkGZYxo
     short-id: '34'
   client-fingerprint: chrome
-- name: OpenRay  KR-55
-  type: vmess
-  server: 13.125.176.95
-  port: 8686
-  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: end-gfw.com
 - name: OpenRay  JP-343
   type: vmess
   server: n1753598445.74qxv.top
@@ -5790,7 +5788,7 @@ proxies:
   client-fingerprint: chrome
 - name: OpenRay  JP-422
   type: vmess
-  server: 18.179.45.138
+  server: 13.230.161.122
   port: 8686
   uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
   alterId: 0
@@ -9568,6 +9566,7 @@ proxy-groups:
   - OpenRay  CA-11193
   - OpenRay  CA-11194
   - OpenRay  CA-11195
+  - OpenRay  CA-11196
   - OpenRay Dynamic-95
   - OpenRay Dynamic-118
   - OpenRay Dynamic-184
@@ -9970,7 +9969,6 @@ proxy-groups:
   - OpenRay  KR-52
   - OpenRay  KR-53
   - OpenRay  KR-54
-  - OpenRay  KR-55
   - OpenRay  JP-343
   - OpenRay  JP-371
   - OpenRay  JP-372
@@ -10413,6 +10411,7 @@ proxy-groups:
   - OpenRay  CA-11193
   - OpenRay  CA-11194
   - OpenRay  CA-11195
+  - OpenRay  CA-11196
   - OpenRay Dynamic-95
   - OpenRay Dynamic-118
   - OpenRay Dynamic-184
@@ -10815,7 +10814,6 @@ proxy-groups:
   - OpenRay  KR-52
   - OpenRay  KR-53
   - OpenRay  KR-54
-  - OpenRay  KR-55
   - OpenRay  JP-343
   - OpenRay  JP-371
   - OpenRay  JP-372
