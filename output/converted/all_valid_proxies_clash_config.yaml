@@ -2584,6 +2584,18 @@ proxies:
     path: /168.138.185.234:443
     headers:
       Host: vermilion.qzz.io
+- name: OpenRay Dynamic-11211
+  type: vmess
+  server: vvvbghyu.922922.shop
+  port: 80
+  uuid: bce0c7cb-08d1-46a7-b77b-7bff8b46252f
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /RkUUbqhA9GJZBROjL3Q5vTymr
+    headers:
+      Host: vvVBgHyu.922922.SHoP
 - name: OpenRay  DE-2600
   type: vless
   server: 85.195.101.122
@@ -3285,34 +3297,20 @@ proxies:
     path: /
     headers:
       Host: frankfurt01.zgjok.com
-- name: OpenRay  DE-3513
+- name: OpenRay  DE-3512
   type: vmess
-  server: 5.83.150.108
-  port: 29578
-  uuid: fa8f8911-2e9b-494e-9a8d-f80239ee2214
+  server: frankfurt01.zgjok.com
+  port: 443
+  uuid: b71579b1-6593-426d-90ac-f002fa96ade1
   alterId: 0
   cipher: auto
   network: ws
   tls: true
-  servername: imafake.locker
+  servername: frankfurt01.zgjok.com
   ws-opts:
-    path: /speedtest
+    path: /
     headers:
-      Host: imafake.locker
-- name: OpenRay  DE-3514
-  type: vmess
-  server: 5.83.150.108
-  port: 29578
-  uuid: 4ec66d81-9565-4d8e-ae58-2bacfde95f48
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  servername: imafake.locker
-  ws-opts:
-    path: /speedtest
-    headers:
-      Host: imafake.locker
+      Host: frankfurt01.zgjok.com
 - name: OpenRay  US-2325
   type: vless
   server: 104.17.134.117
@@ -5567,7 +5565,7 @@ proxies:
       Host: dv4.789900.xyz
 - name: OpenRay  KR-56
   type: vmess
-  server: 3.36.108.167
+  server: 13.209.10.184
   port: 8686
   uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
   alterId: 0
@@ -5808,6 +5806,18 @@ proxies:
     public-key: R2gKMF0Tetlnesc1pPkZH9NaOeehw-f5_U9JKG_cLjU
     short-id: c588
   client-fingerprint: chrome
+- name: OpenRay  JP-422
+  type: vmess
+  server: 13.114.127.182
+  port: 8686
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: end-gfw.com
 - name: OpenRay  FR-5
   type: vless
   server: 141.101.120.232
@@ -8813,6 +8823,19 @@ proxies:
   alterId: 0
   cipher: auto
   network: raw
+- name: OpenRay  TR-8
+  type: vless
+  server: 185.39.204.27
+  port: 443
+  uuid: 2a3a16fe-9e53-46b7-83e1-e6590898f548
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  servername: sun1-90.userapi.com
+  reality-opts:
+    public-key: fsQFwBuDqsc-AylhF85Yu4jI81hn7LkYtNQCT5FFyiw
+    short-id: ''
+  client-fingerprint: chrome
 - name: OpenRay  HK-13
   type: vmess
   server: n1761214918.74qxv.top
@@ -9814,6 +9837,7 @@ proxy-groups:
   - 'OpenRay Dynamic-11198 #2'
   - 'OpenRay Dynamic-11199 #2'
   - OpenRay Dynamic-11203
+  - OpenRay Dynamic-11211
   - OpenRay  DE-2600
   - OpenRay  DE-2971
   - OpenRay  DE-2975
@@ -9878,8 +9902,7 @@ proxy-groups:
   - OpenRay  DE-3508
   - OpenRay  DE-3510
   - OpenRay  DE-3511
-  - OpenRay  DE-3513
-  - OpenRay  DE-3514
+  - OpenRay  DE-3512
   - OpenRay  US-2325
   - OpenRay  US-2737
   - OpenRay  US-2744
@@ -10091,6 +10114,7 @@ proxy-groups:
   - OpenRay  JP-419
   - OpenRay  JP-420
   - OpenRay  JP-421
+  - OpenRay  JP-422
   - OpenRay  FR-5
   - OpenRay  FR-6
   - OpenRay  FR-11
@@ -10385,6 +10409,7 @@ proxy-groups:
   - OpenRay  TR-4
   - OpenRay  TR-5
   - OpenRay  TR-6
+  - OpenRay  TR-8
   - OpenRay  HK-13
   - OpenRay  HK-36
   - OpenRay  HK-43
@@ -10671,6 +10696,7 @@ proxy-groups:
   - 'OpenRay Dynamic-11198 #2'
   - 'OpenRay Dynamic-11199 #2'
   - OpenRay Dynamic-11203
+  - OpenRay Dynamic-11211
   - OpenRay  DE-2600
   - OpenRay  DE-2971
   - OpenRay  DE-2975
@@ -10735,8 +10761,7 @@ proxy-groups:
   - OpenRay  DE-3508
   - OpenRay  DE-3510
   - OpenRay  DE-3511
-  - OpenRay  DE-3513
-  - OpenRay  DE-3514
+  - OpenRay  DE-3512
   - OpenRay  US-2325
   - OpenRay  US-2737
   - OpenRay  US-2744
@@ -10948,6 +10973,7 @@ proxy-groups:
   - OpenRay  JP-419
   - OpenRay  JP-420
   - OpenRay  JP-421
+  - OpenRay  JP-422
   - OpenRay  FR-5
   - OpenRay  FR-6
   - OpenRay  FR-11
@@ -11242,6 +11268,7 @@ proxy-groups:
   - OpenRay  TR-4
   - OpenRay  TR-5
   - OpenRay  TR-6
+  - OpenRay  TR-8
   - OpenRay  HK-13
   - OpenRay  HK-36
   - OpenRay  HK-43
