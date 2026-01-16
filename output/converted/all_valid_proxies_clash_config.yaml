@@ -581,16 +581,6 @@ proxies:
     path: /?ed=2560
     headers:
       Host: tw20.aniusnippets.qzz.io
-- name: OpenRay  CA-11065
-  type: vless
-  server: 104.18.14.19
-  port: 2095
-  uuid: 13ed4a8b-6049-4f26-8cb3-9870df4fda4c
-  network: ws
-  ws-opts:
-    path: 🔒 [By EbraSha]
-    headers:
-      Host: 0107.cxypogon.workers.dev
 - name: OpenRay  CA-11085
   type: vless
   server: 172.67.207.29
@@ -635,16 +625,6 @@ proxies:
     path: /
     headers:
       Host: hzr50.sepiol.name.ng
-- name: OpenRay  CA-11165
-  type: vless
-  server: 104.18.15.19
-  port: 2095
-  uuid: 13ed4a8b-6049-4f26-8cb3-9870df4fda4c
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: 0107.cxypogon.workers.dev
 - name: OpenRay  CA-11172
   type: vless
   server: 85.208.108.136
@@ -775,6 +755,18 @@ proxies:
     path: /?ed=2048
     headers:
       Host: qxz08.indevs.in
+- name: OpenRay  CA-11220
+  type: vmess
+  server: 104.21.68.76
+  port: 80
+  uuid: 2e65577e-8fdb-4bb1-a495-96f3122099a7
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /f6taOMcOSZb9TPR
+    headers:
+      Host: gggggggggggggg.222769.xyz
 - name: OpenRay Dynamic-95
   type: vless
   server: www.udemy.com
@@ -3162,6 +3154,19 @@ proxies:
     path: /
     headers:
       Host: frankfurt01.zgjok.com
+- name: OpenRay  DE-3514
+  type: vless
+  server: 91.99.234.59
+  port: 443
+  uuid: 001f029f-27e9-4bdd-a417-a221e562777d
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  servername: login.steampowered.com
+  reality-opts:
+    public-key: bQPnghTtDxknIOc6OVEt9rKetZDmkmEBN76MFi_nL0k
+    short-id: b039d6
+  client-fingerprint: firefox
 - name: OpenRay  US-2325
   type: vless
   server: 104.17.134.117
@@ -5502,7 +5507,7 @@ proxies:
       Host: dv4.789900.xyz
 - name: OpenRay  KR-56
   type: vmess
-  server: 3.35.168.162
+  server: 13.125.22.128
   port: 8686
   uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
   alterId: 0
@@ -5729,18 +5734,6 @@ proxies:
     path: /?ed=2560
     headers:
       Host: ww23.sgxaniu.qzz.io
-- name: OpenRay  JP-423
-  type: vmess
-  server: 13.115.230.12
-  port: 8686
-  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: end-gfw.com
 - name: OpenRay  FR-5
   type: vless
   server: 141.101.120.232
@@ -8869,6 +8862,20 @@ proxies:
     path: /
     headers:
       Host: sdeweb.hkcsl.com
+- name: OpenRay  HK-87
+  type: vmess
+  server: 8.218.8.135
+  port: 443
+  uuid: 011c4670-cdde-44fb-b9be-8a1e27af26c9
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  servername: n1761214910.74qxv.top
+  ws-opts:
+    path: /
+    headers:
+      Host: n1761214910.74qxv.top
 - name: OpenRay  CH-2
   type: vless
   server: 208.69.78.5
@@ -9480,12 +9487,10 @@ proxy-groups:
   - OpenRay  CA-11010
   - OpenRay  CA-11025
   - OpenRay  CA-11026
-  - OpenRay  CA-11065
   - OpenRay  CA-11085
   - OpenRay  CA-11100
   - OpenRay  CA-11112
   - OpenRay  CA-11143
-  - OpenRay  CA-11165
   - OpenRay  CA-11172
   - OpenRay  CA-11174
   - OpenRay  CA-11180
@@ -9498,6 +9503,7 @@ proxy-groups:
   - OpenRay  CA-11205
   - OpenRay  CA-11210
   - OpenRay  CA-11219
+  - OpenRay  CA-11220
   - OpenRay Dynamic-95
   - OpenRay Dynamic-118
   - OpenRay Dynamic-184
@@ -9703,6 +9709,7 @@ proxy-groups:
   - OpenRay  DE-3511
   - OpenRay  DE-3512
   - OpenRay  DE-3513
+  - OpenRay  DE-3514
   - OpenRay  US-2325
   - OpenRay  US-2737
   - OpenRay  US-2744
@@ -9917,7 +9924,6 @@ proxy-groups:
   - OpenRay  JP-418
   - OpenRay  JP-421
   - OpenRay  JP-422
-  - OpenRay  JP-423
   - OpenRay  FR-5
   - OpenRay  FR-6
   - OpenRay  FR-11
@@ -10222,6 +10228,7 @@ proxy-groups:
   - OpenRay  HK-82
   - OpenRay  HK-84
   - OpenRay  HK-86
+  - OpenRay  HK-87
   - OpenRay  CH-2
   - OpenRay  CH-4
   - OpenRay  CH-5
@@ -10319,12 +10326,10 @@ proxy-groups:
   - OpenRay  CA-11010
   - OpenRay  CA-11025
   - OpenRay  CA-11026
-  - OpenRay  CA-11065
   - OpenRay  CA-11085
   - OpenRay  CA-11100
   - OpenRay  CA-11112
   - OpenRay  CA-11143
-  - OpenRay  CA-11165
   - OpenRay  CA-11172
   - OpenRay  CA-11174
   - OpenRay  CA-11180
@@ -10337,6 +10342,7 @@ proxy-groups:
   - OpenRay  CA-11205
   - OpenRay  CA-11210
   - OpenRay  CA-11219
+  - OpenRay  CA-11220
   - OpenRay Dynamic-95
   - OpenRay Dynamic-118
   - OpenRay Dynamic-184
@@ -10542,6 +10548,7 @@ proxy-groups:
   - OpenRay  DE-3511
   - OpenRay  DE-3512
   - OpenRay  DE-3513
+  - OpenRay  DE-3514
   - OpenRay  US-2325
   - OpenRay  US-2737
   - OpenRay  US-2744
@@ -10756,7 +10763,6 @@ proxy-groups:
   - OpenRay  JP-418
   - OpenRay  JP-421
   - OpenRay  JP-422
-  - OpenRay  JP-423
   - OpenRay  FR-5
   - OpenRay  FR-6
   - OpenRay  FR-11
@@ -11061,6 +11067,7 @@ proxy-groups:
   - OpenRay  HK-82
   - OpenRay  HK-84
   - OpenRay  HK-86
+  - OpenRay  HK-87
   - OpenRay  CH-2
   - OpenRay  CH-4
   - OpenRay  CH-5
