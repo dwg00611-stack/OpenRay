@@ -739,6 +739,18 @@ proxies:
     path: /f6taOMcOSZb9TPR
     headers:
       Host: bbbbbbbbb.222769.xyz
+- name: OpenRay  CA-11222
+  type: vless
+  server: 104.16.125.59
+  port: 443
+  uuid: e258977b-e413-4718-a3af-02d75492c349
+  network: ws
+  tls: true
+  servername: tw.aniusnippets.qzz.io
+  ws-opts:
+    path: /
+    headers:
+      Host: tw.aniusnippets.qzz.io
 - name: OpenRay Dynamic-95
   type: vless
   server: www.udemy.com
@@ -2667,18 +2679,6 @@ proxies:
   port: 58153
   uuid: 14fe2c89-af11-4b7d-cc08-9641f0f2d8ee
   network: grpc
-- name: OpenRay  DE-3438
-  type: vless
-  server: 37.120.172.78
-  port: 22955
-  uuid: 63f92f3c-447c-4283-80b9-0af8e164cdad
-  network: grpc
-  tls: true
-  servername: one-piece.com
-  reality-opts:
-    public-key: 9Mt_Y8J_qDb1khlieWnhDSAq-kGtLHw6aOKgkAzOMms
-    short-id: 6ba85179e30d4fc2
-  client-fingerprint: chrome
 - name: OpenRay  DE-3443
   type: vless
   server: 159.195.42.123
@@ -2833,20 +2833,6 @@ proxies:
     public-key: bQPnghTtDxknIOc6OVEt9rKetZDmkmEBN76MFi_nL0k
     short-id: b039d6
   client-fingerprint: firefox
-- name: OpenRay  DE-3515
-  type: vless
-  server: i9club.freedomefortecme.com
-  port: 600
-  uuid: c720931c-f403-4d07-841f-cf2e56252226
-  network: tcp
-- name: OpenRay  DE-3516
-  type: vmess
-  server: i9club.freedomefortecme.com
-  port: 10571
-  uuid: 7971c099-8081-4bc6-ac6d-06b87753d85f
-  alterId: 0
-  cipher: auto
-  network: tcp
 - name: OpenRay  DE-3517
   type: vless
   server: 103.75.199.3
@@ -4807,7 +4793,7 @@ proxies:
       Host: dv4.789900.xyz
 - name: OpenRay  KR-56
   type: vmess
-  server: 52.79.131.200
+  server: 43.201.100.26
   port: 8686
   uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
   alterId: 0
@@ -5022,6 +5008,18 @@ proxies:
     path: /?ed=2560
     headers:
       Host: ww23.sgxaniu.qzz.io
+- name: OpenRay  JP-423
+  type: vmess
+  server: 52.193.156.81
+  port: 8686
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: end-gfw.com
 - name: OpenRay  FR-5
   type: vless
   server: 141.101.120.232
@@ -8480,19 +8478,6 @@ proxies:
     public-key: gZGVp5PUdafgsmi1gawa1yLuha_XhXRc_W9SvPiGmTY
     short-id: 7cad5040
   client-fingerprint: chrome
-- name: OpenRay  IL-5
-  type: vless
-  server: 20.217.81.221
-  port: 443
-  uuid: 0e8a6896-ad90-4a3b-89a3-77d64aa409e2
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  servername: i2pd.website
-  reality-opts:
-    public-key: YVDo7U4O-AT2fa5H9E7hyYHKgfZd1vB6UdbAf2ggWQE
-    short-id: 55e6af1a35e64a98
-  client-fingerprint: chrome
 - name: OpenRay  KZ-9
   type: vless
   server: 83.222.23.81
@@ -8806,6 +8791,7 @@ proxy-groups:
   - OpenRay  CA-11219
   - OpenRay  CA-11220
   - OpenRay  CA-11221
+  - OpenRay  CA-11222
   - OpenRay Dynamic-95
   - OpenRay Dynamic-118
   - OpenRay Dynamic-184
@@ -8975,7 +8961,6 @@ proxy-groups:
   - OpenRay  DE-3406
   - OpenRay  DE-3422
   - OpenRay  DE-3437
-  - OpenRay  DE-3438
   - OpenRay  DE-3443
   - OpenRay  DE-3448
   - OpenRay  DE-3449
@@ -8990,8 +8975,6 @@ proxy-groups:
   - OpenRay  DE-3506
   - OpenRay  DE-3508
   - OpenRay  DE-3514
-  - OpenRay  DE-3515
-  - OpenRay  DE-3516
   - OpenRay  DE-3517
   - OpenRay  DE-3518
   - OpenRay  US-2325
@@ -9176,6 +9159,7 @@ proxy-groups:
   - OpenRay  JP-418
   - OpenRay  JP-421
   - OpenRay  JP-422
+  - OpenRay  JP-423
   - OpenRay  FR-5
   - OpenRay  FR-6
   - OpenRay  FR-11
@@ -9508,7 +9492,6 @@ proxy-groups:
   - OpenRay  LV-17
   - OpenRay  LV-18
   - OpenRay  IL-4
-  - OpenRay  IL-5
   - OpenRay  KZ-9
   - OpenRay  KZ-11
   - OpenRay  AT-1
@@ -9594,6 +9577,7 @@ proxy-groups:
   - OpenRay  CA-11219
   - OpenRay  CA-11220
   - OpenRay  CA-11221
+  - OpenRay  CA-11222
   - OpenRay Dynamic-95
   - OpenRay Dynamic-118
   - OpenRay Dynamic-184
@@ -9763,7 +9747,6 @@ proxy-groups:
   - OpenRay  DE-3406
   - OpenRay  DE-3422
   - OpenRay  DE-3437
-  - OpenRay  DE-3438
   - OpenRay  DE-3443
   - OpenRay  DE-3448
   - OpenRay  DE-3449
@@ -9778,8 +9761,6 @@ proxy-groups:
   - OpenRay  DE-3506
   - OpenRay  DE-3508
   - OpenRay  DE-3514
-  - OpenRay  DE-3515
-  - OpenRay  DE-3516
   - OpenRay  DE-3517
   - OpenRay  DE-3518
   - OpenRay  US-2325
@@ -9964,6 +9945,7 @@ proxy-groups:
   - OpenRay  JP-418
   - OpenRay  JP-421
   - OpenRay  JP-422
+  - OpenRay  JP-423
   - OpenRay  FR-5
   - OpenRay  FR-6
   - OpenRay  FR-11
@@ -10296,7 +10278,6 @@ proxy-groups:
   - OpenRay  LV-17
   - OpenRay  LV-18
   - OpenRay  IL-4
-  - OpenRay  IL-5
   - OpenRay  KZ-9
   - OpenRay  KZ-11
   - OpenRay  AT-1
