@@ -3179,6 +3179,20 @@ proxies:
   port: 600
   uuid: c720931c-f403-4d07-841f-cf2e56252226
   network: tcp
+- name: OpenRay  DE-3516
+  type: vmess
+  server: i9club.freedomefortecme.com
+  port: 10571
+  uuid: 7971c099-8081-4bc6-ac6d-06b87753d85f
+  alterId: 0
+  cipher: auto
+  network: tcp
+- name: OpenRay  DE-3517
+  type: vless
+  server: 103.75.199.3
+  port: 52312
+  uuid: cb69f3d7-bfd3-4a83-8882-d5349ce5703c
+  network: tcp
 - name: OpenRay  US-2325
   type: vless
   server: 104.17.134.117
@@ -5093,7 +5107,7 @@ proxies:
       Host: sss.ifree.int.yt
 - name: OpenRay  KR-57
   type: vmess
-  server: 43.203.120.112
+  server: 3.35.19.199
   port: 8686
   uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
   alterId: 0
@@ -5310,7 +5324,7 @@ proxies:
       Host: ww23.sgxaniu.qzz.io
 - name: OpenRay  JP-423
   type: vmess
-  server: 54.250.154.186
+  server: 13.159.18.28
   port: 8686
   uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
   alterId: 0
@@ -8279,6 +8293,19 @@ proxies:
   alterId: 0
   cipher: auto
   network: raw
+- name: OpenRay  TR-8
+  type: vless
+  server: 185.39.204.27
+  port: 443
+  uuid: 37782ff8-fcae-4a05-b91e-4d82e1c4d11c
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  servername: sun1-90.userapi.com
+  reality-opts:
+    public-key: fsQFwBuDqsc-AylhF85Yu4jI81hn7LkYtNQCT5FFyiw
+    short-id: ''
+  client-fingerprint: chrome
 - name: OpenRay  HK-13
   type: vmess
   server: n1761214918.74qxv.top
@@ -9301,6 +9328,8 @@ proxy-groups:
   - OpenRay  DE-3511
   - OpenRay  DE-3514
   - OpenRay  DE-3515
+  - OpenRay  DE-3516
+  - OpenRay  DE-3517
   - OpenRay  US-2325
   - OpenRay  US-2737
   - OpenRay  US-2744
@@ -9773,6 +9802,7 @@ proxy-groups:
   - OpenRay  TR-4
   - OpenRay  TR-5
   - OpenRay  TR-6
+  - OpenRay  TR-8
   - OpenRay  HK-13
   - OpenRay  HK-36
   - OpenRay  HK-43
@@ -10109,6 +10139,8 @@ proxy-groups:
   - OpenRay  DE-3511
   - OpenRay  DE-3514
   - OpenRay  DE-3515
+  - OpenRay  DE-3516
+  - OpenRay  DE-3517
   - OpenRay  US-2325
   - OpenRay  US-2737
   - OpenRay  US-2744
@@ -10581,6 +10613,7 @@ proxy-groups:
   - OpenRay  TR-4
   - OpenRay  TR-5
   - OpenRay  TR-6
+  - OpenRay  TR-8
   - OpenRay  HK-13
   - OpenRay  HK-36
   - OpenRay  HK-43
