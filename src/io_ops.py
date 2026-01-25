@@ -70,12 +70,10 @@ try:
     STATE_DIR = get_state_dir()
     OUTPUT_DIR = get_output_dir()
     AVAILABLE_FILE = get_available_file()
-    STREAKS_FILE = get_streaks_file()
 except:
     STATE_DIR = DEFAULT_STATE_DIR
     OUTPUT_DIR = DEFAULT_OUTPUT_DIR
     AVAILABLE_FILE = DEFAULT_AVAILABLE_FILE
-    STREAKS_FILE = DEFAULT_STREAKS_FILE
 
 
 def ensure_dirs() -> None:
