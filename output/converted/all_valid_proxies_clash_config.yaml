@@ -9860,6 +9860,18 @@ proxies:
     path: /ws?ed=2048
     headers:
       Host: cdn.goharma.ir
+- name: OpenRay  US-11480
+  type: vless
+  server: api1.uploadsho.com
+  port: 443
+  uuid: 91d906df-9e60-4186-945e-4ad1ac331e3a
+  network: ws
+  tls: true
+  servername: nl.uploadsho.com
+  ws-opts:
+    path: /upload/?ed=2560
+    headers:
+      Host: nl.uploadsho.com
 - name: OpenRay  NL-4
   type: vless
   server: 51.158.206.96
@@ -11354,6 +11366,19 @@ proxies:
   reality-opts:
     public-key: 5XB_N3ATilH-6tp_MXht-84_y5YaJnx_Z7MbuY2otHE
     short-id: aa7e96542880027a
+  client-fingerprint: chrome
+- name: OpenRay  NL-440
+  type: vless
+  server: nl11.odavpn.online
+  port: 56824
+  uuid: af1a9622-5deb-480c-8539-d8763f59e012
+  network: raw
+  flow: xtls-rprx-vision
+  tls: true
+  servername: ya.ru
+  reality-opts:
+    public-key: Gpzl6U5r_tIq-xIGyXhzT37vIDsZW6Vot6XL1sH6lVM
+    short-id: aabbccdd
   client-fingerprint: chrome
 - name: OpenRay  FI-56
   type: vless
@@ -18631,6 +18656,18 @@ proxies:
     public-key: Q-394d0JQhk1CJYBNTxmwoZHHDl1xj5r8egsesyIZmA
     short-id: a98e1de9
   client-fingerprint: chrome
+- name: OpenRay  IR-12
+  type: vless
+  server: fit.ari-s.sbs
+  port: 8443
+  uuid: 161aa738-9f4a-4874-a3fd-6ba39c3662ec
+  network: tcp
+  tls: true
+  servername: www.microsoft.com
+  reality-opts:
+    public-key: LOS87LofEJA0paPzrS2mIFhmTaqkOZC-AUFgNvE1UEs
+    short-id: 82cada35130f1ef2
+  client-fingerprint: chrome
 - name: OpenRay  MX-1
   type: vmess
   server: 216.238.86.158
@@ -19603,6 +19640,7 @@ proxy-groups:
   - OpenRay  US-11475
   - OpenRay  US-11477
   - OpenRay  US-11478
+  - OpenRay  US-11480
   - OpenRay  NL-4
   - OpenRay  NL-6
   - OpenRay  NL-7
@@ -19723,6 +19761,7 @@ proxy-groups:
   - OpenRay  NL-436
   - OpenRay  NL-437
   - OpenRay  NL-438
+  - OpenRay  NL-440
   - OpenRay  FI-56
   - OpenRay  FI-57
   - OpenRay  FI-75
@@ -20316,6 +20355,7 @@ proxy-groups:
   - OpenRay  IR-8
   - OpenRay  IR-9
   - OpenRay  IR-10
+  - OpenRay  IR-12
   - OpenRay  MX-1
   - OpenRay  MX-2
   - OpenRay  MX-3
@@ -21188,6 +21228,7 @@ proxy-groups:
   - OpenRay  US-11475
   - OpenRay  US-11477
   - OpenRay  US-11478
+  - OpenRay  US-11480
   - OpenRay  NL-4
   - OpenRay  NL-6
   - OpenRay  NL-7
@@ -21308,6 +21349,7 @@ proxy-groups:
   - OpenRay  NL-436
   - OpenRay  NL-437
   - OpenRay  NL-438
+  - OpenRay  NL-440
   - OpenRay  FI-56
   - OpenRay  FI-57
   - OpenRay  FI-75
@@ -21901,6 +21943,7 @@ proxy-groups:
   - OpenRay  IR-8
   - OpenRay  IR-9
   - OpenRay  IR-10
+  - OpenRay  IR-12
   - OpenRay  MX-1
   - OpenRay  MX-2
   - OpenRay  MX-3
