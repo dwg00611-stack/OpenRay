@@ -344,6 +344,7 @@ def main() -> int:
     do_recheck = recheck_env not in ('0', 'false', 'no')
     alive: List[str] = []
     host_map_existing: Dict[str, Optional[str]] = {}
+    host_success_run: Dict[str, bool] = {}
     if do_recheck and os.path.exists(AVAILABLE_FILE):
         existing_lines = [ln.strip() for ln in read_lines(AVAILABLE_FILE) if ln.strip()]
         if existing_lines:
