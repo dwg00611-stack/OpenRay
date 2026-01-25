@@ -9328,6 +9328,20 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
+- name: OpenRay  US-11472
+  type: vmess
+  server: mccdn.md-teach.com
+  port: 8443
+  uuid: 00c24d3c-77fb-42be-b380-e3a1e5860476
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  servername: pmcdn.md-teach.com
+  ws-opts:
+    path: /@mdje
+    headers:
+      Host: pmcdn.md-teach.com
 - name: OpenRay  NL-4
   type: vless
   server: 51.158.206.96
@@ -16815,6 +16829,19 @@ proxies:
     path: /vmess/
     headers:
       Host: 3h-kazakhstan1.09vpn.com
+- name: OpenRay  KZ-63
+  type: vless
+  server: 91.217.10.166
+  port: 9443
+  uuid: 5b6e9a8d-1559-4abc-96ee-a0b98fad5db9
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  servername: api.avito.ru
+  reality-opts:
+    public-key: WvNaAxI0W__qfUKbtysH4IwF155YENlv3PG6crCmPkA
+    short-id: ''
+  client-fingerprint: chrome
 - name: OpenRay  AT-1
   type: vless
   server: 38.180.144.156
@@ -18712,6 +18739,7 @@ proxy-groups:
   - OpenRay  US-11469
   - OpenRay  US-11470
   - OpenRay  US-11471
+  - OpenRay  US-11472
   - OpenRay  NL-4
   - OpenRay  NL-6
   - OpenRay  NL-7
@@ -19317,6 +19345,7 @@ proxy-groups:
   - OpenRay  KZ-60
   - OpenRay  KZ-61
   - OpenRay  KZ-62
+  - OpenRay  KZ-63
   - OpenRay  AT-1
   - OpenRay  AT-2
   - OpenRay  AT-3
@@ -20224,6 +20253,7 @@ proxy-groups:
   - OpenRay  US-11469
   - OpenRay  US-11470
   - OpenRay  US-11471
+  - OpenRay  US-11472
   - OpenRay  NL-4
   - OpenRay  NL-6
   - OpenRay  NL-7
@@ -20829,6 +20859,7 @@ proxy-groups:
   - OpenRay  KZ-60
   - OpenRay  KZ-61
   - OpenRay  KZ-62
+  - OpenRay  KZ-63
   - OpenRay  AT-1
   - OpenRay  AT-2
   - OpenRay  AT-3
