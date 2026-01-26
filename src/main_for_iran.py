@@ -474,7 +474,7 @@ def _validate_proxies_directly(proxies: List[str]) -> List[str]:
             else:
                 if proxy not in counts:
                     counts[proxy] = {"main": 0, "iran": 0, "consecutive_failures": 0}
-                counts[proxy]["consecutive_failures"] += 1
+                # counts[proxy]["consecutive_failures"] += 1
                 
                 # We don't remove proxies here because main_for_iran.py is read-only for available proxies
                 # and only updates check_counts.json. But we could log it.
