@@ -29,18 +29,16 @@ if [ -n "$(git status --porcelain)" ]; then
     git add .
     git commit -m "Auto update for iran: $(date '+%Y-%m-%d %H:%M:%S')"
 
-    # Try to push, and if it fails due to remote changes, pull and push again
+     # Push (local always wins)
     if ! git push origin main; then
-        echo "git push failed, pulling remote changes and retrying..."
-        if ! git pull origin main --no-edit; then
-            echo "git pull failed, trying merge strategy..."
-            git pull --no-edit origin main --no-rebase
-        fi
+        echo "Push failed, forcing local state to remote..."
+
         # Clean conflict markers again after merge/pull
         echo "Cleaning data files from conflicts after merge..."
         python3 clean_data.py
-        # Try push again after pulling
-        git push origin main
+
+        git fetch origin
+        git push origin main --force-with-lease
     fi
 else
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] No changes to commit."
