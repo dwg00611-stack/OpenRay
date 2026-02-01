@@ -475,17 +475,17 @@ def build_juicity_config(uri: str) -> Optional[Tuple[str, Dict]]:
         p = urlsplit(uri)
         if p.scheme.lower() != 'juicity':
             return None
-            
+
         host = p.hostname
         port = p.port
         if not host or not port:
             return None
-            
+
         user = p.username
         password = p.password
         q = parse_qs(p.query or '')
         remark = unquote(p.fragment or '')
-        
+
         outbound = {
             'protocol': 'juicity',
             'settings': {
@@ -499,7 +499,7 @@ def build_juicity_config(uri: str) -> Optional[Tuple[str, Dict]]:
         }
         st = _stream_settings_from_query(p, q, q.get('sni', [''])[0])
         outbound['streamSettings'] = st
-        
+
         cfg = {
             'log': {'loglevel': 'warning'},
             'inbounds': [{
@@ -509,6 +509,102 @@ def build_juicity_config(uri: str) -> Optional[Tuple[str, Dict]]:
             'outbounds': [outbound]
         }
         tag = remark or f"JUICITY_{host}_{port}"
+        return (tag, cfg)
+    except Exception:
+        return None
+
+
+def build_wireguard_config(uri: str) -> Optional[Tuple[str, Dict]]:
+    try:
+        p = urlsplit(uri)
+        if p.scheme.lower() != 'wireguard':
+            return None
+
+        host = p.hostname
+        port = p.port or 51820  # Default WireGuard port
+        if not host:
+            return None
+
+        q = parse_qs(p.query or '')
+
+        # Extract WireGuard parameters
+        secretkey = q.get('privatekey', [''])[0] or q.get('secretkey', [''])[0]
+        publickey = q.get('publickey', [''])[0] or q.get('peerpubkey', [''])[0]
+        address = q.get('address', [''])[0] or q.get('addresses', [''])[0]
+        mtu = q.get('mtu', [''])[0]
+        reserved = q.get('reserved', [''])[0]
+
+        # Extract additional parameters
+        dns_servers = q.get('dns', [''])[0]
+        kernel = q.get('kernel', [''])[0]
+
+        # Parse addresses (comma-separated)
+        addresses = [addr.strip() for addr in address.split(',')] if address else []
+        if not addresses:
+            # Fallback: try to get address from path part of URI
+            if p.path and p.path.startswith('/'):
+                path_addr = p.path[1:].split(',')
+                addresses = [addr.strip() for addr in path_addr if addr.strip()]
+
+        # Parse reserved bytes (comma-separated numbers)
+        reserved_bytes = []
+        if reserved:
+            try:
+                reserved_bytes = [int(x.strip()) for x in reserved.split(',')]
+            except ValueError:
+                reserved_bytes = []
+
+        # Parse MTU
+        mtu_val = None
+        if mtu:
+            try:
+                mtu_val = int(mtu)
+            except ValueError:
+                pass
+
+        # Parse DNS servers
+        dns_list = []
+        if dns_servers:
+            dns_list = [dns.strip() for dns in dns_servers.split(',') if dns.strip()]
+
+        remark = unquote(p.fragment or '')
+
+        # Build WireGuard outbound configuration
+        outbound = {
+            'protocol': 'wireguard',
+            'settings': {
+                'address': addresses if addresses else ['172.16.0.2/32'],
+                'peers': [{
+                    'endpoint': f"{host}:{port}",
+                    'publicKey': publickey,
+                    'allowedIPs': ['0.0.0.0/0', '::/0']  # Allow all IPs by default
+                }],
+                'secretKey': secretkey,
+                'mtu': mtu_val or 1420  # Default MTU
+            }
+        }
+
+        # Add reserved bytes if provided
+        if reserved_bytes:
+            outbound['settings']['reserved'] = reserved_bytes
+
+        # Add DNS if provided
+        if dns_list:
+            outbound['settings']['dns'] = dns_list
+
+        # Add kernel option if provided
+        if kernel.lower() in ['1', 'true', 'yes']:
+            outbound['settings']['kernelMode'] = True
+
+        cfg = {
+            'log': {'loglevel': 'warning'},
+            'inbounds': [{
+                'listen': '127.0.0.1', 'port': 10808, 'protocol': 'socks',
+                'settings': {'udp': True}
+            }],
+            'outbounds': [outbound]
+        }
+        tag = remark or f"WIREGUARD_{host}_{port}"
         return (tag, cfg)
     except Exception:
         return None
@@ -532,6 +628,8 @@ def build_config_for_uri(uri: str) -> Optional[Tuple[str, Dict]]:
         return build_tuic_config(uri)
     if scheme == 'juicity':
         return build_juicity_config(uri)
+    if scheme == 'wireguard':
+        return build_wireguard_config(uri)
     return None
 
 

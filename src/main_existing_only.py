@@ -106,7 +106,7 @@ def main() -> int:
                     if not ping_host(h):
                         return None
                     scheme = u.split('://', 1)[0].lower()
-                    if scheme in ('vmess', 'vless', 'trojan', 'ss', 'ssr'):
+                    if scheme in ('vmess', 'vless', 'trojan', 'ss', 'ssr', 'hysteria', 'hysteria2', 'hy2', 'tuic', 'juicity', 'wireguard'):
                         p = extract_port(u)
                         if p is not None:
                             ok = connect_host_port(h, int(p))

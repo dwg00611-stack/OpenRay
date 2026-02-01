@@ -26,7 +26,7 @@ def _check_one(item: Tuple[str, str]) -> Optional[str]:
             return None
         # Then, for TCP-based schemes, also ensure we can connect to the specific port
         scheme = uri.split('://', 1)[0].lower()
-        if scheme in ('vmess', 'vless', 'trojan', 'ss', 'ssr'):
+        if scheme in ('vmess', 'vless', 'trojan', 'ss', 'ssr', 'hysteria', 'hysteria2', 'hy2', 'tuic', 'juicity', 'wireguard'):
             p = extract_port(uri)
             if p is not None:
                 ok = connect_host_port(host, int(p))

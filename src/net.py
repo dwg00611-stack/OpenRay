@@ -767,22 +767,22 @@ def check_one_sync(uri: str, host: str) -> Tuple[str, str, bool]:
         ping_ok = ping_host(host)
         
         scheme = (uri.split('://', 1)[0] or '').lower()
-        if scheme in ('vmess', 'vless', 'trojan', 'ss', 'ssr'):
+        if scheme in ('vmess', 'vless', 'trojan', 'ss', 'ssr', 'hysteria', 'hysteria2', 'hy2', 'tuic', 'juicity', 'wireguard'):
             try:
                 from .parsing import extract_port  # local import to avoid cycles at module load
                 p = extract_port(uri)
             except Exception:
                 p = None
-            
+
             if p is not None:
                 # Step 2: Specific port check (hard gate)
                 # We try this even if ping_host failed, because some hosts block ICMP/fallback ports.
                 ok2 = connect_host_port(host, int(p))
-                
+
                 # Step 3: Optional protocol probe
                 if ok2 and int(ENABLE_STAGE2) == 1:
                     ok2 = quick_protocol_probe(uri, host, int(p))
-                
+
                 return (uri, host, ok2)
         
         # If not a recognized TCP scheme or port extraction failed, fallback to ping result
