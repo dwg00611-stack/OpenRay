@@ -212,6 +212,8 @@ def extract_host(uri: str) -> Optional[str]:
         return host_from_ss(uri)
     if scheme == 'ssr':
         return host_from_ssr(uri)
+    if scheme in ('hysteria', 'hysteria2', 'hy2', 'tuic', 'juicity'):
+        return host_from_generic(uri)
     # others via generic parsing
     return host_from_generic(uri)
 
@@ -327,6 +329,8 @@ def extract_port(uri: str) -> Optional[int]:
         return port_from_ss(uri)
     if scheme == 'ssr':
         return port_from_ssr(uri)
+    if scheme in ('hysteria', 'hysteria2', 'hy2', 'tuic', 'juicity'):
+        return port_from_generic(uri)
     return port_from_generic(uri)
 
 

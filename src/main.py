@@ -542,7 +542,7 @@ def main() -> int:
                 # For TCP-based schemes, we ensure we can connect to the specific port.
                 # We try this even if ping_host failed, because some hosts block ICMP/fallback ports.
                 scheme = uri.split('://', 1)[0].lower()
-                if scheme in ('vmess', 'vless', 'trojan', 'ss', 'ssr'):
+                if scheme in ('vmess', 'vless', 'trojan', 'ss', 'ssr', 'hysteria', 'hysteria2', 'hy2', 'tuic', 'juicity'):
                     p = extract_port(uri)
                     if p is not None:
                         ok2 = connect_host_port(host, int(p))
