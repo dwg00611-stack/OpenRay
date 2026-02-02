@@ -98,13 +98,13 @@ curl -s https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/outp
 <tr>
 <td align="center">
 <strong>📱 Clash Format</strong><br>
-<a href="https://github.com/sakha1370/OpenRay/blob/main/output/converted/all_valid_proxies_clash_config.yaml">
+<a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output/converted/all_valid_proxies_clash_config.yaml">
 <img src="https://img.shields.io/badge/YAML-Config-ff6b6b?style=for-the-badge&logo=yaml" alt="Clash Config">
 </a>
 </td>
 <td align="center">
 <strong>🚀 Singbox Format</strong><br>
-<a href="https://github.com/sakha1370/OpenRay/blob/main/output/converted/all_valid_proxies_singbox_config.json">
+<a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output/converted/all_valid_proxies_singbox_config.json">
 <img src="https://img.shields.io/badge/JSON-Config-4ecdc4?style=for-the-badge&logo=json" alt="Singbox Config">
 </a>
 </td>
