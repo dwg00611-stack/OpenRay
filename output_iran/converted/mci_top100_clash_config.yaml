@@ -81,6 +81,41 @@ dns:
   - 1.1.1.1
 
 proxies:
+- name: OpenRay  IR-91
+  type: vless
+  server: zarin8i.alireza031.pw
+  port: 50666
+  uuid: 5afbca1a-910a-4021-b6f9-b5be5fc4202b
+  network: ws
+  ws-opts:
+    path: /ZARIN8
+    headers:
+      Host: 
+        5z63d.divarcdn.com,S4Iqe.snappfood.ir,paF02.yjc.ir,vlUS4.digikala.com,E6NSK.tic.ir
+- name: OpenRay  CA-12561
+  type: vless
+  server: ip-range.web3.name.ng
+  port: 8443
+  uuid: ccbe6b7c-9264-40c4-8bc1-ef8f6205d7a4
+  network: ws
+  tls: true
+  servername: hzr50.sepiol.name.ng
+  ws-opts:
+    path: /
+    headers:
+      Host: hzr50.sepiol.name.ng
+- name: OpenRay  CA-12670
+  type: vless
+  server: 104.19.155.97
+  port: 443
+  uuid: e323b00d-591e-485a-b1bb-0fb16371c7ae
+  network: ws
+  tls: true
+  servername: silencer.sepehrsilencer.workers.dev
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: silencer.sepehrsilencer.workers.dev
 - name: OpenRay  KZ-27
   type: vless
   server: 77.73.232.61
@@ -121,17 +156,6 @@ proxies:
     path: /
     headers:
       Host: n1761214902.wpg27.xyz
-- name: OpenRay  IR-91
-  type: vless
-  server: zarin8i.alireza031.pw
-  port: 50666
-  uuid: 5afbca1a-910a-4021-b6f9-b5be5fc4202b
-  network: ws
-  ws-opts:
-    path: /ZARIN8
-    headers:
-      Host: 
-        5z63d.divarcdn.com,S4Iqe.snappfood.ir,paF02.yjc.ir,vlUS4.digikala.com,E6NSK.tic.ir
 - name: OpenRay  CA-11965
   type: vless
   server: 188.114.98.0
@@ -152,18 +176,6 @@ proxies:
   alterId: 0
   cipher: auto
   network: raw
-- name: OpenRay  CA-12561
-  type: vless
-  server: ip-range.web3.name.ng
-  port: 8443
-  uuid: ccbe6b7c-9264-40c4-8bc1-ef8f6205d7a4
-  network: ws
-  tls: true
-  servername: hzr50.sepiol.name.ng
-  ws-opts:
-    path: /
-    headers:
-      Host: hzr50.sepiol.name.ng
 - name: OpenRay  KZ-11
   type: vless
   server: 178.236.16.98
@@ -1099,19 +1111,6 @@ proxies:
     path: /?ed=2560
     headers:
       Host: l9o2x6frp1qcje430.zjde5.de5.net
-- name: OpenRay  HK-53
-  type: vless
-  server: 47.83.153.19
-  port: 59750
-  uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.amd.com
-  reality-opts:
-    public-key: W9BjX6YmCIVsjhKMlz233Yoe0xcf0SVHfvPKqbf3vCg
-    short-id: ''
-  client-fingerprint: chrome
 
 proxy-groups:
 - name: AUTO
@@ -1120,13 +1119,14 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
+  - OpenRay  IR-91
+  - OpenRay  CA-12561
+  - OpenRay  CA-12670
   - OpenRay  KZ-27
   - OpenRay  JP-453
   - OpenRay  HK-126
-  - OpenRay  IR-91
   - OpenRay  CA-11965
   - OpenRay  US-11318
-  - OpenRay  CA-12561
   - OpenRay  KZ-11
   - OpenRay  KZ-9
   - OpenRay  CA-11629
@@ -1207,18 +1207,18 @@ proxy-groups:
   - OpenRay Dynamic-11612
   - OpenRay  RU-1446
   - OpenRay Dynamic-11954
-  - OpenRay  HK-53
 - name: PROXY
   type: select
   proxies:
   - AUTO
+  - OpenRay  IR-91
+  - OpenRay  CA-12561
+  - OpenRay  CA-12670
   - OpenRay  KZ-27
   - OpenRay  JP-453
   - OpenRay  HK-126
-  - OpenRay  IR-91
   - OpenRay  CA-11965
   - OpenRay  US-11318
-  - OpenRay  CA-12561
   - OpenRay  KZ-11
   - OpenRay  KZ-9
   - OpenRay  CA-11629
@@ -1299,7 +1299,6 @@ proxy-groups:
   - OpenRay Dynamic-11612
   - OpenRay  RU-1446
   - OpenRay Dynamic-11954
-  - OpenRay  HK-53
 rules:
 - DOMAIN-SUFFIX,ir,DIRECT
 - DOMAIN-SUFFIX,aparat.com,DIRECT
