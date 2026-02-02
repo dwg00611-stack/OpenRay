@@ -3,10 +3,17 @@ set -e
 
 # Parse command line arguments
 SKIP_GIT=false
-if [ "$1" == "--skip-git" ]; then
-    SKIP_GIT=true
-    echo "Running with --skip-git flag: Git operations will be skipped"
-fi
+PYTHON_FLAGS=""
+
+for arg in "$@"; do
+    if [ "$arg" == "--skip-git" ]; then
+        SKIP_GIT=true
+        echo "Running with --skip-git flag: Git operations will be skipped"
+    else
+        # Collect all other arguments to pass to Python script
+        PYTHON_FLAGS="$PYTHON_FLAGS $arg"
+    fi
+done
 
 # Activate virtual environment
 source /mnt/c/d/Development/OpenRay/.venv/bin/activate
@@ -29,8 +36,9 @@ else
     echo "Skipping git pull operations..."
 fi
 
-# Run your Python script
-python3 -m src.main_for_iran
+# Run your Python script with collected flags
+echo "Running Python script with flags:$PYTHON_FLAGS"
+python3 -m src.main_for_iran$PYTHON_FLAGS
 
 # Convert subscription to Clash and Singbox formats
 echo "Converting Iran subscription to config formats..."

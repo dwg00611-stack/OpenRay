@@ -86,8 +86,8 @@ CHECK_COUNTS_FILE = os.path.join(STATE_DIR, 'check_counts.json')
 TOP100_FILE = os.path.join(os.path.dirname(AVAILABLE_FILE), 'main_top100_checked.txt')
 
 
-def _load_check_counts() -> Dict[str, Dict[str, int]]:
-    """Load check counts with dual counter system: {proxy: {"main": count, "iran": count, "consecutive_failures": count}}"""
+def _load_check_counts() -> Dict[str, Any]:
+    """Load check counts with new structure: {proxy: {"global": count, "iran": {"total": count, "operators": {...}}, "consecutive_failures": count}}"""
     try:
         if os.path.exists(CHECK_COUNTS_FILE):
             with open(CHECK_COUNTS_FILE, 'r', encoding='utf-8') as f:
@@ -96,16 +96,44 @@ def _load_check_counts() -> Dict[str, Dict[str, int]]:
                     result = {}
                     for proxy, value in data.items():
                         if isinstance(value, dict):
-                            result[str(proxy)] = {
-                                "main": int(value.get("main", 0)),
-                                "iran": int(value.get("iran", 0)),
-                                "consecutive_failures": int(value.get("consecutive_failures", 0))
-                            }
+                            # Handle both old and new formats for backward compatibility
+                            if "iran" in value and isinstance(value["iran"], dict):
+                                # New format - use as is
+                                result[str(proxy)] = value
+                            else:
+                                # Old format - migrate to new format
+                                main_count = int(value.get("main", 0))
+                                iran_count = int(value.get("iran", 0))
+                                consecutive_failures = int(value.get("consecutive_failures", 0))
+
+                                result[str(proxy)] = {
+                                    "global": main_count,
+                                    "iran": {
+                                        "total": iran_count,
+                                        "operators": {
+                                            "mci": 0,
+                                            "irancell": 0,
+                                            "tci": 0,
+                                            "others": iran_count
+                                        }
+                                    },
+                                    "consecutive_failures": consecutive_failures
+                                }
                         else:
-                            # Old format - convert to new format
+                            # Very old format - single integer
+                            main_count = int(value) if isinstance(value, (int, str)) else 0
+
                             result[str(proxy)] = {
-                                "main": int(value) if isinstance(value, (int, str)) else 0,
-                                "iran": 0,
+                                "global": main_count,
+                                "iran": {
+                                    "total": 0,
+                                    "operators": {
+                                        "mci": 0,
+                                        "irancell": 0,
+                                        "tci": 0,
+                                        "others": 0
+                                    }
+                                },
                                 "consecutive_failures": 0
                             }
                     return result
@@ -126,7 +154,7 @@ def _save_check_counts(counts: Dict[str, Dict[str, int]]) -> None:
         log(f"Failed to save check counts: {e}")
 
 
-def _update_check_counts_for_proxies(proxies: List[str], counter_type: str = "main") -> None:
+def _update_check_counts_for_proxies(proxies: List[str], counter_type: str = "global") -> None:
     """Update check counts for successfully validated proxies."""
     if not proxies:
         return
@@ -135,11 +163,11 @@ def _update_check_counts_for_proxies(proxies: List[str], counter_type: str = "ma
     # Deduplicate proxies using custom OpenRay dedup key
     seen_keys: set = set()
     unique_proxies: List[str] = []
-    
+
     for p in proxies:
         if not p:
             continue
-        
+
         # Deduplicate using custom OpenRay dedup key
         conn_key = get_openray_dedup_key(p)
         if conn_key not in seen_keys:
@@ -150,13 +178,39 @@ def _update_check_counts_for_proxies(proxies: List[str], counter_type: str = "ma
     updated_count = 0
     for p in unique_proxies:
         if p not in counts:
-            counts[p] = {"main": 0, "iran": 0, "consecutive_failures": 0}
-        
-        old_count = counts[p].get(counter_type, 0)
-        counts[p][counter_type] = old_count + 1
+            counts[p] = {
+                "global": 0,
+                "iran": {
+                    "total": 0,
+                    "operators": {
+                        "mci": 0,
+                        "irancell": 0,
+                        "tci": 0,
+                        "others": 0
+                    }
+                },
+                "consecutive_failures": 0
+            }
+
+        # Update the global counter
+        if counter_type == "global":
+            old_count = counts[p].get("global", 0)
+            counts[p]["global"] = old_count + 1
+        elif counter_type == "iran":
+            # For backward compatibility, increment the "others" operator when using "iran" counter
+            old_count = counts[p]["iran"]["operators"].get("others", 0)
+            counts[p]["iran"]["operators"]["others"] = old_count + 1
+            # Update total
+            total = sum(counts[p]["iran"]["operators"].values())
+            counts[p]["iran"]["total"] = total
+        else:
+            # For any other counter type, treat as global
+            old_count = counts[p].get("global", 0)
+            counts[p]["global"] = old_count + 1
+
         counts[p]["consecutive_failures"] = 0  # Reset consecutive failures on success
         updated_count += 1
-    
+
     if updated_count > 0:
         _save_check_counts(counts)
         log(f"📈 Updated {counter_type} check counts for {updated_count} successfully validated proxies")
@@ -167,40 +221,52 @@ def _sync_check_counts_with_available_file() -> None:
     try:
         if not os.path.exists(AVAILABLE_FILE):
             return
-        
+
         # Read all proxies from all_valid_proxies.txt
         current_proxies = set()
         for line in read_lines(AVAILABLE_FILE):
             proxy = line.strip()
             if proxy:
                 current_proxies.add(proxy)
-        
+
         if not current_proxies:
             return
-        
+
         # Load current check counts
         counts = _load_check_counts()
-        
+
         # Track changes
         removed_count = 0
         added_count = 0
-        
+
         # Remove entries for proxies no longer in the file
         proxies_to_remove = []
         for proxy in counts.keys():
             if proxy not in current_proxies:
                 proxies_to_remove.append(proxy)
                 removed_count += 1
-        
+
         for proxy in proxies_to_remove:
             del counts[proxy]
-        
+
         # Add entries for new proxies (with 0 counts)
         for proxy in current_proxies:
             if proxy not in counts:
-                counts[proxy] = {"main": 0, "iran": 0, "consecutive_failures": 0}
+                counts[proxy] = {
+                    "global": 0,
+                    "iran": {
+                        "total": 0,
+                        "operators": {
+                            "mci": 0,
+                            "irancell": 0,
+                            "tci": 0,
+                            "others": 0
+                        }
+                    },
+                    "consecutive_failures": 0
+                }
                 added_count += 1
-        
+
         # Save if there were changes
         if removed_count > 0 or added_count > 0:
             _save_check_counts(counts)
@@ -214,104 +280,120 @@ def _sync_check_counts_with_available_file() -> None:
 
 def _write_top100_by_checks(active_proxies: List[str]) -> None:
     """Write top 100 most frequently checked proxies to main_top100_checked.txt.
-    Prioritizes main scores, then iran scores as tiebreaker."""
+    Prioritizes global scores, then iran total scores as tiebreaker."""
     try:
         counts = _load_check_counts()
-        
+
         if not active_proxies:
             log("⚠️ No active proxies to rank")
             return
-            
-        # Score each active proxy by main count first, then iran count as tiebreaker
+
+        # Score each active proxy by global count first, then iran total count as tiebreaker
         scored = []
         for idx, p in enumerate(active_proxies):
-            proxy_counts = counts.get(p, {"main": 0, "iran": 0})
-            main_count = proxy_counts.get("main", 0)
-            iran_count = proxy_counts.get("iran", 0)
-            scored.append((main_count, iran_count, idx, p))
-        
-        # Sort by main count desc, then iran count desc, then original order asc (stable tie-break)
+            proxy_counts = counts.get(p, {
+                "global": 0,
+                "iran": {"total": 0, "operators": {"mci": 0, "irancell": 0, "tci": 0, "others": 0}},
+                "consecutive_failures": 0
+            })
+            global_count = proxy_counts.get("global", 0)
+            iran_total = proxy_counts["iran"]["total"] if isinstance(proxy_counts["iran"], dict) else proxy_counts.get("iran", 0)
+            scored.append((global_count, iran_total, idx, p))
+
+        # Sort by global count desc, then iran total count desc, then original order asc (stable tie-break)
         scored.sort(key=lambda t: (-t[0], -t[1], t[2]))
-        
+
         # Get top 100
         top = [p for _, _, _, p in scored[:100]]
-        
+
         # Log some statistics
         if scored:
-            max_main = scored[0][0] if scored else 0
+            max_global = scored[0][0] if scored else 0
             max_iran = max(t[1] for t in scored) if scored else 0
-            avg_main = sum(t[0] for t in scored) / len(scored) if scored else 0
+            avg_global = sum(t[0] for t in scored) / len(scored) if scored else 0
             avg_iran = sum(t[1] for t in scored) / len(scored) if scored else 0
-            
-            log(f"📊 Main check stats: max={max_main}, avg={avg_main:.1f}")
+
+            log(f"📊 Global check stats: max={max_global}, avg={avg_global:.1f}")
             log(f"📊 Iran check stats: max={max_iran}, avg={avg_iran:.1f}")
-        
+
         write_text_file_atomic(TOP100_FILE, top)
         log(f"🏆 Wrote top {len(top)} most reliable proxies to {TOP100_FILE}")
-        
+
         # Show top 5 for verification
         if top:
             log("🥇 Top 5 most reliable proxies:")
             for i, proxy in enumerate(top[:5], 1):
-                proxy_counts = counts.get(proxy, {"main": 0, "iran": 0})
-                main_count = proxy_counts.get("main", 0)
-                iran_count = proxy_counts.get("iran", 0)
-                log(f"  {i}. [Main:{main_count}, Iran:{iran_count}] {proxy[:60]}...")
-                
+                proxy_counts = counts.get(proxy, {
+                    "global": 0,
+                    "iran": {"total": 0, "operators": {"mci": 0, "irancell": 0, "tci": 0, "others": 0}},
+                    "consecutive_failures": 0
+                })
+                global_count = proxy_counts.get("global", 0)
+                iran_total = proxy_counts["iran"]["total"] if isinstance(proxy_counts["iran"], dict) else proxy_counts.get("iran", 0)
+                log(f"  {i}. [Global:{global_count}, Iran:{iran_total}] {proxy[:60]}...")
+
     except Exception as e:
         log(f"❌ Failed to write top100 checked proxies: {e}")
 
 
 def _write_iran_top100_by_checks(active_proxies: List[str]) -> None:
     """Write top 100 most frequently checked proxies for Iran.
-    Prioritizes iran scores, then main scores as tiebreaker."""
+    Prioritizes iran total scores, then global scores as tiebreaker."""
     try:
         # Iran-specific output directory (same level as output directory)
         iran_output_dir = os.path.join(os.path.dirname(OUTPUT_DIR), 'output_iran')
         iran_top100_file = os.path.join(iran_output_dir, 'iran_top100_checked.txt')
-        
+
         # Ensure directory exists
         os.makedirs(iran_output_dir, exist_ok=True)
-        
+
         counts = _load_check_counts()
-        
+
         if not active_proxies:
             log("⚠️ No active proxies to rank for Iran")
             return
-            
-        # Score each active proxy by iran count first, then main count as tiebreaker
+
+        # Score each active proxy by iran total count first, then global count as tiebreaker
         scored = []
         for idx, p in enumerate(active_proxies):
-            proxy_counts = counts.get(p, {"main": 0, "iran": 0})
-            iran_count = proxy_counts.get("iran", 0)
-            main_count = proxy_counts.get("main", 0)
-            scored.append((iran_count, main_count, idx, p))
-        
-        # Sort by iran count desc, then main count desc, then original order asc (stable tie-break)
+            proxy_counts = counts.get(p, {
+                "global": 0,
+                "iran": {"total": 0, "operators": {"mci": 0, "irancell": 0, "tci": 0, "others": 0}},
+                "consecutive_failures": 0
+            })
+            iran_total = proxy_counts["iran"]["total"] if isinstance(proxy_counts["iran"], dict) else proxy_counts.get("iran", 0)
+            global_count = proxy_counts.get("global", 0)
+            scored.append((iran_total, global_count, idx, p))
+
+        # Sort by iran total count desc, then global count desc, then original order asc (stable tie-break)
         scored.sort(key=lambda t: (-t[0], -t[1], t[2]))
-        
+
         # Get top 100
         top = [p for _, _, _, p in scored[:100]]
-        
+
         # Log Iran-specific statistics only
         if scored:
             max_iran = scored[0][0] if scored else 0
             avg_iran = sum(t[0] for t in scored) / len(scored) if scored else 0
-            
+
             log(f"📊 Iran check stats: max={max_iran}, avg={avg_iran:.1f}")
-        
+
         write_text_file_atomic(iran_top100_file, top)
         log(f"🏆 Wrote top {len(top)} most reliable Iran proxies to {iran_top100_file}")
-        
+
         # Show top 5 for verification
         if top:
             log("🥇 Top 5 most reliable Iran proxies:")
             for i, proxy in enumerate(top[:5], 1):
-                proxy_counts = counts.get(proxy, {"main": 0, "iran": 0})
-                iran_count = proxy_counts.get("iran", 0)
-                main_count = proxy_counts.get("main", 0)
-                log(f"  {i}. [Iran:{iran_count}, Main:{main_count}] {proxy[:60]}...")
-                
+                proxy_counts = counts.get(proxy, {
+                    "global": 0,
+                    "iran": {"total": 0, "operators": {"mci": 0, "irancell": 0, "tci": 0, "others": 0}},
+                    "consecutive_failures": 0
+                })
+                iran_total = proxy_counts["iran"]["total"] if isinstance(proxy_counts["iran"], dict) else proxy_counts.get("iran", 0)
+                global_count = proxy_counts.get("global", 0)
+                log(f"  {i}. [Iran:{iran_total}, Global:{global_count}] {proxy[:60]}...")
+
     except Exception as e:
         log(f"❌ Failed to write Iran top100 checked proxies: {e}")
 

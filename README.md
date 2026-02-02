@@ -187,6 +187,37 @@ curl -s https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/outp
 #### 🏆 Top 100 Most Reliable
 [![Top 100](https://img.shields.io/badge/Top_100-Most_Reliable-ff6b6b?style=for-the-badge&logo=star&logoColor=white)](https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/iran_top100_checked.txt)
 
+#### 📊 Operator-Specific Rankings
+<table>
+<tr>
+<th>Carrier</th>
+<th>Top 100 Links</th>
+<th>Description</th>
+</tr>
+<tr>
+<td align="center"><strong>📱 MCI</strong></td>
+<td><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/mci_top100.txt">Download</a></td>
+<td>Iran Cell (Hamrah-e-Aval) optimized proxies</td>
+</tr>
+<tr>
+<td align="center"><strong>📶 Irancell</strong></td>
+<td><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/irancell_top100.txt">Download</a></td>
+<td>Irancell (MTN IranCell) optimized proxies</td>
+</tr>
+<tr>
+<td align="center"><strong>🌐 TCI</strong></td>
+<td><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/tci_top100.txt">Download</a></td>
+<td>Telecommunication Company of Iran optimized proxies</td>
+</tr>
+<tr>
+<td align="center"><strong>🌍 Others</strong></td>
+<td><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/others_top100.txt">Download</a></td>
+<td>Other carriers and general Iran-optimized proxies</td>
+</tr>
+</table>
+
+</div>
+
 
 #### ⚙️ Ready-to-Use Configs
 <table>
@@ -262,6 +293,44 @@ curl -s https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/outp
 - ✅ **Auto-Generated Configs**: Ready-to-use Clash and Singbox configurations
 - ✅ **Stability Tracking**: Persistent monitoring with reliability streaks
 - ✅ **Auto-Core Detection**: Automatic Xray/V2Ray core detection and integration
+- ✅ **Operator-Specific Tracking**: Detailed Iran carrier analytics (MCI, Irancell, TCI, Others)
+
+### 📊 **Data Structure & Analytics**
+The system tracks proxy reliability using a sophisticated scoring system:
+
+**New JSON Structure:**
+```json
+{
+  "vless://uuid@server:port": {
+    "global": 17,
+    "iran": {
+      "total": 5,
+      "operators": {
+        "mci": 1,
+        "irancell": 3,
+        "tci": 1,
+        "others": 0
+      }
+    },
+    "consecutive_failures": 0
+  }
+}
+```
+
+**Iran Carrier-Specific CLI Commands:**
+```bash
+# Track MCI (Iran Cell) optimized proxies
+python3 -m src.main_for_iran --mci
+
+# Track Irancell optimized proxies
+python3 -m src.main_for_iran --irancell
+
+# Track TCI (Telecom) optimized proxies
+python3 -m src.main_for_iran --tci
+
+# Default: Track "others" category
+python3 -m src.main_for_iran
+```
 
 ---
 
