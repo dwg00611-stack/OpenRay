@@ -149,6 +149,17 @@ proxies:
   alterId: 0
   cipher: auto
   network: raw
+- name: OpenRay  IR-91
+  type: vless
+  server: zarin8i.alireza031.pw
+  port: 50666
+  uuid: 5afbca1a-910a-4021-b6f9-b5be5fc4202b
+  network: ws
+  ws-opts:
+    path: /ZARIN8
+    headers:
+      Host: 
+        5z63d.divarcdn.com,S4Iqe.snappfood.ir,paF02.yjc.ir,vlUS4.digikala.com,E6NSK.tic.ir
 - name: OpenRay  KZ-11
   type: vless
   server: 178.236.16.98
@@ -316,17 +327,18 @@ proxies:
     path: /?ed=2560
     headers:
       Host: 5jq7fvwpqt5owo2fi198sa6qoxznkzfea7en4m3xroeqrt3u3q.zjde5.de5.net
-- name: OpenRay  IR-91
+- name: OpenRay  CA-12561
   type: vless
-  server: zarin8i.alireza031.pw
-  port: 50666
-  uuid: 5afbca1a-910a-4021-b6f9-b5be5fc4202b
+  server: ip-range.web3.name.ng
+  port: 8443
+  uuid: ccbe6b7c-9264-40c4-8bc1-ef8f6205d7a4
   network: ws
+  tls: true
+  servername: hzr50.sepiol.name.ng
   ws-opts:
-    path: /ZARIN8
+    path: /
     headers:
-      Host: 
-        5z63d.divarcdn.com,S4Iqe.snappfood.ir,paF02.yjc.ir,vlUS4.digikala.com,E6NSK.tic.ir
+      Host: hzr50.sepiol.name.ng
 - name: OpenRay Dynamic-11547
   type: vless
   server: s1.db-link.in
@@ -766,18 +778,18 @@ proxies:
       /eyJqdW5rIjoiblpnQTM1U2tMRVNQIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==?ed=2560
     headers:
       Host: 025.ELEcTROcELLco-Cf-025.wORkeRS.DeV
-- name: OpenRay  CA-12561
-  type: vless
-  server: ip-range.web3.name.ng
-  port: 8443
-  uuid: ccbe6b7c-9264-40c4-8bc1-ef8f6205d7a4
+- name: OpenRay  GB-172
+  type: vmess
+  server: 18.168.124.58
+  port: 80
+  uuid: ff7be42d-7d09-445e-b89f-96d7712eb4bf
+  alterId: 0
+  cipher: auto
   network: ws
-  tls: true
-  servername: hzr50.sepiol.name.ng
   ws-opts:
-    path: /
+    path: /graphql
     headers:
-      Host: hzr50.sepiol.name.ng
+      Host: 18.168.124.58
 - name: OpenRay Dynamic-9652
   type: vless
   server: all.tellmethetrue.shop
@@ -1123,6 +1135,7 @@ proxy-groups:
   - OpenRay  CA-11965
   - OpenRay  US-11318
   - OpenRay  US-11412
+  - OpenRay  IR-91
   - OpenRay  KZ-11
   - OpenRay  KZ-9
   - OpenRay  CA-11629
@@ -1137,7 +1150,7 @@ proxy-groups:
   - OpenRay  CA-12127
   - OpenRay  US-11391
   - OpenRay  CA-12331
-  - OpenRay  IR-91
+  - OpenRay  CA-12561
   - OpenRay Dynamic-11547
   - OpenRay  US-11385
   - OpenRay  FI-105
@@ -1174,7 +1187,7 @@ proxy-groups:
   - OpenRay  CA-12334
   - OpenRay  CA-12341
   - OpenRay Dynamic-11598
-  - OpenRay  CA-12561
+  - OpenRay  GB-172
   - OpenRay Dynamic-9652
   - OpenRay Dynamic-11357
   - OpenRay Dynamic-11536
@@ -1215,6 +1228,7 @@ proxy-groups:
   - OpenRay  CA-11965
   - OpenRay  US-11318
   - OpenRay  US-11412
+  - OpenRay  IR-91
   - OpenRay  KZ-11
   - OpenRay  KZ-9
   - OpenRay  CA-11629
@@ -1229,7 +1243,7 @@ proxy-groups:
   - OpenRay  CA-12127
   - OpenRay  US-11391
   - OpenRay  CA-12331
-  - OpenRay  IR-91
+  - OpenRay  CA-12561
   - OpenRay Dynamic-11547
   - OpenRay  US-11385
   - OpenRay  FI-105
@@ -1266,7 +1280,7 @@ proxy-groups:
   - OpenRay  CA-12334
   - OpenRay  CA-12341
   - OpenRay Dynamic-11598
-  - OpenRay  CA-12561
+  - OpenRay  GB-172
   - OpenRay Dynamic-9652
   - OpenRay Dynamic-11357
   - OpenRay Dynamic-11536
