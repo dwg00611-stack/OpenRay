@@ -101,6 +101,39 @@ jobs:
           src/converter/singbox.json \
           ./output_iran/converted/iran_top100_clash_config.yaml \
           ./output_iran/converted/iran_top100_singbox_config.json
+        
+        # Convert Irancell top100 proxy list
+        python src/converter/sub2clash_singbox.py \
+          ./output_iran/irancell_top100.txt \
+          src/converter/config.yaml \
+          src/converter/singbox.json \
+          ./output_iran/converted/irancell_top100_clash_config.yaml \
+          ./output_iran/converted/irancell_top100_singbox_config.json
+        
+        # Convert MCI top100 proxy list
+        python src/converter/sub2clash_singbox.py \
+          ./output_iran/mci_top100.txt \
+          src/converter/config.yaml \
+          src/converter/singbox.json \
+          ./output_iran/converted/mci_top100_clash_config.yaml \
+          ./output_iran/converted/mci_top100_singbox_config.json
+        
+        # Convert TCI top100 proxy list
+        python src/converter/sub2clash_singbox.py \
+          ./output_iran/tci_top100.txt \
+          src/converter/config.yaml \
+          src/converter/singbox.json \
+          ./output_iran/converted/tci_top100_clash_config.yaml \
+          ./output_iran/converted/tci_top100_singbox_config.json
+        
+        # Convert Others top100 proxy list
+        python src/converter/sub2clash_singbox.py \
+          ./output_iran/others_top100.txt \
+          src/converter/config.yaml \
+          src/converter/singbox.json \
+          ./output_iran/converted/others_top100_clash_config.yaml \
+          ./output_iran/converted/others_top100_singbox_config.json
+        
 
     # Commit and push changes directly to the main
     - name: Commit and push changes (no rebase, ignore conflicts)

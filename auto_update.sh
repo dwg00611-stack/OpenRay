@@ -40,13 +40,13 @@ fi
 echo "Running Python script with flags:$PYTHON_FLAGS"
 python3 -m src.main_for_iran$PYTHON_FLAGS
 
-# Convert subscription to Clash and Singbox formats
-echo "Converting Iran subscription to config formats..."
-python src/converter/sub2clash_singbox.py ./output_iran/iran_top100_checked.txt src/converter/config.yaml src/converter/singbox.json ./output_iran/converted/iran_top100_clash_config.yaml ./output_iran/converted/iran_top100_singbox_config.json
-python src/converter/sub2clash_singbox.py ./output_iran/irancell_top100.txt src/converter/config.yaml src/converter/singbox.json ./output_iran/converted/irancell_top100_clash_config.yaml ./output_iran/converted/irancell_top100_singbox_config.json
-python src/converter/sub2clash_singbox.py ./output_iran/mci_top100.txt src/converter/config.yaml src/converter/singbox.json ./output_iran/converted/mci_top100_clash_config.yaml ./output_iran/converted/mci_top100_singbox_config.json
-python src/converter/sub2clash_singbox.py ./output_iran/tci_top100.txt src/converter/config.yaml src/converter/singbox.json ./output_iran/converted/tci_top100_clash_config.yaml ./output_iran/converted/tci_top100_singbox_config.json
-python src/converter/sub2clash_singbox.py ./output_iran/others_top100.txt src/converter/config.yaml src/converter/singbox.json ./output_iran/converted/others_top100_clash_config.yaml ./output_iran/converted/others_top100_singbox_config.json
+## Convert subscription to Clash and Singbox formats
+#echo "Converting Iran subscription to config formats..."
+#python src/converter/sub2clash_singbox.py ./output_iran/iran_top100_checked.txt src/converter/config.yaml src/converter/singbox.json ./output_iran/converted/iran_top100_clash_config.yaml ./output_iran/converted/iran_top100_singbox_config.json
+#python src/converter/sub2clash_singbox.py ./output_iran/irancell_top100.txt src/converter/config.yaml src/converter/singbox.json ./output_iran/converted/irancell_top100_clash_config.yaml ./output_iran/converted/irancell_top100_singbox_config.json
+#python src/converter/sub2clash_singbox.py ./output_iran/mci_top100.txt src/converter/config.yaml src/converter/singbox.json ./output_iran/converted/mci_top100_clash_config.yaml ./output_iran/converted/mci_top100_singbox_config.json
+#python src/converter/sub2clash_singbox.py ./output_iran/tci_top100.txt src/converter/config.yaml src/converter/singbox.json ./output_iran/converted/tci_top100_clash_config.yaml ./output_iran/converted/tci_top100_singbox_config.json
+#python src/converter/sub2clash_singbox.py ./output_iran/others_top100.txt src/converter/config.yaml src/converter/singbox.json ./output_iran/converted/others_top100_clash_config.yaml ./output_iran/converted/others_top100_singbox_config.json
 
 # Git commit and push operations (only if not skipping)
 if [ "$SKIP_GIT" = false ]; then
