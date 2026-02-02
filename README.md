@@ -187,39 +187,49 @@ curl -s https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/outp
 #### 🏆 Top 100 Most Reliable
 [![Top 100](https://img.shields.io/badge/Top_100-Most_Reliable-ff6b6b?style=for-the-badge&logo=star&logoColor=white)](https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/iran_top100_checked.txt)
 
-#### 📊 Operator-Specific Rankings
+#### 📊 Operator-Specific Rankings & Configurations
+<div align="center">
 <table>
 <tr>
 <th>Carrier</th>
-<th>Top 100 Links</th>
+<th>📋 Raw Proxies</th>
+<th>📱 Clash Config</th>
+<th>🚀 Singbox Config</th>
 <th>Description</th>
 </tr>
 <tr>
 <td align="center"><strong>📱 MCI</strong></td>
 <td><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/mci_top100.txt">Download</a></td>
+<td><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/converted/mci_top100_clash_config.yaml"><img src="https://img.shields.io/badge/YAML-Config-ff6b6b?style=flat-square&logo=yaml" alt="Clash MCI"></a></td>
+<td><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/converted/mci_top100_singbox_config.json"><img src="https://img.shields.io/badge/JSON-Config-4ecdc4?style=flat-square&logo=json" alt="Singbox MCI"></a></td>
 <td>Iran Cell (Hamrah-e-Aval) optimized proxies</td>
 </tr>
 <tr>
 <td align="center"><strong>📶 Irancell</strong></td>
 <td><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/irancell_top100.txt">Download</a></td>
+<td><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/converted/irancell_top100_clash_config.yaml"><img src="https://img.shields.io/badge/YAML-Config-ff6b6b?style=flat-square&logo=yaml" alt="Clash Irancell"></a></td>
+<td><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/converted/irancell_top100_singbox_config.json"><img src="https://img.shields.io/badge/JSON-Config-4ecdc4?style=flat-square&logo=json" alt="Singbox Irancell"></a></td>
 <td>Irancell (MTN IranCell) optimized proxies</td>
 </tr>
 <tr>
 <td align="center"><strong>🌐 TCI</strong></td>
 <td><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/tci_top100.txt">Download</a></td>
+<td><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/converted/tci_top100_clash_config.yaml"><img src="https://img.shields.io/badge/YAML-Config-ff6b6b?style=flat-square&logo=yaml" alt="Clash TCI"></a></td>
+<td><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/converted/tci_top100_singbox_config.json"><img src="https://img.shields.io/badge/JSON-Config-4ecdc4?style=flat-square&logo=json" alt="Singbox TCI"></a></td>
 <td>Telecommunication Company of Iran optimized proxies</td>
 </tr>
 <tr>
 <td align="center"><strong>🌍 Others</strong></td>
 <td><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/others_top100.txt">Download</a></td>
+<td><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/converted/others_top100_clash_config.yaml"><img src="https://img.shields.io/badge/YAML-Config-ff6b6b?style=flat-square&logo=yaml" alt="Clash Others"></a></td>
+<td><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/converted/others_top100_singbox_config.json"><img src="https://img.shields.io/badge/JSON-Config-4ecdc4?style=flat-square&logo=json" alt="Singbox Others"></a></td>
 <td>Other carriers and general Iran-optimized proxies</td>
 </tr>
 </table>
-
 </div>
 
-
-#### ⚙️ Ready-to-Use Configs
+#### 🏆 General Iran-Optimized Configs
+<div align="center">
 <table>
 <tr>
 <th>Format</th>
@@ -228,36 +238,18 @@ curl -s https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/outp
 </tr>
 <tr>
 <td align="center"><strong>📱 Clash</strong></td>
-<td align="center"><a href="https://github.com/sakha1370/OpenRay/blob/main/output_iran/converted/iran_top100_clash_config.yaml"><img src="https://img.shields.io/badge/YAML-Config-ff6b6b?style=flat-square&logo=yaml" alt="Clash Top 100"></a></td>
-<td align="center"><a href="https://github.com/sakha1370/OpenRay/blob/main/output_iran/converted/iran_all_valid_proxies_clash_config.yaml"><img src="https://img.shields.io/badge/YAML-Config-ff6b6b?style=flat-square&logo=yaml" alt="Clash All"></a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/converted/iran_top100_clash_config.yaml"><img src="https://img.shields.io/badge/YAML-Config-ff6b6b?style=flat-square&logo=yaml" alt="Clash Top 100"></a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/converted/iran_all_valid_proxies_clash_config.yaml"><img src="https://img.shields.io/badge/YAML-Config-ff6b6b?style=flat-square&logo=yaml" alt="Clash All"></a></td>
 </tr>
 <tr>
 <td align="center"><strong>🚀 Singbox</strong></td>
-<td align="center"><a href="https://github.com/sakha1370/OpenRay/blob/main/output_iran/converted/iran_top100_singbox_config.json"><img src="https://img.shields.io/badge/JSON-Config-4ecdc4?style=flat-square&logo=json" alt="Singbox Top 100"></a></td>
-<td align="center"><a href="https://github.com/sakha1370/OpenRay/blob/main/output_iran/converted/iran_all_valid_proxies_singbox_config.json"><img src="https://img.shields.io/badge/JSON-Config-4ecdc4?style=flat-square&logo=json" alt="Singbox All"></a></td>
-</tr>
-</table>
-
-</div>
-
-#### 🔧 By Protocol Type (Iran-Optimized)
-
-<div align="center">
-<table>
-<tr>
-<td align="center"><strong>🔵 VMess</strong><br><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/kind/vmess.txt">Download</a><br><em>Iran-tested</em></td>
-<td align="center"><strong>🟢 VLess</strong><br><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/kind/vless.txt">Download</a><br><em>Iran-tested</em></td>
-<td align="center"><strong>🔒 Trojan</strong><br><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/kind/trojan.txt">Download</a><br><em>Iran-tested</em></td>
-<td align="center"><strong>⚡ Shadowsocks</strong><br><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/kind/ss.txt">Download</a><br><em>Iran-tested</em></td>
-</tr>
-<tr>
-<td align="center"><strong>🔑 ShadowsocksR</strong><br><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/kind/ssr.txt">Download</a><br><em>Iran-tested</em></td>
-<td align="center"><strong>🌐 Hysteria</strong><br><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/kind/hysteria.txt">Download</a><br><em>Iran-tested</em></td>
-<td align="center"><strong>🚀 TUIC</strong><br><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/kind/tuic.txt">Download</a><br><em>Iran-tested</em></td>
-<td align="center"><strong>🧃 Juicity</strong><br><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/kind/juicity.txt">Download</a><br><em>Iran-tested</em></td>
+<td align="center"><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/converted/iran_top100_singbox_config.json"><img src="https://img.shields.io/badge/JSON-Config-4ecdc4?style=flat-square&logo=json" alt="Singbox Top 100"></a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/converted/iran_all_valid_proxies_singbox_config.json"><img src="https://img.shields.io/badge/JSON-Config-4ecdc4?style=flat-square&logo=json" alt="Singbox All"></a></td>
 </tr>
 </table>
 </div>
+</div>
+
 
 ---
 
