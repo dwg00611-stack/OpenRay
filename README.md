@@ -84,6 +84,7 @@ curl -s https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/outp
 
 ---
 
+
 ## 📋 Proxy Collections
 
 ### 🌍 Global Collection
@@ -250,6 +251,14 @@ curl -s https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/outp
 </div>
 </div>
 
+
+---
+## ✈️ Telegram Proxies Collection
+<div align="center">
+📦 Complete Telegram Collection
+
+[![Download All](https://img.shields.io/badge/Download-All_Proxies-5865F2?style=for-the-badge&logo=telegram&logoColor=white)](https://raw.githubusercontent.com/sakha1370/V2rayCollector/refs/heads/main/active_mtproto_proxies.txt)
+</div>
 
 ---
 
