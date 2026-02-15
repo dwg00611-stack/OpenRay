@@ -370,6 +370,12 @@ proxies:
     path: /?ed
     headers:
       Host: SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.
+- name: OpenRay  US-10828
+  type: vless
+  server: 45.82.251.208
+  port: 8880
+  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
+  network: grpc
 - name: OpenRay  US-11431
   type: vmess
   server: 209.126.84.189
@@ -407,12 +413,6 @@ proxies:
     path: /vmessws
     headers:
       Host: 209.126.84.189
-- name: OpenRay  US-10828
-  type: vless
-  server: 45.82.251.208
-  port: 8880
-  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
-  network: grpc
 - name: OpenRay  JP-433
   type: vless
   server: 45.89.109.25
@@ -807,16 +807,6 @@ proxies:
     path: /?ed
     headers:
       Host: kIndhEArTeD-PARkb5Rjo2juEr.sPorTLaNd.COMpAny.
-- name: OpenRay  CA-12337
-  type: vless
-  server: 104.18.32.47
-  port: 80
-  uuid: c5fbb5dd-83bb-43ce-a799-e3e5c29e25da
-  network: ws
-  ws-opts:
-    path: /?ed
-    headers:
-      Host: gLeEfuL-GrassMcKS7Sr4kw.wiNdleR.co.Uk.
 - name: OpenRay  CA-12304
   type: vless
   server: 172.66.128.70
@@ -827,6 +817,16 @@ proxies:
     path: /?ed
     headers:
       Host: kIndhEArTeD-PARkb5Rjo2juEr.sPorTLaNd.COMpAny.
+- name: OpenRay  CA-12337
+  type: vless
+  server: 104.18.32.47
+  port: 80
+  uuid: c5fbb5dd-83bb-43ce-a799-e3e5c29e25da
+  network: ws
+  ws-opts:
+    path: /?ed
+    headers:
+      Host: gLeEfuL-GrassMcKS7Sr4kw.wiNdleR.co.Uk.
 - name: OpenRay Dynamic-12188
   type: vless
   server: nodejs.org
@@ -1119,10 +1119,10 @@ proxy-groups:
   - OpenRay  HK-186
   - OpenRay  HK-53
   - OpenRay  CA-12302
+  - OpenRay  US-10828
   - OpenRay  US-11431
   - OpenRay  US-10095
   - OpenRay  US-11402
-  - OpenRay  US-10828
   - OpenRay  JP-433
   - OpenRay  CA-9952
   - OpenRay Dynamic-11357
@@ -1159,8 +1159,8 @@ proxy-groups:
   - OpenRay Dynamic-11818
   - OpenRay Dynamic-12190
   - OpenRay Dynamic-12193
-  - OpenRay  CA-12337
   - OpenRay  CA-12304
+  - OpenRay  CA-12337
   - OpenRay Dynamic-12188
   - OpenRay Dynamic-12217
   - OpenRay  KZ-53
@@ -1212,10 +1212,10 @@ proxy-groups:
   - OpenRay  HK-186
   - OpenRay  HK-53
   - OpenRay  CA-12302
+  - OpenRay  US-10828
   - OpenRay  US-11431
   - OpenRay  US-10095
   - OpenRay  US-11402
-  - OpenRay  US-10828
   - OpenRay  JP-433
   - OpenRay  CA-9952
   - OpenRay Dynamic-11357
@@ -1252,8 +1252,8 @@ proxy-groups:
   - OpenRay Dynamic-11818
   - OpenRay Dynamic-12190
   - OpenRay Dynamic-12193
-  - OpenRay  CA-12337
   - OpenRay  CA-12304
+  - OpenRay  CA-12337
   - OpenRay Dynamic-12188
   - OpenRay Dynamic-12217
   - OpenRay  KZ-53
