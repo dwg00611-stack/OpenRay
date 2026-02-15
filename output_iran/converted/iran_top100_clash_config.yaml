@@ -133,18 +133,6 @@ proxies:
     path: /db10240eb751d6ab
     headers:
       Host: dabaius2.sylu.net
-- name: OpenRay  KZ-11
-  type: vless
-  server: 178.236.16.98
-  port: 35728
-  uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
-  network: tcp
-  tls: true
-  servername: yahoo.com
-  reality-opts:
-    public-key: vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng
-    short-id: 69a2
-  client-fingerprint: chrome
 - name: OpenRay  FI-105
   type: vless
   server: fit.jojack.ru
@@ -157,6 +145,18 @@ proxies:
   reality-opts:
     public-key: u26A516I3BCfUMPOo6rw0-XYt0C2sCWaPNP2pNdtxzw
     short-id: f8865ecbb9bc11a3
+  client-fingerprint: chrome
+- name: OpenRay  KZ-11
+  type: vless
+  server: 178.236.16.98
+  port: 35728
+  uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
+  network: tcp
+  tls: true
+  servername: yahoo.com
+  reality-opts:
+    public-key: vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng
+    short-id: 69a2
   client-fingerprint: chrome
 - name: OpenRay Dynamic-11547
   type: vless
@@ -380,7 +380,7 @@ proxies:
     path: /?ed
     headers:
       Host: SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.
-- name: OpenRay  US-11431
+- name: OpenRay  US-11402
   type: vmess
   server: 209.126.84.189
   port: 443
@@ -391,7 +391,7 @@ proxies:
   ws-opts:
     path: /vmessws
     headers:
-      Host: AZERB.NET
+      Host: 209.126.84.189
 - name: OpenRay  US-10828
   type: vless
   server: 45.82.251.208
@@ -411,7 +411,7 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
   client-fingerprint: chrome
-- name: OpenRay  US-11402
+- name: OpenRay  US-11431
   type: vmess
   server: 209.126.84.189
   port: 443
@@ -422,7 +422,7 @@ proxies:
   ws-opts:
     path: /vmessws
     headers:
-      Host: 209.126.84.189
+      Host: AZERB.NET
 - name: OpenRay  CA-9952
   type: vless
   server: 104.16.9.20
@@ -1097,8 +1097,8 @@ proxy-groups:
   - OpenRay  KZ-27
   - OpenRay  JP-453
   - OpenRay  CA-11996
-  - OpenRay  KZ-11
   - OpenRay  FI-105
+  - OpenRay  KZ-11
   - OpenRay Dynamic-11547
   - OpenRay  HK-151
   - OpenRay  HK-181
@@ -1118,10 +1118,10 @@ proxy-groups:
   - OpenRay  HK-53
   - OpenRay  HK-186
   - OpenRay  CA-12302
-  - OpenRay  US-11431
+  - OpenRay  US-11402
   - OpenRay  US-10828
   - OpenRay  US-10095
-  - OpenRay  US-11402
+  - OpenRay  US-11431
   - OpenRay  CA-9952
   - OpenRay  JP-433
   - OpenRay Dynamic-11357
@@ -1190,8 +1190,8 @@ proxy-groups:
   - OpenRay  KZ-27
   - OpenRay  JP-453
   - OpenRay  CA-11996
-  - OpenRay  KZ-11
   - OpenRay  FI-105
+  - OpenRay  KZ-11
   - OpenRay Dynamic-11547
   - OpenRay  HK-151
   - OpenRay  HK-181
@@ -1211,10 +1211,10 @@ proxy-groups:
   - OpenRay  HK-53
   - OpenRay  HK-186
   - OpenRay  CA-12302
-  - OpenRay  US-11431
+  - OpenRay  US-11402
   - OpenRay  US-10828
   - OpenRay  US-10095
-  - OpenRay  US-11402
+  - OpenRay  US-11431
   - OpenRay  CA-9952
   - OpenRay  JP-433
   - OpenRay Dynamic-11357
