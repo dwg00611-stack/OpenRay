@@ -370,12 +370,6 @@ proxies:
     path: /?ed
     headers:
       Host: SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.
-- name: OpenRay  US-10828
-  type: vless
-  server: 45.82.251.208
-  port: 8880
-  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
-  network: grpc
 - name: OpenRay  US-10095
   type: vless
   server: 15.204.97.167
@@ -389,18 +383,6 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
   client-fingerprint: chrome
-- name: OpenRay  US-11431
-  type: vmess
-  server: 209.126.84.189
-  port: 443
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /vmessws
-    headers:
-      Host: AZERB.NET
 - name: OpenRay  US-11402
   type: vmess
   server: 209.126.84.189
@@ -413,6 +395,24 @@ proxies:
     path: /vmessws
     headers:
       Host: 209.126.84.189
+- name: OpenRay  US-10828
+  type: vless
+  server: 45.82.251.208
+  port: 8880
+  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
+  network: grpc
+- name: OpenRay  US-11431
+  type: vmess
+  server: 209.126.84.189
+  port: 443
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vmessws
+    headers:
+      Host: AZERB.NET
 - name: OpenRay  JP-433
   type: vless
   server: 45.89.109.25
@@ -861,6 +861,16 @@ proxies:
     path: /
     headers:
       Host: ca.adobe-connect.top
+- name: OpenRay Dynamic-12195
+  type: vless
+  server: nodejs.org
+  port: 80
+  uuid: 2a2a8023-3b4b-407d-a00a-7beb5a158148
+  network: ws
+  ws-opts:
+    path: /?ed
+    headers:
+      Host: SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.
 - name: OpenRay  KZ-57
   type: vmess
   server: 38.107.234.57
@@ -873,16 +883,6 @@ proxies:
     path: /vmess/
     headers:
       Host: google.com
-- name: OpenRay Dynamic-12195
-  type: vless
-  server: nodejs.org
-  port: 80
-  uuid: 2a2a8023-3b4b-407d-a00a-7beb5a158148
-  network: ws
-  ws-opts:
-    path: /?ed
-    headers:
-      Host: SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.
 - name: OpenRay  FR-389
   type: vless
   server: 94.232.247.168
@@ -1119,10 +1119,10 @@ proxy-groups:
   - OpenRay  HK-186
   - OpenRay  HK-53
   - OpenRay  CA-12302
-  - OpenRay  US-10828
   - OpenRay  US-10095
-  - OpenRay  US-11431
   - OpenRay  US-11402
+  - OpenRay  US-10828
+  - OpenRay  US-11431
   - OpenRay  JP-433
   - OpenRay  CA-9952
   - OpenRay Dynamic-11357
@@ -1164,8 +1164,8 @@ proxy-groups:
   - OpenRay Dynamic-12188
   - OpenRay  KZ-53
   - OpenRay Dynamic-12217
-  - OpenRay  KZ-57
   - OpenRay Dynamic-12195
+  - OpenRay  KZ-57
   - OpenRay  FR-389
   - OpenRay  KZ-64
   - OpenRay  US-11416
@@ -1212,10 +1212,10 @@ proxy-groups:
   - OpenRay  HK-186
   - OpenRay  HK-53
   - OpenRay  CA-12302
-  - OpenRay  US-10828
   - OpenRay  US-10095
-  - OpenRay  US-11431
   - OpenRay  US-11402
+  - OpenRay  US-10828
+  - OpenRay  US-11431
   - OpenRay  JP-433
   - OpenRay  CA-9952
   - OpenRay Dynamic-11357
@@ -1257,8 +1257,8 @@ proxy-groups:
   - OpenRay Dynamic-12188
   - OpenRay  KZ-53
   - OpenRay Dynamic-12217
-  - OpenRay  KZ-57
   - OpenRay Dynamic-12195
+  - OpenRay  KZ-57
   - OpenRay  FR-389
   - OpenRay  KZ-64
   - OpenRay  US-11416
