@@ -133,18 +133,6 @@ proxies:
     path: /db10240eb751d6ab
     headers:
       Host: dabaius2.sylu.net
-- name: OpenRay  KZ-11
-  type: vless
-  server: 178.236.16.98
-  port: 35728
-  uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
-  network: tcp
-  tls: true
-  servername: yahoo.com
-  reality-opts:
-    public-key: vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng
-    short-id: 69a2
-  client-fingerprint: chrome
 - name: OpenRay  FI-105
   type: vless
   server: fit.jojack.ru
@@ -157,6 +145,18 @@ proxies:
   reality-opts:
     public-key: u26A516I3BCfUMPOo6rw0-XYt0C2sCWaPNP2pNdtxzw
     short-id: f8865ecbb9bc11a3
+  client-fingerprint: chrome
+- name: OpenRay  KZ-11
+  type: vless
+  server: 178.236.16.98
+  port: 35728
+  uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
+  network: tcp
+  tls: true
+  servername: yahoo.com
+  reality-opts:
+    public-key: vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng
+    short-id: 69a2
   client-fingerprint: chrome
 - name: OpenRay Dynamic-11547
   type: vless
@@ -343,19 +343,6 @@ proxies:
     path: /
     headers:
       Host: n1761214912.wpg27.xyz
-- name: OpenRay  HK-53
-  type: vless
-  server: 47.83.153.19
-  port: 59750
-  uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.amd.com
-  reality-opts:
-    public-key: W9BjX6YmCIVsjhKMlz233Yoe0xcf0SVHfvPKqbf3vCg
-    short-id: ''
-  client-fingerprint: chrome
 - name: OpenRay  HK-186
   type: vmess
   server: n1761214919.mv7wh.tech
@@ -370,6 +357,19 @@ proxies:
     path: /
     headers:
       Host: n1761214919.mv7wh.tech
+- name: OpenRay  HK-53
+  type: vless
+  server: 47.83.153.19
+  port: 59750
+  uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.amd.com
+  reality-opts:
+    public-key: W9BjX6YmCIVsjhKMlz233Yoe0xcf0SVHfvPKqbf3vCg
+    short-id: ''
+  client-fingerprint: chrome
 - name: OpenRay  CA-12302
   type: vless
   server: 172.66.128.70
@@ -380,12 +380,6 @@ proxies:
     path: /?ed
     headers:
       Host: SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.
-- name: OpenRay  US-10828
-  type: vless
-  server: 45.82.251.208
-  port: 8880
-  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
-  network: grpc
 - name: OpenRay  US-11431
   type: vmess
   server: 209.126.84.189
@@ -423,14 +417,12 @@ proxies:
     path: /vmessws
     headers:
       Host: 209.126.84.189
-- name: OpenRay  CA-9952
+- name: OpenRay  US-10828
   type: vless
-  server: 104.16.9.20
-  port: 443
-  uuid: e4824193-4f54-453b-d037-88368e85ef0e
+  server: 45.82.251.208
+  port: 8880
+  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
   network: grpc
-  tls: true
-  servername: pqh30v5.carwashipdir.shop
 - name: OpenRay  JP-433
   type: vless
   server: 45.89.109.25
@@ -443,6 +435,14 @@ proxies:
     public-key: 8Fglzc7t2LS4r1vQWlVMNe_EsFdhMawlxeDacbhmiAg
     short-id: f0
   client-fingerprint: chrome
+- name: OpenRay  CA-9952
+  type: vless
+  server: 104.16.9.20
+  port: 443
+  uuid: e4824193-4f54-453b-d037-88368e85ef0e
+  network: grpc
+  tls: true
+  servername: pqh30v5.carwashipdir.shop
 - name: OpenRay Dynamic-11357
   type: vless
   server: chatgpt.com
@@ -859,18 +859,6 @@ proxies:
     path: /vmess/
     headers:
       Host: 38.107.234.57
-- name: OpenRay  KZ-57
-  type: vmess
-  server: 38.107.234.57
-  port: 80
-  uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /vmess/
-    headers:
-      Host: google.com
 - name: OpenRay Dynamic-12217
   type: vless
   server: vip2.kaixincloud.top
@@ -883,16 +871,18 @@ proxies:
     path: /
     headers:
       Host: ca.adobe-connect.top
-- name: OpenRay Dynamic-12195
-  type: vless
-  server: nodejs.org
+- name: OpenRay  KZ-57
+  type: vmess
+  server: 38.107.234.57
   port: 80
-  uuid: 2a2a8023-3b4b-407d-a00a-7beb5a158148
+  uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
+  alterId: 0
+  cipher: auto
   network: ws
   ws-opts:
-    path: /?ed
+    path: /vmess/
     headers:
-      Host: SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.
+      Host: google.com
 - name: OpenRay  FR-389
   type: vless
   server: 94.232.247.168
@@ -905,6 +895,16 @@ proxies:
     public-key: TY6w1zP-qUFKVCAQdQT2ZEJsZBrPO4hZjZYBSS6h6DU
     short-id: 1aab45
   client-fingerprint: chrome
+- name: OpenRay Dynamic-12195
+  type: vless
+  server: nodejs.org
+  port: 80
+  uuid: 2a2a8023-3b4b-407d-a00a-7beb5a158148
+  network: ws
+  ws-opts:
+    path: /?ed
+    headers:
+      Host: SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.
 - name: OpenRay  KZ-64
   type: vmess
   server: 3h-kazakhstan1.09vpn.com
@@ -1097,8 +1097,8 @@ proxy-groups:
   - OpenRay  KZ-27
   - OpenRay  JP-453
   - OpenRay  CA-11996
-  - OpenRay  KZ-11
   - OpenRay  FI-105
+  - OpenRay  KZ-11
   - OpenRay Dynamic-11547
   - OpenRay  HK-151
   - OpenRay  HK-181
@@ -1115,15 +1115,15 @@ proxy-groups:
   - OpenRay  NL-363
   - OpenRay  US-11485
   - OpenRay  HK-169
-  - OpenRay  HK-53
   - OpenRay  HK-186
+  - OpenRay  HK-53
   - OpenRay  CA-12302
-  - OpenRay  US-10828
   - OpenRay  US-11431
   - OpenRay  US-10095
   - OpenRay  US-11402
-  - OpenRay  CA-9952
+  - OpenRay  US-10828
   - OpenRay  JP-433
+  - OpenRay  CA-9952
   - OpenRay Dynamic-11357
   - OpenRay  US-11505
   - OpenRay Dynamic-11336
@@ -1162,10 +1162,10 @@ proxy-groups:
   - OpenRay  CA-12337
   - OpenRay Dynamic-12188
   - OpenRay  KZ-53
-  - OpenRay  KZ-57
   - OpenRay Dynamic-12217
-  - OpenRay Dynamic-12195
+  - OpenRay  KZ-57
   - OpenRay  FR-389
+  - OpenRay Dynamic-12195
   - OpenRay  KZ-64
   - OpenRay  US-11416
   - OpenRay  HK-222
@@ -1190,8 +1190,8 @@ proxy-groups:
   - OpenRay  KZ-27
   - OpenRay  JP-453
   - OpenRay  CA-11996
-  - OpenRay  KZ-11
   - OpenRay  FI-105
+  - OpenRay  KZ-11
   - OpenRay Dynamic-11547
   - OpenRay  HK-151
   - OpenRay  HK-181
@@ -1208,15 +1208,15 @@ proxy-groups:
   - OpenRay  NL-363
   - OpenRay  US-11485
   - OpenRay  HK-169
-  - OpenRay  HK-53
   - OpenRay  HK-186
+  - OpenRay  HK-53
   - OpenRay  CA-12302
-  - OpenRay  US-10828
   - OpenRay  US-11431
   - OpenRay  US-10095
   - OpenRay  US-11402
-  - OpenRay  CA-9952
+  - OpenRay  US-10828
   - OpenRay  JP-433
+  - OpenRay  CA-9952
   - OpenRay Dynamic-11357
   - OpenRay  US-11505
   - OpenRay Dynamic-11336
@@ -1255,10 +1255,10 @@ proxy-groups:
   - OpenRay  CA-12337
   - OpenRay Dynamic-12188
   - OpenRay  KZ-53
-  - OpenRay  KZ-57
   - OpenRay Dynamic-12217
-  - OpenRay Dynamic-12195
+  - OpenRay  KZ-57
   - OpenRay  FR-389
+  - OpenRay Dynamic-12195
   - OpenRay  KZ-64
   - OpenRay  US-11416
   - OpenRay  HK-222
