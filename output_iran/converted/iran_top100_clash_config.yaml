@@ -133,6 +133,18 @@ proxies:
     path: /db10240eb751d6ab
     headers:
       Host: dabaius2.sylu.net
+- name: OpenRay  KZ-11
+  type: vless
+  server: 178.236.16.98
+  port: 35728
+  uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
+  network: tcp
+  tls: true
+  servername: yahoo.com
+  reality-opts:
+    public-key: vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng
+    short-id: 69a2
+  client-fingerprint: chrome
 - name: OpenRay  FI-105
   type: vless
   server: fit.jojack.ru
@@ -145,18 +157,6 @@ proxies:
   reality-opts:
     public-key: u26A516I3BCfUMPOo6rw0-XYt0C2sCWaPNP2pNdtxzw
     short-id: f8865ecbb9bc11a3
-  client-fingerprint: chrome
-- name: OpenRay  KZ-11
-  type: vless
-  server: 178.236.16.98
-  port: 35728
-  uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
-  network: tcp
-  tls: true
-  servername: yahoo.com
-  reality-opts:
-    public-key: vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng
-    short-id: 69a2
   client-fingerprint: chrome
 - name: OpenRay Dynamic-11547
   type: vless
@@ -859,18 +859,6 @@ proxies:
     path: /vmess/
     headers:
       Host: 38.107.234.57
-- name: OpenRay Dynamic-12217
-  type: vless
-  server: vip2.kaixincloud.top
-  port: 2096
-  uuid: 686c62d9-17a7-43c9-a40a-f6747df60a9f
-  network: ws
-  tls: true
-  servername: ca.adobe-connect.top
-  ws-opts:
-    path: /
-    headers:
-      Host: ca.adobe-connect.top
 - name: OpenRay  KZ-57
   type: vmess
   server: 38.107.234.57
@@ -883,6 +871,28 @@ proxies:
     path: /vmess/
     headers:
       Host: google.com
+- name: OpenRay Dynamic-12217
+  type: vless
+  server: vip2.kaixincloud.top
+  port: 2096
+  uuid: 686c62d9-17a7-43c9-a40a-f6747df60a9f
+  network: ws
+  tls: true
+  servername: ca.adobe-connect.top
+  ws-opts:
+    path: /
+    headers:
+      Host: ca.adobe-connect.top
+- name: OpenRay Dynamic-12195
+  type: vless
+  server: nodejs.org
+  port: 80
+  uuid: 2a2a8023-3b4b-407d-a00a-7beb5a158148
+  network: ws
+  ws-opts:
+    path: /?ed
+    headers:
+      Host: SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.
 - name: OpenRay  FR-389
   type: vless
   server: 94.232.247.168
@@ -895,16 +905,6 @@ proxies:
     public-key: TY6w1zP-qUFKVCAQdQT2ZEJsZBrPO4hZjZYBSS6h6DU
     short-id: 1aab45
   client-fingerprint: chrome
-- name: OpenRay Dynamic-12195
-  type: vless
-  server: nodejs.org
-  port: 80
-  uuid: 2a2a8023-3b4b-407d-a00a-7beb5a158148
-  network: ws
-  ws-opts:
-    path: /?ed
-    headers:
-      Host: SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.
 - name: OpenRay  KZ-64
   type: vmess
   server: 3h-kazakhstan1.09vpn.com
@@ -1097,8 +1097,8 @@ proxy-groups:
   - OpenRay  KZ-27
   - OpenRay  JP-453
   - OpenRay  CA-11996
-  - OpenRay  FI-105
   - OpenRay  KZ-11
+  - OpenRay  FI-105
   - OpenRay Dynamic-11547
   - OpenRay  HK-151
   - OpenRay  HK-181
@@ -1162,10 +1162,10 @@ proxy-groups:
   - OpenRay  CA-12337
   - OpenRay Dynamic-12188
   - OpenRay  KZ-53
-  - OpenRay Dynamic-12217
   - OpenRay  KZ-57
-  - OpenRay  FR-389
+  - OpenRay Dynamic-12217
   - OpenRay Dynamic-12195
+  - OpenRay  FR-389
   - OpenRay  KZ-64
   - OpenRay  US-11416
   - OpenRay  HK-222
@@ -1190,8 +1190,8 @@ proxy-groups:
   - OpenRay  KZ-27
   - OpenRay  JP-453
   - OpenRay  CA-11996
-  - OpenRay  FI-105
   - OpenRay  KZ-11
+  - OpenRay  FI-105
   - OpenRay Dynamic-11547
   - OpenRay  HK-151
   - OpenRay  HK-181
@@ -1255,10 +1255,10 @@ proxy-groups:
   - OpenRay  CA-12337
   - OpenRay Dynamic-12188
   - OpenRay  KZ-53
-  - OpenRay Dynamic-12217
   - OpenRay  KZ-57
-  - OpenRay  FR-389
+  - OpenRay Dynamic-12217
   - OpenRay Dynamic-12195
+  - OpenRay  FR-389
   - OpenRay  KZ-64
   - OpenRay  US-11416
   - OpenRay  HK-222
