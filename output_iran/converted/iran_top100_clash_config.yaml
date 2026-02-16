@@ -370,18 +370,6 @@ proxies:
     path: /?ed
     headers:
       Host: SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.
-- name: OpenRay  US-11431
-  type: vmess
-  server: 209.126.84.189
-  port: 443
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /vmessws
-    headers:
-      Host: AZERB.NET
 - name: OpenRay  US-11402
   type: vmess
   server: 209.126.84.189
@@ -394,12 +382,6 @@ proxies:
     path: /vmessws
     headers:
       Host: 209.126.84.189
-- name: OpenRay  US-10828
-  type: vless
-  server: 45.82.251.208
-  port: 8880
-  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
-  network: grpc
 - name: OpenRay  US-10095
   type: vless
   server: 15.204.97.167
@@ -413,6 +395,24 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
   client-fingerprint: chrome
+- name: OpenRay  US-11431
+  type: vmess
+  server: 209.126.84.189
+  port: 443
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vmessws
+    headers:
+      Host: AZERB.NET
+- name: OpenRay  US-10828
+  type: vless
+  server: 45.82.251.208
+  port: 8880
+  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
+  network: grpc
 - name: OpenRay  JP-433
   type: vless
   server: 45.89.109.25
@@ -940,16 +940,6 @@ proxies:
     path: /?ed
     headers:
       Host: everlASTinG-oFfERC4S5Mg1918.SpoRTLand.COMpaNy.
-- name: OpenRay  CA-12460
-  type: vless
-  server: 172.66.128.70
-  port: 80
-  uuid: 33e1a095-1e25-4198-bfe7-ec312e4f98ee
-  network: ws
-  ws-opts:
-    path: /?ed
-    headers:
-      Host: CREDibLe-pLaNt7ddV4jJ7et.OnEeaT.CO.
 - name: OpenRay  AL-7
   type: vless
   server: pq-albania1.09vpn.com
@@ -960,6 +950,16 @@ proxies:
     path: /vless/
     headers:
       Host: pq-albania1.09vpn.com
+- name: OpenRay  CA-12460
+  type: vless
+  server: 172.66.128.70
+  port: 80
+  uuid: 33e1a095-1e25-4198-bfe7-ec312e4f98ee
+  network: ws
+  ws-opts:
+    path: /?ed
+    headers:
+      Host: CREDibLe-pLaNt7ddV4jJ7et.OnEeaT.CO.
 - name: OpenRay  CA-12383
   type: vless
   server: 104.18.185.26
@@ -1126,10 +1126,10 @@ proxy-groups:
   - OpenRay  HK-186
   - OpenRay  HK-53
   - OpenRay  CA-12302
-  - OpenRay  US-11431
   - OpenRay  US-11402
-  - OpenRay  US-10828
   - OpenRay  US-10095
+  - OpenRay  US-11431
+  - OpenRay  US-10828
   - OpenRay  JP-433
   - OpenRay  CA-9952
   - OpenRay Dynamic-11357
@@ -1178,8 +1178,8 @@ proxy-groups:
   - OpenRay  US-11416
   - OpenRay  HK-222
   - OpenRay  CA-12412
-  - OpenRay  CA-12460
   - OpenRay  AL-7
+  - OpenRay  CA-12460
   - OpenRay  CA-12383
   - OpenRay  TR-67
   - OpenRay  US-11498
@@ -1220,10 +1220,10 @@ proxy-groups:
   - OpenRay  HK-186
   - OpenRay  HK-53
   - OpenRay  CA-12302
-  - OpenRay  US-11431
   - OpenRay  US-11402
-  - OpenRay  US-10828
   - OpenRay  US-10095
+  - OpenRay  US-11431
+  - OpenRay  US-10828
   - OpenRay  JP-433
   - OpenRay  CA-9952
   - OpenRay Dynamic-11357
@@ -1272,8 +1272,8 @@ proxy-groups:
   - OpenRay  US-11416
   - OpenRay  HK-222
   - OpenRay  CA-12412
-  - OpenRay  CA-12460
   - OpenRay  AL-7
+  - OpenRay  CA-12460
   - OpenRay  CA-12383
   - OpenRay  TR-67
   - OpenRay  US-11498
