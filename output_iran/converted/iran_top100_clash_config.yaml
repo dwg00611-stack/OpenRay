@@ -357,18 +357,6 @@ proxies:
     path: /?ed
     headers:
       Host: SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.
-- name: OpenRay  US-11431
-  type: vmess
-  server: 209.126.84.189
-  port: 443
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /vmessws
-    headers:
-      Host: AZERB.NET
 - name: OpenRay  US-11402
   type: vmess
   server: 209.126.84.189
@@ -387,6 +375,18 @@ proxies:
   port: 8880
   uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
   network: grpc
+- name: OpenRay  US-11431
+  type: vmess
+  server: 209.126.84.189
+  port: 443
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vmessws
+    headers:
+      Host: AZERB.NET
 - name: OpenRay  US-10095
   type: vless
   server: 15.204.97.167
@@ -784,9 +784,9 @@ proxies:
     path: /?ed
     headers:
       Host: CREDibLe-pLaNt7ddV4jJ7et.OnEeaT.CO.
-- name: OpenRay  CA-12304
+- name: OpenRay Dynamic-12193
   type: vless
-  server: 172.66.128.70
+  server: nodejs.org
   port: 80
   uuid: 4c97ec3e-3527-48c5-80ff-b715463896ba
   network: ws
@@ -794,9 +794,9 @@ proxies:
     path: /?ed
     headers:
       Host: kIndhEArTeD-PARkb5Rjo2juEr.sPorTLaNd.COMpAny.
-- name: OpenRay Dynamic-12193
+- name: OpenRay  CA-12304
   type: vless
-  server: nodejs.org
+  server: 172.66.128.70
   port: 80
   uuid: 4c97ec3e-3527-48c5-80ff-b715463896ba
   network: ws
@@ -903,16 +903,6 @@ proxies:
     headers:
       Host: 
         wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-- name: OpenRay  CA-12412
-  type: vless
-  server: 172.66.128.70
-  port: 80
-  uuid: 65fe56c2-78ec-417a-a666-9f393eac8b61
-  network: ws
-  ws-opts:
-    path: /?ed
-    headers:
-      Host: everlASTinG-oFfERC4S5Mg1918.SpoRTLand.COMpaNy.
 - name: OpenRay  HK-222
   type: vmess
   server: 47.243.244.164
@@ -927,6 +917,16 @@ proxies:
     path: /
     headers:
       Host: n1761214908.wpg27.xyz
+- name: OpenRay  CA-12412
+  type: vless
+  server: 172.66.128.70
+  port: 80
+  uuid: 65fe56c2-78ec-417a-a666-9f393eac8b61
+  network: ws
+  ws-opts:
+    path: /?ed
+    headers:
+      Host: everlASTinG-oFfERC4S5Mg1918.SpoRTLand.COMpaNy.
 - name: OpenRay  AL-7
   type: vless
   server: pq-albania1.09vpn.com
@@ -1124,9 +1124,9 @@ proxy-groups:
   - OpenRay  HK-53
   - OpenRay  HK-186
   - OpenRay  CA-12302
-  - OpenRay  US-11431
   - OpenRay  US-11402
   - OpenRay  US-10828
+  - OpenRay  US-11431
   - OpenRay  US-10095
   - OpenRay  JP-433
   - OpenRay  CA-9952
@@ -1163,8 +1163,8 @@ proxy-groups:
   - OpenRay Dynamic-11612
   - OpenRay Dynamic-11818
   - OpenRay Dynamic-12190
-  - OpenRay  CA-12304
   - OpenRay Dynamic-12193
+  - OpenRay  CA-12304
   - OpenRay  CA-12337
   - OpenRay Dynamic-12188
   - OpenRay Dynamic-12217
@@ -1174,8 +1174,8 @@ proxy-groups:
   - OpenRay  FR-389
   - OpenRay  US-11416
   - OpenRay  KZ-64
-  - OpenRay  CA-12412
   - OpenRay  HK-222
+  - OpenRay  CA-12412
   - OpenRay  AL-7
   - OpenRay  CA-12460
   - OpenRay  CA-12383
@@ -1218,9 +1218,9 @@ proxy-groups:
   - OpenRay  HK-53
   - OpenRay  HK-186
   - OpenRay  CA-12302
-  - OpenRay  US-11431
   - OpenRay  US-11402
   - OpenRay  US-10828
+  - OpenRay  US-11431
   - OpenRay  US-10095
   - OpenRay  JP-433
   - OpenRay  CA-9952
@@ -1257,8 +1257,8 @@ proxy-groups:
   - OpenRay Dynamic-11612
   - OpenRay Dynamic-11818
   - OpenRay Dynamic-12190
-  - OpenRay  CA-12304
   - OpenRay Dynamic-12193
+  - OpenRay  CA-12304
   - OpenRay  CA-12337
   - OpenRay Dynamic-12188
   - OpenRay Dynamic-12217
@@ -1268,8 +1268,8 @@ proxy-groups:
   - OpenRay  FR-389
   - OpenRay  US-11416
   - OpenRay  KZ-64
-  - OpenRay  CA-12412
   - OpenRay  HK-222
+  - OpenRay  CA-12412
   - OpenRay  AL-7
   - OpenRay  CA-12460
   - OpenRay  CA-12383
