@@ -333,19 +333,6 @@ proxies:
     path: /
     headers:
       Host: n1761214912.wpg27.xyz
-- name: OpenRay  HK-53
-  type: vless
-  server: 47.83.153.19
-  port: 59750
-  uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.amd.com
-  reality-opts:
-    public-key: W9BjX6YmCIVsjhKMlz233Yoe0xcf0SVHfvPKqbf3vCg
-    short-id: ''
-  client-fingerprint: chrome
 - name: OpenRay  HK-186
   type: vmess
   server: n1761214919.mv7wh.tech
@@ -360,6 +347,19 @@ proxies:
     path: /
     headers:
       Host: n1761214919.mv7wh.tech
+- name: OpenRay  HK-53
+  type: vless
+  server: 47.83.153.19
+  port: 59750
+  uuid: 9e76cfb8-b7a6-40f6-c2aa-9905aa19f31b
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.amd.com
+  reality-opts:
+    public-key: W9BjX6YmCIVsjhKMlz233Yoe0xcf0SVHfvPKqbf3vCg
+    short-id: ''
+  client-fingerprint: chrome
 - name: OpenRay  CA-12302
   type: vless
   server: 172.66.128.70
@@ -382,6 +382,18 @@ proxies:
     path: /vmessws
     headers:
       Host: AZERB.NET
+- name: OpenRay  US-11402
+  type: vmess
+  server: 209.126.84.189
+  port: 443
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vmessws
+    headers:
+      Host: 209.126.84.189
 - name: OpenRay  US-10095
   type: vless
   server: 15.204.97.167
@@ -401,18 +413,6 @@ proxies:
   port: 8880
   uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
   network: grpc
-- name: OpenRay  US-11402
-  type: vmess
-  server: 209.126.84.189
-  port: 443
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /vmessws
-    headers:
-      Host: 209.126.84.189
 - name: OpenRay  JP-433
   type: vless
   server: 45.89.109.25
@@ -1123,13 +1123,13 @@ proxy-groups:
   - OpenRay  NL-363
   - OpenRay  US-11485
   - OpenRay  HK-169
-  - OpenRay  HK-53
   - OpenRay  HK-186
+  - OpenRay  HK-53
   - OpenRay  CA-12302
   - OpenRay  US-11431
+  - OpenRay  US-11402
   - OpenRay  US-10095
   - OpenRay  US-10828
-  - OpenRay  US-11402
   - OpenRay  JP-433
   - OpenRay  CA-9952
   - OpenRay Dynamic-11357
@@ -1217,13 +1217,13 @@ proxy-groups:
   - OpenRay  NL-363
   - OpenRay  US-11485
   - OpenRay  HK-169
-  - OpenRay  HK-53
   - OpenRay  HK-186
+  - OpenRay  HK-53
   - OpenRay  CA-12302
   - OpenRay  US-11431
+  - OpenRay  US-11402
   - OpenRay  US-10095
   - OpenRay  US-10828
-  - OpenRay  US-11402
   - OpenRay  JP-433
   - OpenRay  CA-9952
   - OpenRay Dynamic-11357
