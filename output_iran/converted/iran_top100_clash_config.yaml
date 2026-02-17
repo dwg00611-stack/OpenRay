@@ -357,24 +357,6 @@ proxies:
     path: /?ed
     headers:
       Host: SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.
-- name: OpenRay  US-11402
-  type: vmess
-  server: 209.126.84.189
-  port: 443
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /vmessws
-    headers:
-      Host: 209.126.84.189
-- name: OpenRay  US-10828
-  type: vless
-  server: 45.82.251.208
-  port: 8880
-  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
-  network: grpc
 - name: OpenRay  US-11431
   type: vmess
   server: 209.126.84.189
@@ -387,6 +369,24 @@ proxies:
     path: /vmessws
     headers:
       Host: AZERB.NET
+- name: OpenRay  US-10828
+  type: vless
+  server: 45.82.251.208
+  port: 8880
+  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
+  network: grpc
+- name: OpenRay  US-11402
+  type: vmess
+  server: 209.126.84.189
+  port: 443
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vmessws
+    headers:
+      Host: 209.126.84.189
 - name: OpenRay  JP-433
   type: vless
   server: 45.89.109.25
@@ -846,18 +846,6 @@ proxies:
     path: /?ed
     headers:
       Host: SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.
-- name: OpenRay  KZ-53
-  type: vmess
-  server: 38.107.234.57
-  port: 80
-  uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /vmess/
-    headers:
-      Host: 38.107.234.57
 - name: OpenRay  FR-389
   type: vless
   server: 94.232.247.168
@@ -870,6 +858,18 @@ proxies:
     public-key: TY6w1zP-qUFKVCAQdQT2ZEJsZBrPO4hZjZYBSS6h6DU
     short-id: 1aab45
   client-fingerprint: chrome
+- name: OpenRay  KZ-53
+  type: vmess
+  server: 38.107.234.57
+  port: 80
+  uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: 38.107.234.57
 - name: OpenRay  KZ-57
   type: vmess
   server: 38.107.234.57
@@ -1061,14 +1061,6 @@ proxies:
     path: /vmess
     headers:
       Host: france-paris.hostinger.kcartik-vps.com
-- name: OpenRay  US-11672
-  type: vmess
-  server: 172.233.229.91
-  port: 14102
-  uuid: 27ba87fc-583f-4763-9060-83cf0b9264db
-  alterId: 0
-  cipher: auto
-  network: tcp
 - name: OpenRay Dynamic-12453
   type: vmess
   server: tgju.org
@@ -1081,6 +1073,14 @@ proxies:
     path: /nasnet/cdn?ed=2560
     headers:
       Host: nasnet-571296497.iranpress.co
+- name: OpenRay  US-11672
+  type: vmess
+  server: 172.233.229.91
+  port: 14102
+  uuid: 27ba87fc-583f-4763-9060-83cf0b9264db
+  alterId: 0
+  cipher: auto
+  network: tcp
 - name: OpenRay  CA-12483
   type: vmess
   server: 172.67.73.163
@@ -1124,9 +1124,9 @@ proxy-groups:
   - OpenRay  HK-53
   - OpenRay  HK-186
   - OpenRay  CA-12302
-  - OpenRay  US-11402
-  - OpenRay  US-10828
   - OpenRay  US-11431
+  - OpenRay  US-10828
+  - OpenRay  US-11402
   - OpenRay  JP-433
   - OpenRay  CA-9952
   - OpenRay Dynamic-11357
@@ -1169,8 +1169,8 @@ proxy-groups:
   - OpenRay Dynamic-12188
   - OpenRay Dynamic-12217
   - OpenRay Dynamic-12195
-  - OpenRay  KZ-53
   - OpenRay  FR-389
+  - OpenRay  KZ-53
   - OpenRay  KZ-57
   - OpenRay  US-11416
   - OpenRay  HK-222
@@ -1188,8 +1188,8 @@ proxy-groups:
   - OpenRay  CA-12557
   - OpenRay Dynamic-12510
   - OpenRay  FR-469
-  - OpenRay  US-11672
   - OpenRay Dynamic-12453
+  - OpenRay  US-11672
   - OpenRay  CA-12483
 - name: PROXY
   type: select
@@ -1218,9 +1218,9 @@ proxy-groups:
   - OpenRay  HK-53
   - OpenRay  HK-186
   - OpenRay  CA-12302
-  - OpenRay  US-11402
-  - OpenRay  US-10828
   - OpenRay  US-11431
+  - OpenRay  US-10828
+  - OpenRay  US-11402
   - OpenRay  JP-433
   - OpenRay  CA-9952
   - OpenRay Dynamic-11357
@@ -1263,8 +1263,8 @@ proxy-groups:
   - OpenRay Dynamic-12188
   - OpenRay Dynamic-12217
   - OpenRay Dynamic-12195
-  - OpenRay  KZ-53
   - OpenRay  FR-389
+  - OpenRay  KZ-53
   - OpenRay  KZ-57
   - OpenRay  US-11416
   - OpenRay  HK-222
@@ -1282,8 +1282,8 @@ proxy-groups:
   - OpenRay  CA-12557
   - OpenRay Dynamic-12510
   - OpenRay  FR-469
-  - OpenRay  US-11672
   - OpenRay Dynamic-12453
+  - OpenRay  US-11672
   - OpenRay  CA-12483
 rules:
 - DOMAIN-SUFFIX,ir,DIRECT
