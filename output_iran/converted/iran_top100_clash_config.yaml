@@ -369,12 +369,6 @@ proxies:
     path: /vmessws
     headers:
       Host: 209.126.84.189
-- name: OpenRay  US-10828
-  type: vless
-  server: 45.82.251.208
-  port: 8880
-  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
-  network: grpc
 - name: OpenRay  US-11431
   type: vmess
   server: 209.126.84.189
@@ -387,6 +381,12 @@ proxies:
     path: /vmessws
     headers:
       Host: AZERB.NET
+- name: OpenRay  US-10828
+  type: vless
+  server: 45.82.251.208
+  port: 8880
+  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
+  network: grpc
 - name: OpenRay  JP-433
   type: vless
   server: 45.89.109.25
@@ -1049,14 +1049,6 @@ proxies:
     path: /nasnet/cdn?ed=2560
     headers:
       Host: nasnet-5712964102.sharghdaily.co
-- name: OpenRay  US-11672
-  type: vmess
-  server: 172.233.229.91
-  port: 14102
-  uuid: 27ba87fc-583f-4763-9060-83cf0b9264db
-  alterId: 0
-  cipher: auto
-  network: tcp
 - name: OpenRay Dynamic-12453
   type: vmess
   server: tgju.org
@@ -1069,6 +1061,14 @@ proxies:
     path: /nasnet/cdn?ed=2560
     headers:
       Host: nasnet-571296497.iranpress.co
+- name: OpenRay  US-11672
+  type: vmess
+  server: 172.233.229.91
+  port: 14102
+  uuid: 27ba87fc-583f-4763-9060-83cf0b9264db
+  alterId: 0
+  cipher: auto
+  network: tcp
 - name: OpenRay  FR-469
   type: vmess
   server: france-paris.hostinger.kcartik-vps.com
@@ -1125,8 +1125,8 @@ proxy-groups:
   - OpenRay  HK-186
   - OpenRay  CA-12302
   - OpenRay  US-11402
-  - OpenRay  US-10828
   - OpenRay  US-11431
+  - OpenRay  US-10828
   - OpenRay  JP-433
   - OpenRay  CA-9952
   - OpenRay Dynamic-11357
@@ -1187,8 +1187,8 @@ proxy-groups:
   - OpenRay  KZ-67
   - OpenRay  CA-12557
   - OpenRay Dynamic-12510
-  - OpenRay  US-11672
   - OpenRay Dynamic-12453
+  - OpenRay  US-11672
   - OpenRay  FR-469
   - OpenRay  CA-12483
 - name: PROXY
@@ -1219,8 +1219,8 @@ proxy-groups:
   - OpenRay  HK-186
   - OpenRay  CA-12302
   - OpenRay  US-11402
-  - OpenRay  US-10828
   - OpenRay  US-11431
+  - OpenRay  US-10828
   - OpenRay  JP-433
   - OpenRay  CA-9952
   - OpenRay Dynamic-11357
@@ -1281,8 +1281,8 @@ proxy-groups:
   - OpenRay  KZ-67
   - OpenRay  CA-12557
   - OpenRay Dynamic-12510
-  - OpenRay  US-11672
   - OpenRay Dynamic-12453
+  - OpenRay  US-11672
   - OpenRay  FR-469
   - OpenRay  CA-12483
 rules:
