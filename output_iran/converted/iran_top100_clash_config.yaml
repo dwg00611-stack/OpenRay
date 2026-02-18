@@ -369,6 +369,12 @@ proxies:
     path: /vmessws
     headers:
       Host: 209.126.84.189
+- name: OpenRay  US-10828
+  type: vless
+  server: 45.82.251.208
+  port: 8880
+  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
+  network: grpc
 - name: OpenRay  US-11431
   type: vmess
   server: 209.126.84.189
@@ -381,12 +387,6 @@ proxies:
     path: /vmessws
     headers:
       Host: AZERB.NET
-- name: OpenRay  US-10828
-  type: vless
-  server: 45.82.251.208
-  port: 8880
-  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
-  network: grpc
 - name: OpenRay  JP-433
   type: vless
   server: 45.89.109.25
@@ -927,16 +927,6 @@ proxies:
     headers:
       Host: 
         wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-- name: OpenRay  AL-7
-  type: vless
-  server: pq-albania1.09vpn.com
-  port: 80
-  uuid: 8910cbb3-33b1-4266-a243-ac780ac63394
-  network: ws
-  ws-opts:
-    path: /vless/
-    headers:
-      Host: pq-albania1.09vpn.com
 - name: OpenRay  CA-12460
   type: vless
   server: 172.66.128.70
@@ -947,6 +937,16 @@ proxies:
     path: /?ed
     headers:
       Host: CREDibLe-pLaNt7ddV4jJ7et.OnEeaT.CO.
+- name: OpenRay  AL-7
+  type: vless
+  server: pq-albania1.09vpn.com
+  port: 80
+  uuid: 8910cbb3-33b1-4266-a243-ac780ac63394
+  network: ws
+  ws-opts:
+    path: /vless/
+    headers:
+      Host: pq-albania1.09vpn.com
 - name: OpenRay  CA-12383
   type: vless
   server: 104.18.185.26
@@ -1125,8 +1125,8 @@ proxy-groups:
   - OpenRay  HK-186
   - OpenRay  CA-12302
   - OpenRay  US-11402
-  - OpenRay  US-11431
   - OpenRay  US-10828
+  - OpenRay  US-11431
   - OpenRay  JP-433
   - OpenRay  CA-9952
   - OpenRay Dynamic-11357
@@ -1176,8 +1176,8 @@ proxy-groups:
   - OpenRay  HK-222
   - OpenRay  CA-12412
   - OpenRay  KZ-64
-  - OpenRay  AL-7
   - OpenRay  CA-12460
+  - OpenRay  AL-7
   - OpenRay  CA-12383
   - OpenRay  TR-67
   - OpenRay  US-11498
@@ -1219,8 +1219,8 @@ proxy-groups:
   - OpenRay  HK-186
   - OpenRay  CA-12302
   - OpenRay  US-11402
-  - OpenRay  US-11431
   - OpenRay  US-10828
+  - OpenRay  US-11431
   - OpenRay  JP-433
   - OpenRay  CA-9952
   - OpenRay Dynamic-11357
@@ -1270,8 +1270,8 @@ proxy-groups:
   - OpenRay  HK-222
   - OpenRay  CA-12412
   - OpenRay  KZ-64
-  - OpenRay  AL-7
   - OpenRay  CA-12460
+  - OpenRay  AL-7
   - OpenRay  CA-12383
   - OpenRay  TR-67
   - OpenRay  US-11498
