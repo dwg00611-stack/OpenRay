@@ -337,18 +337,6 @@ proxies:
   port: 8880
   uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
   network: grpc
-- name: OpenRay  US-11402
-  type: vmess
-  server: 209.126.84.189
-  port: 443
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /vmessws
-    headers:
-      Host: 209.126.84.189
 - name: OpenRay  US-11431
   type: vmess
   server: 209.126.84.189
@@ -361,6 +349,18 @@ proxies:
     path: /vmessws
     headers:
       Host: AZERB.NET
+- name: OpenRay  US-11402
+  type: vmess
+  server: 209.126.84.189
+  port: 443
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vmessws
+    headers:
+      Host: 209.126.84.189
 - name: OpenRay  JP-433
   type: vless
   server: 45.89.109.25
@@ -726,14 +726,6 @@ proxies:
     path: /
     headers:
       Host: ca.adobe-connect.top
-- name: OpenRay  US-11416
-  type: vmess
-  server: 172.233.229.91
-  port: 14102
-  uuid: 27ba87fc-583f-4763-9060-83cf0b9264db
-  alterId: 0
-  cipher: auto
-  network: tcp
 - name: OpenRay  FR-489
   type: vless
   server: ov-france1.09vpn.com
@@ -744,6 +736,14 @@ proxies:
     path: /vless/
     headers:
       Host: ov-france1.09vpn.com
+- name: OpenRay  US-11416
+  type: vmess
+  server: 172.233.229.91
+  port: 14102
+  uuid: 27ba87fc-583f-4763-9060-83cf0b9264db
+  alterId: 0
+  cipher: auto
+  network: tcp
 - name: OpenRay  HK-222
   type: vmess
   server: 47.243.244.164
@@ -1073,8 +1073,8 @@ proxy-groups:
   - OpenRay  HK-186
   - OpenRay  CA-12302
   - OpenRay  US-10828
-  - OpenRay  US-11402
   - OpenRay  US-11431
+  - OpenRay  US-11402
   - OpenRay  JP-433
   - OpenRay  CA-9952
   - OpenRay  US-11505
@@ -1108,8 +1108,8 @@ proxy-groups:
   - OpenRay  CA-12337
   - OpenRay  CA-12304
   - OpenRay Dynamic-12217
-  - OpenRay  US-11416
   - OpenRay  FR-489
+  - OpenRay  US-11416
   - OpenRay  HK-222
   - OpenRay  CA-12460
   - OpenRay  CA-12412
@@ -1163,8 +1163,8 @@ proxy-groups:
   - OpenRay  HK-186
   - OpenRay  CA-12302
   - OpenRay  US-10828
-  - OpenRay  US-11402
   - OpenRay  US-11431
+  - OpenRay  US-11402
   - OpenRay  JP-433
   - OpenRay  CA-9952
   - OpenRay  US-11505
@@ -1198,8 +1198,8 @@ proxy-groups:
   - OpenRay  CA-12337
   - OpenRay  CA-12304
   - OpenRay Dynamic-12217
-  - OpenRay  US-11416
   - OpenRay  FR-489
+  - OpenRay  US-11416
   - OpenRay  HK-222
   - OpenRay  CA-12460
   - OpenRay  CA-12412
