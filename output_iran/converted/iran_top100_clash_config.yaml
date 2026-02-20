@@ -331,18 +331,6 @@ proxies:
     path: /?ed
     headers:
       Host: SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.
-- name: OpenRay  US-11402
-  type: vmess
-  server: 209.126.84.189
-  port: 443
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /vmessws
-    headers:
-      Host: 209.126.84.189
 - name: OpenRay  US-11431
   type: vmess
   server: 209.126.84.189
@@ -355,6 +343,18 @@ proxies:
     path: /vmessws
     headers:
       Host: AZERB.NET
+- name: OpenRay  US-11402
+  type: vmess
+  server: 209.126.84.189
+  port: 443
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vmessws
+    headers:
+      Host: 209.126.84.189
 - name: OpenRay  US-10828
   type: vless
   server: 45.82.251.208
@@ -484,6 +484,16 @@ proxies:
     path: /?ed
     headers:
       Host: SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.
+- name: OpenRay  CA-12443
+  type: vless
+  server: 104.20.1.252
+  port: 80
+  uuid: 33e1a095-1e25-4198-bfe7-ec312e4f98ee
+  network: ws
+  ws-opts:
+    path: /?ed
+    headers:
+      Host: CREDibLe-pLaNt7ddV4jJ7et.OnEeaT.CO.
 - name: OpenRay  HK-53
   type: vless
   server: 47.83.153.19
@@ -497,16 +507,6 @@ proxies:
     public-key: W9BjX6YmCIVsjhKMlz233Yoe0xcf0SVHfvPKqbf3vCg
     short-id: ''
   client-fingerprint: chrome
-- name: OpenRay  CA-12443
-  type: vless
-  server: 104.20.1.252
-  port: 80
-  uuid: 33e1a095-1e25-4198-bfe7-ec312e4f98ee
-  network: ws
-  ws-opts:
-    path: /?ed
-    headers:
-      Host: CREDibLe-pLaNt7ddV4jJ7et.OnEeaT.CO.
 - name: OpenRay  US-11713
   type: vless
   server: 45.82.251.116
@@ -1081,8 +1081,8 @@ proxy-groups:
   - OpenRay  HK-169
   - OpenRay  HK-186
   - OpenRay  CA-12302
-  - OpenRay  US-11402
   - OpenRay  US-11431
+  - OpenRay  US-11402
   - OpenRay  US-10828
   - OpenRay  JP-433
   - OpenRay  CA-9952
@@ -1095,8 +1095,8 @@ proxy-groups:
   - OpenRay  NL-363
   - OpenRay  US-11414
   - OpenRay  CA-12291
-  - OpenRay  HK-53
   - OpenRay  CA-12443
+  - OpenRay  HK-53
   - OpenRay  US-11713
   - OpenRay  HK-232
   - OpenRay  FR-509
@@ -1171,8 +1171,8 @@ proxy-groups:
   - OpenRay  HK-169
   - OpenRay  HK-186
   - OpenRay  CA-12302
-  - OpenRay  US-11402
   - OpenRay  US-11431
+  - OpenRay  US-11402
   - OpenRay  US-10828
   - OpenRay  JP-433
   - OpenRay  CA-9952
@@ -1185,8 +1185,8 @@ proxy-groups:
   - OpenRay  NL-363
   - OpenRay  US-11414
   - OpenRay  CA-12291
-  - OpenRay  HK-53
   - OpenRay  CA-12443
+  - OpenRay  HK-53
   - OpenRay  US-11713
   - OpenRay  HK-232
   - OpenRay  FR-509
