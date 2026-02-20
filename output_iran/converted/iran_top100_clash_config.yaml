@@ -411,18 +411,6 @@ proxies:
     path: /IOebhLMhl1CTbFHbL95myfRX2
     headers:
       Host: 15.235.41.200
-- name: OpenRay  FR-445
-  type: vless
-  server: 157.173.127.225
-  port: 443
-  uuid: 11beaf11-726d-4c11-8ce9-27308c1c608c
-  network: tcp
-  tls: true
-  servername: analytics.google.com
-  reality-opts:
-    public-key: v3EwzA9RIIh5Ndxm-gypRY6RCJhOpQ-2WO7KaH8nsC8
-    short-id: eab26c4a32
-  client-fingerprint: random
 - name: OpenRay  US-11387
   type: vless
   server: 95.164.85.109
@@ -435,6 +423,18 @@ proxies:
     public-key: ZsswZuBV8bEGQWFrpShCilSytnDUj0kwHFhTSLXzOwc
     short-id: d21e7c
   client-fingerprint: chrome
+- name: OpenRay  FR-445
+  type: vless
+  server: 157.173.127.225
+  port: 443
+  uuid: 11beaf11-726d-4c11-8ce9-27308c1c608c
+  network: tcp
+  tls: true
+  servername: analytics.google.com
+  reality-opts:
+    public-key: v3EwzA9RIIh5Ndxm-gypRY6RCJhOpQ-2WO7KaH8nsC8
+    short-id: eab26c4a32
+  client-fingerprint: random
 - name: OpenRay  US-11241
   type: vless
   server: 137.184.218.169
@@ -726,6 +726,14 @@ proxies:
     path: /?ed
     headers:
       Host: kIndhEArTeD-PARkb5Rjo2juEr.sPorTLaNd.COMpAny.
+- name: OpenRay  US-11416
+  type: vmess
+  server: 172.233.229.91
+  port: 14102
+  uuid: 27ba87fc-583f-4763-9060-83cf0b9264db
+  alterId: 0
+  cipher: auto
+  network: tcp
 - name: OpenRay  FR-489
   type: vless
   server: ov-france1.09vpn.com
@@ -736,14 +744,6 @@ proxies:
     path: /vless/
     headers:
       Host: ov-france1.09vpn.com
-- name: OpenRay  US-11416
-  type: vmess
-  server: 172.233.229.91
-  port: 14102
-  uuid: 27ba87fc-583f-4763-9060-83cf0b9264db
-  alterId: 0
-  cipher: auto
-  network: tcp
 - name: OpenRay  HK-222
   type: vmess
   server: 47.243.244.164
@@ -1031,20 +1031,18 @@ proxies:
     path: /vmessws
     headers:
       Host: 209.126.84.189
-- name: OpenRay  HK-166
+- name: OpenRay  CA-11664
   type: vmess
-  server: n1747624280.lie5d.cyou
-  port: 443
-  uuid: 49dcf4b4-81eb-4fe2-91d3-86dc2e27ced5
+  server: 15.235.41.200
+  port: 80
+  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
   alterId: 0
   cipher: auto
   network: ws
-  tls: true
-  servername: n1747624280.lie5d.cyou
   ws-opts:
-    path: /
+    path: /IOebhLMhl1CTbFHbL95myfRX2
     headers:
-      Host: n1747624280.lie5d.cyou
+      Host: 15.235.41.200
 
 proxy-groups:
 - name: AUTO
@@ -1082,8 +1080,8 @@ proxy-groups:
   - OpenRay  US-11505
   - OpenRay Dynamic-11336
   - OpenRay  CA-11815
-  - OpenRay  FR-445
   - OpenRay  US-11387
+  - OpenRay  FR-445
   - OpenRay  US-11241
   - OpenRay  NL-363
   - OpenRay  US-11414
@@ -1110,8 +1108,8 @@ proxy-groups:
   - OpenRay  CA-12337
   - OpenRay Dynamic-12217
   - OpenRay  CA-12304
-  - OpenRay  FR-489
   - OpenRay  US-11416
+  - OpenRay  FR-489
   - OpenRay  HK-222
   - OpenRay  CA-12460
   - OpenRay  CA-12383
@@ -1138,7 +1136,7 @@ proxy-groups:
   - OpenRay  AM-4
   - OpenRay  GR-1
   - OpenRay  US-11494
-  - OpenRay  HK-166
+  - OpenRay  CA-11664
 - name: PROXY
   type: select
   proxies:
@@ -1172,8 +1170,8 @@ proxy-groups:
   - OpenRay  US-11505
   - OpenRay Dynamic-11336
   - OpenRay  CA-11815
-  - OpenRay  FR-445
   - OpenRay  US-11387
+  - OpenRay  FR-445
   - OpenRay  US-11241
   - OpenRay  NL-363
   - OpenRay  US-11414
@@ -1200,8 +1198,8 @@ proxy-groups:
   - OpenRay  CA-12337
   - OpenRay Dynamic-12217
   - OpenRay  CA-12304
-  - OpenRay  FR-489
   - OpenRay  US-11416
+  - OpenRay  FR-489
   - OpenRay  HK-222
   - OpenRay  CA-12460
   - OpenRay  CA-12383
@@ -1228,7 +1226,7 @@ proxy-groups:
   - OpenRay  AM-4
   - OpenRay  GR-1
   - OpenRay  US-11494
-  - OpenRay  HK-166
+  - OpenRay  CA-11664
 rules:
 - DOMAIN-SUFFIX,ir,DIRECT
 - DOMAIN-SUFFIX,aparat.com,DIRECT
