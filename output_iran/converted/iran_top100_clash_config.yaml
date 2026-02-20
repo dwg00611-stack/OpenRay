@@ -331,18 +331,6 @@ proxies:
     path: /?ed
     headers:
       Host: SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.
-- name: OpenRay  US-11431
-  type: vmess
-  server: 209.126.84.189
-  port: 443
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /vmessws
-    headers:
-      Host: AZERB.NET
 - name: OpenRay  US-10828
   type: vless
   server: 45.82.251.208
@@ -361,6 +349,18 @@ proxies:
     path: /vmessws
     headers:
       Host: 209.126.84.189
+- name: OpenRay  US-11431
+  type: vmess
+  server: 209.126.84.189
+  port: 443
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vmessws
+    headers:
+      Host: AZERB.NET
 - name: OpenRay  JP-433
   type: vless
   server: 45.89.109.25
@@ -925,6 +925,16 @@ proxies:
     path: /
     headers:
       Host: floral-term-d21f.wafajax493.workers.dev
+- name: OpenRay  CA-11871
+  type: vless
+  server: 104.18.185.26
+  port: 80
+  uuid: 93526fcb-8dbf-442e-a656-eb304f1da4ef
+  network: ws
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: lucky-voice-d6f3.difat89954-0c6.workers.dev
 - name: OpenRay  CA-11873
   type: vless
   server: 104.17.25.173
@@ -938,16 +948,6 @@ proxies:
 - name: OpenRay  CA-11875
   type: vless
   server: 104.21.7.133
-  port: 80
-  uuid: 93526fcb-8dbf-442e-a656-eb304f1da4ef
-  network: ws
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: lucky-voice-d6f3.difat89954-0c6.workers.dev
-- name: OpenRay  CA-11871
-  type: vless
-  server: 104.18.185.26
   port: 80
   uuid: 93526fcb-8dbf-442e-a656-eb304f1da4ef
   network: ws
@@ -1105,9 +1105,9 @@ proxy-groups:
   - OpenRay  HK-169
   - OpenRay  HK-186
   - OpenRay  CA-12302
-  - OpenRay  US-11431
   - OpenRay  US-10828
   - OpenRay  US-11402
+  - OpenRay  US-11431
   - OpenRay  JP-433
   - OpenRay  CA-9952
   - OpenRay  US-11505
@@ -1159,9 +1159,9 @@ proxy-groups:
   - OpenRay Dynamic-11777
   - OpenRay Dynamic-11768
   - OpenRay  CA-11205
+  - OpenRay  CA-11871
   - OpenRay  CA-11873
   - OpenRay  CA-11875
-  - OpenRay  CA-11871
   - OpenRay  AM-4
   - OpenRay  GR-1
   - OpenRay  US-11494
@@ -1197,9 +1197,9 @@ proxy-groups:
   - OpenRay  HK-169
   - OpenRay  HK-186
   - OpenRay  CA-12302
-  - OpenRay  US-11431
   - OpenRay  US-10828
   - OpenRay  US-11402
+  - OpenRay  US-11431
   - OpenRay  JP-433
   - OpenRay  CA-9952
   - OpenRay  US-11505
@@ -1251,9 +1251,9 @@ proxy-groups:
   - OpenRay Dynamic-11777
   - OpenRay Dynamic-11768
   - OpenRay  CA-11205
+  - OpenRay  CA-11871
   - OpenRay  CA-11873
   - OpenRay  CA-11875
-  - OpenRay  CA-11871
   - OpenRay  AM-4
   - OpenRay  GR-1
   - OpenRay  US-11494
