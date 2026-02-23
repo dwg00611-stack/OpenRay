@@ -618,18 +618,6 @@ proxies:
     path: /db10248afdcb0daf
     headers:
       Host: s6.oboob.cn
-- name: OpenRay  US-11298
-  type: vless
-  server: 172.234.130.82
-  port: 10001
-  uuid: 53cd8178-2ee6-43d9-a2a7-881f287fd408
-  network: tcp
-  tls: true
-  servername: yahoo.com
-  reality-opts:
-    public-key: kKX1o7FhJLyDaVE6sqXUcYpUIuFUgij_ueRYc_E4JhM
-    short-id: 1a24af87
-  client-fingerprint: chrome
 - name: OpenRay  CA-11890
   type: vmess
   server: 15.235.41.200
@@ -642,6 +630,18 @@ proxies:
     path: /IOebhLMhl1CTbFHbL95myfRX2
     headers:
       Host: 15.235.41.200
+- name: OpenRay  US-11298
+  type: vless
+  server: 172.234.130.82
+  port: 10001
+  uuid: 53cd8178-2ee6-43d9-a2a7-881f287fd408
+  network: tcp
+  tls: true
+  servername: yahoo.com
+  reality-opts:
+    public-key: kKX1o7FhJLyDaVE6sqXUcYpUIuFUgij_ueRYc_E4JhM
+    short-id: 1a24af87
+  client-fingerprint: chrome
 - name: OpenRay  CA-12337
   type: vless
   server: 104.18.32.47
@@ -919,16 +919,6 @@ proxies:
     path: /
     headers:
       Host: floral-term-d21f.wafajax493.workers.dev
-- name: OpenRay  CA-11875
-  type: vless
-  server: 104.21.7.133
-  port: 80
-  uuid: 93526fcb-8dbf-442e-a656-eb304f1da4ef
-  network: ws
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: lucky-voice-d6f3.difat89954-0c6.workers.dev
 - name: OpenRay  CA-11871
   type: vless
   server: 104.18.185.26
@@ -942,6 +932,16 @@ proxies:
 - name: OpenRay  CA-11873
   type: vless
   server: 104.17.25.173
+  port: 80
+  uuid: 93526fcb-8dbf-442e-a656-eb304f1da4ef
+  network: ws
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: lucky-voice-d6f3.difat89954-0c6.workers.dev
+- name: OpenRay  CA-11875
+  type: vless
+  server: 104.21.7.133
   port: 80
   uuid: 93526fcb-8dbf-442e-a656-eb304f1da4ef
   network: ws
@@ -1137,8 +1137,8 @@ proxy-groups:
   - OpenRay Dynamic-11357
   - OpenRay  DE-3505
   - OpenRay Dynamic-11334
-  - OpenRay  US-11298
   - OpenRay  CA-11890
+  - OpenRay  US-11298
   - OpenRay  CA-12337
   - OpenRay Dynamic-11612
   - OpenRay Dynamic-11818
@@ -1164,9 +1164,9 @@ proxy-groups:
   - OpenRay Dynamic-11777
   - OpenRay  CA-11205
   - OpenRay Dynamic-11768
-  - OpenRay  CA-11875
   - OpenRay  CA-11871
   - OpenRay  CA-11873
+  - OpenRay  CA-11875
   - OpenRay  AM-4
   - OpenRay  GR-1
   - OpenRay  US-11494
@@ -1229,8 +1229,8 @@ proxy-groups:
   - OpenRay Dynamic-11357
   - OpenRay  DE-3505
   - OpenRay Dynamic-11334
-  - OpenRay  US-11298
   - OpenRay  CA-11890
+  - OpenRay  US-11298
   - OpenRay  CA-12337
   - OpenRay Dynamic-11612
   - OpenRay Dynamic-11818
@@ -1256,9 +1256,9 @@ proxy-groups:
   - OpenRay Dynamic-11777
   - OpenRay  CA-11205
   - OpenRay Dynamic-11768
-  - OpenRay  CA-11875
   - OpenRay  CA-11871
   - OpenRay  CA-11873
+  - OpenRay  CA-11875
   - OpenRay  AM-4
   - OpenRay  GR-1
   - OpenRay  US-11494
