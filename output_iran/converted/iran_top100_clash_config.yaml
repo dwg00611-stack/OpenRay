@@ -281,18 +281,6 @@ proxies:
     path: /db1024efd9edc1a9
     headers:
       Host: s6.oboob.cn
-- name: OpenRay  US-11485
-  type: vmess
-  server: 69.63.210.35
-  port: 24943
-  uuid: a89feda9-ec30-48c1-ae6b-1a6f5b573f6b
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /a89feda9-ec30-48c1-ae6b-1a6f5b573f6b-vm
-    headers:
-      Host: www.bing.com
 - name: OpenRay  HK-169
   type: vmess
   server: 47.243.205.58
@@ -307,6 +295,18 @@ proxies:
     path: /
     headers:
       Host: n1761214912.wpg27.xyz
+- name: OpenRay  US-11485
+  type: vmess
+  server: 69.63.210.35
+  port: 24943
+  uuid: a89feda9-ec30-48c1-ae6b-1a6f5b573f6b
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /a89feda9-ec30-48c1-ae6b-1a6f5b573f6b-vm
+    headers:
+      Host: www.bing.com
 - name: OpenRay  HK-186
   type: vmess
   server: n1761214919.mv7wh.tech
@@ -618,18 +618,6 @@ proxies:
     path: /db10248afdcb0daf
     headers:
       Host: s6.oboob.cn
-- name: OpenRay  CA-11890
-  type: vmess
-  server: 15.235.41.200
-  port: 80
-  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /IOebhLMhl1CTbFHbL95myfRX2
-    headers:
-      Host: 15.235.41.200
 - name: OpenRay  US-11298
   type: vless
   server: 172.234.130.82
@@ -642,6 +630,18 @@ proxies:
     public-key: kKX1o7FhJLyDaVE6sqXUcYpUIuFUgij_ueRYc_E4JhM
     short-id: 1a24af87
   client-fingerprint: chrome
+- name: OpenRay  CA-11890
+  type: vmess
+  server: 15.235.41.200
+  port: 80
+  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /IOebhLMhl1CTbFHbL95myfRX2
+    headers:
+      Host: 15.235.41.200
 - name: OpenRay  CA-12337
   type: vless
   server: 104.18.32.47
@@ -919,9 +919,9 @@ proxies:
     path: /
     headers:
       Host: floral-term-d21f.wafajax493.workers.dev
-- name: OpenRay  CA-11873
+- name: OpenRay  CA-11871
   type: vless
-  server: 104.17.25.173
+  server: 104.18.185.26
   port: 80
   uuid: 93526fcb-8dbf-442e-a656-eb304f1da4ef
   network: ws
@@ -939,9 +939,9 @@ proxies:
     path: /?ed=2048
     headers:
       Host: lucky-voice-d6f3.difat89954-0c6.workers.dev
-- name: OpenRay  CA-11871
+- name: OpenRay  CA-11873
   type: vless
-  server: 104.18.185.26
+  server: 104.17.25.173
   port: 80
   uuid: 93526fcb-8dbf-442e-a656-eb304f1da4ef
   network: ws
@@ -1107,8 +1107,8 @@ proxy-groups:
   - OpenRay Dynamic-11335
   - OpenRay  HK-151
   - OpenRay Dynamic-11801
-  - OpenRay  US-11485
   - OpenRay  HK-169
+  - OpenRay  US-11485
   - OpenRay  HK-186
   - OpenRay  CA-12302
   - OpenRay  US-10828
@@ -1137,8 +1137,8 @@ proxy-groups:
   - OpenRay Dynamic-11357
   - OpenRay  DE-3505
   - OpenRay Dynamic-11334
-  - OpenRay  CA-11890
   - OpenRay  US-11298
+  - OpenRay  CA-11890
   - OpenRay  CA-12337
   - OpenRay Dynamic-11612
   - OpenRay Dynamic-11818
@@ -1164,9 +1164,9 @@ proxy-groups:
   - OpenRay Dynamic-11777
   - OpenRay Dynamic-11768
   - OpenRay  CA-11205
-  - OpenRay  CA-11873
-  - OpenRay  CA-11875
   - OpenRay  CA-11871
+  - OpenRay  CA-11875
+  - OpenRay  CA-11873
   - OpenRay  AM-4
   - OpenRay  GR-1
   - OpenRay  US-11494
@@ -1199,8 +1199,8 @@ proxy-groups:
   - OpenRay Dynamic-11335
   - OpenRay  HK-151
   - OpenRay Dynamic-11801
-  - OpenRay  US-11485
   - OpenRay  HK-169
+  - OpenRay  US-11485
   - OpenRay  HK-186
   - OpenRay  CA-12302
   - OpenRay  US-10828
@@ -1229,8 +1229,8 @@ proxy-groups:
   - OpenRay Dynamic-11357
   - OpenRay  DE-3505
   - OpenRay Dynamic-11334
-  - OpenRay  CA-11890
   - OpenRay  US-11298
+  - OpenRay  CA-11890
   - OpenRay  CA-12337
   - OpenRay Dynamic-11612
   - OpenRay Dynamic-11818
@@ -1256,9 +1256,9 @@ proxy-groups:
   - OpenRay Dynamic-11777
   - OpenRay Dynamic-11768
   - OpenRay  CA-11205
-  - OpenRay  CA-11873
-  - OpenRay  CA-11875
   - OpenRay  CA-11871
+  - OpenRay  CA-11875
+  - OpenRay  CA-11873
   - OpenRay  AM-4
   - OpenRay  GR-1
   - OpenRay  US-11494
