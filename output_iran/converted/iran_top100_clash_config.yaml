@@ -361,14 +361,6 @@ proxies:
     path: /vmessws
     headers:
       Host: AZERB.NET
-- name: OpenRay  CA-9952
-  type: vless
-  server: 104.16.9.20
-  port: 443
-  uuid: e4824193-4f54-453b-d037-88368e85ef0e
-  network: grpc
-  tls: true
-  servername: pqh30v5.carwashipdir.shop
 - name: OpenRay  JP-433
   type: vless
   server: 45.89.109.25
@@ -381,6 +373,14 @@ proxies:
     public-key: 8Fglzc7t2LS4r1vQWlVMNe_EsFdhMawlxeDacbhmiAg
     short-id: f0
   client-fingerprint: chrome
+- name: OpenRay  CA-9952
+  type: vless
+  server: 104.16.9.20
+  port: 443
+  uuid: e4824193-4f54-453b-d037-88368e85ef0e
+  network: grpc
+  tls: true
+  servername: pqh30v5.carwashipdir.shop
 - name: OpenRay  US-11505
   type: vless
   server: pqh29v4.globalfymain.com
@@ -399,18 +399,6 @@ proxies:
     path: /db10242a4797a252
     headers:
       Host: s6.oboob.cn
-- name: OpenRay  US-11387
-  type: vless
-  server: 95.164.85.109
-  port: 59374
-  uuid: bfc78cd8-5951-4803-8d6c-4cedef8cd420
-  network: tcp
-  tls: true
-  servername: yahoo.com
-  reality-opts:
-    public-key: ZsswZuBV8bEGQWFrpShCilSytnDUj0kwHFhTSLXzOwc
-    short-id: d21e7c
-  client-fingerprint: chrome
 - name: OpenRay  CA-11815
   type: vmess
   server: 15.235.41.200
@@ -423,6 +411,18 @@ proxies:
     path: /IOebhLMhl1CTbFHbL95myfRX2
     headers:
       Host: 15.235.41.200
+- name: OpenRay  US-11387
+  type: vless
+  server: 95.164.85.109
+  port: 59374
+  uuid: bfc78cd8-5951-4803-8d6c-4cedef8cd420
+  network: tcp
+  tls: true
+  servername: yahoo.com
+  reality-opts:
+    public-key: ZsswZuBV8bEGQWFrpShCilSytnDUj0kwHFhTSLXzOwc
+    short-id: d21e7c
+  client-fingerprint: chrome
 - name: OpenRay  FR-445
   type: vless
   server: 157.173.127.225
@@ -536,18 +536,6 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: OpenRay Dynamic-12509
-  type: vmess
-  server: tgju.org
-  port: 8080
-  uuid: nasnet
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /nasnet/cdn?ed=2560
-    headers:
-      Host: nasnet-162191099.sharghdaily.co
 - name: OpenRay Dynamic-11598
   type: vless
   server: 025.electrocellco-cf-025.workers.dev
@@ -618,18 +606,6 @@ proxies:
     path: /db10248afdcb0daf
     headers:
       Host: s6.oboob.cn
-- name: OpenRay  CA-11890
-  type: vmess
-  server: 15.235.41.200
-  port: 80
-  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /IOebhLMhl1CTbFHbL95myfRX2
-    headers:
-      Host: 15.235.41.200
 - name: OpenRay  US-11298
   type: vless
   server: 172.234.130.82
@@ -642,6 +618,18 @@ proxies:
     public-key: kKX1o7FhJLyDaVE6sqXUcYpUIuFUgij_ueRYc_E4JhM
     short-id: 1a24af87
   client-fingerprint: chrome
+- name: OpenRay  CA-11890
+  type: vmess
+  server: 15.235.41.200
+  port: 80
+  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /IOebhLMhl1CTbFHbL95myfRX2
+    headers:
+      Host: 15.235.41.200
 - name: OpenRay Dynamic-11818
   type: vmess
   server: cf.090227.xyz
@@ -826,18 +814,6 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: OpenRay Dynamic-12510
-  type: vmess
-  server: tgju.org
-  port: 8080
-  uuid: nasnet
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /nasnet/cdn?ed=2560
-    headers:
-      Host: nasnet-5712964102.sharghdaily.co
 - name: OpenRay  CA-12483
   type: vmess
   server: 172.67.73.163
@@ -874,18 +850,6 @@ proxies:
     path: /nasnet/cdn
     headers:
       Host: nasnet-571296497.iranpress.co
-- name: OpenRay Dynamic-12555
-  type: vmess
-  server: tgju.org
-  port: 8080
-  uuid: nasnet
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /nasnet/cdn
-    headers:
-      Host: nasnet-162191099.sharghdaily.co
 - name: OpenRay Dynamic-11777
   type: vless
   server: 017.electrocellco-cf-017.workers.dev
@@ -919,9 +883,9 @@ proxies:
     path: /
     headers:
       Host: floral-term-d21f.wafajax493.workers.dev
-- name: OpenRay  CA-11873
+- name: OpenRay  CA-11875
   type: vless
-  server: 104.17.25.173
+  server: 104.21.7.133
   port: 80
   uuid: 93526fcb-8dbf-442e-a656-eb304f1da4ef
   network: ws
@@ -939,9 +903,9 @@ proxies:
     path: /?ed=2048
     headers:
       Host: lucky-voice-d6f3.difat89954-0c6.workers.dev
-- name: OpenRay  CA-11875
+- name: OpenRay  CA-11873
   type: vless
-  server: 104.21.7.133
+  server: 104.17.25.173
   port: 80
   uuid: 93526fcb-8dbf-442e-a656-eb304f1da4ef
   network: ws
@@ -985,18 +949,6 @@ proxies:
     path: /vmessws
     headers:
       Host: 209.126.84.189
-- name: OpenRay  CA-11664
-  type: vmess
-  server: 15.235.41.200
-  port: 80
-  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /IOebhLMhl1CTbFHbL95myfRX2
-    headers:
-      Host: 15.235.41.200
 - name: OpenRay  HK-166
   type: vmess
   server: n1747624280.lie5d.cyou
@@ -1011,6 +963,18 @@ proxies:
     path: /
     headers:
       Host: n1747624280.lie5d.cyou
+- name: OpenRay  CA-11664
+  type: vmess
+  server: 15.235.41.200
+  port: 80
+  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /IOebhLMhl1CTbFHbL95myfRX2
+    headers:
+      Host: 15.235.41.200
 - name: OpenRay  BR-19
   type: vmess
   server: 95.164.4.88
@@ -1080,6 +1044,43 @@ proxies:
     path: /vless/
     headers:
       Host: pq-albania1.09vpn.com
+- name: OpenRay Dynamic-12271
+  type: vless
+  server: v1.dabache.top
+  port: 2096
+  uuid: 686c62d9-17a7-43c9-a40a-f6747df60a9f
+  network: ws
+  tls: true
+  servername: ca.adobe-connect.top
+  ws-opts:
+    path: /
+    headers:
+      Host: ca.adobe-connect.top
+- name: OpenRay  FR-389
+  type: vless
+  server: 94.232.247.168
+  port: 41360
+  uuid: e16a35ea-6715-4e75-9845-d20358bd0876
+  network: tcp
+  tls: true
+  servername: yahoo.com
+  reality-opts:
+    public-key: TY6w1zP-qUFKVCAQdQT2ZEJsZBrPO4hZjZYBSS6h6DU
+    short-id: 1aab45
+  client-fingerprint: chrome
+- name: OpenRay  TR-67
+  type: vless
+  server: 94.131.123.167
+  port: 443
+  uuid: a44e0875-210f-4941-9062-89b6361a14c6
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  servername: apple.com
+  reality-opts:
+    public-key: i5a8i2AWUSMZ-rYA6hGBRCBBoe7W5ah33SCdF5JkMk4
+    short-id: 8bcfe256cf216fd8
+  client-fingerprint: chrome
 
 proxy-groups:
 - name: AUTO
@@ -1112,12 +1113,12 @@ proxy-groups:
   - OpenRay  US-10828
   - OpenRay  US-11402
   - OpenRay  US-11431
-  - OpenRay  CA-9952
   - OpenRay  JP-433
+  - OpenRay  CA-9952
   - OpenRay  US-11505
   - OpenRay Dynamic-11336
-  - OpenRay  US-11387
   - OpenRay  CA-11815
+  - OpenRay  US-11387
   - OpenRay  FR-445
   - OpenRay  NL-363
   - OpenRay  US-11241
@@ -1128,15 +1129,14 @@ proxy-groups:
   - OpenRay  HK-232
   - OpenRay  FR-509
   - OpenRay  US-11386
-  - OpenRay Dynamic-12509
   - OpenRay Dynamic-11598
   - OpenRay  CA-11721
   - OpenRay  AT-9
   - OpenRay Dynamic-11357
   - OpenRay  DE-3505
   - OpenRay Dynamic-11334
-  - OpenRay  CA-11890
   - OpenRay  US-11298
+  - OpenRay  CA-11890
   - OpenRay Dynamic-11818
   - OpenRay Dynamic-11612
   - OpenRay  CA-12337
@@ -1154,28 +1154,29 @@ proxy-groups:
   - OpenRay  MY-6
   - OpenRay  CA-12557
   - OpenRay  US-11672
-  - OpenRay Dynamic-12510
   - OpenRay  CA-12483
   - OpenRay Dynamic-12453
   - OpenRay Dynamic-12482
-  - OpenRay Dynamic-12555
   - OpenRay Dynamic-11777
   - OpenRay  CA-11205
   - OpenRay Dynamic-11768
-  - OpenRay  CA-11873
-  - OpenRay  CA-11871
   - OpenRay  CA-11875
+  - OpenRay  CA-11871
+  - OpenRay  CA-11873
   - OpenRay  AM-4
   - OpenRay  GR-1
   - OpenRay  US-11494
-  - OpenRay  CA-11664
   - OpenRay  HK-166
+  - OpenRay  CA-11664
   - OpenRay  BR-19
   - OpenRay  NL-406
   - OpenRay Dynamic-12190
   - OpenRay Dynamic-11820
   - OpenRay Dynamic-12195
   - OpenRay  AL-7
+  - OpenRay Dynamic-12271
+  - OpenRay  FR-389
+  - OpenRay  TR-67
 - name: PROXY
   type: select
   proxies:
@@ -1204,12 +1205,12 @@ proxy-groups:
   - OpenRay  US-10828
   - OpenRay  US-11402
   - OpenRay  US-11431
-  - OpenRay  CA-9952
   - OpenRay  JP-433
+  - OpenRay  CA-9952
   - OpenRay  US-11505
   - OpenRay Dynamic-11336
-  - OpenRay  US-11387
   - OpenRay  CA-11815
+  - OpenRay  US-11387
   - OpenRay  FR-445
   - OpenRay  NL-363
   - OpenRay  US-11241
@@ -1220,15 +1221,14 @@ proxy-groups:
   - OpenRay  HK-232
   - OpenRay  FR-509
   - OpenRay  US-11386
-  - OpenRay Dynamic-12509
   - OpenRay Dynamic-11598
   - OpenRay  CA-11721
   - OpenRay  AT-9
   - OpenRay Dynamic-11357
   - OpenRay  DE-3505
   - OpenRay Dynamic-11334
-  - OpenRay  CA-11890
   - OpenRay  US-11298
+  - OpenRay  CA-11890
   - OpenRay Dynamic-11818
   - OpenRay Dynamic-11612
   - OpenRay  CA-12337
@@ -1246,28 +1246,29 @@ proxy-groups:
   - OpenRay  MY-6
   - OpenRay  CA-12557
   - OpenRay  US-11672
-  - OpenRay Dynamic-12510
   - OpenRay  CA-12483
   - OpenRay Dynamic-12453
   - OpenRay Dynamic-12482
-  - OpenRay Dynamic-12555
   - OpenRay Dynamic-11777
   - OpenRay  CA-11205
   - OpenRay Dynamic-11768
-  - OpenRay  CA-11873
-  - OpenRay  CA-11871
   - OpenRay  CA-11875
+  - OpenRay  CA-11871
+  - OpenRay  CA-11873
   - OpenRay  AM-4
   - OpenRay  GR-1
   - OpenRay  US-11494
-  - OpenRay  CA-11664
   - OpenRay  HK-166
+  - OpenRay  CA-11664
   - OpenRay  BR-19
   - OpenRay  NL-406
   - OpenRay Dynamic-12190
   - OpenRay Dynamic-11820
   - OpenRay Dynamic-12195
   - OpenRay  AL-7
+  - OpenRay Dynamic-12271
+  - OpenRay  FR-389
+  - OpenRay  TR-67
 rules:
 - DOMAIN-SUFFIX,ir,DIRECT
 - DOMAIN-SUFFIX,aparat.com,DIRECT
