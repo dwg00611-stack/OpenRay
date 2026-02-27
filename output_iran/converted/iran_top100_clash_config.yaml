@@ -595,18 +595,6 @@ proxies:
     public-key: kKX1o7FhJLyDaVE6sqXUcYpUIuFUgij_ueRYc_E4JhM
     short-id: 1a24af87
   client-fingerprint: chrome
-- name: OpenRay Dynamic-11612
-  type: vmess
-  server: cf.090227.xyz
-  port: 443
-  uuid: 290cc691-3ac6-4387-98a1-25c8eb8ca2ea
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sgal.dagrate.eu.org
 - name: OpenRay Dynamic-11818
   type: vmess
   server: cf.090227.xyz
@@ -617,6 +605,18 @@ proxies:
   network: ws
   tls: true
   servername: sgal.dagrate.eu.org
+  ws-opts:
+    path: /
+    headers:
+      Host: sgal.dagrate.eu.org
+- name: OpenRay Dynamic-11612
+  type: vmess
+  server: cf.090227.xyz
+  port: 443
+  uuid: 290cc691-3ac6-4387-98a1-25c8eb8ca2ea
+  alterId: 0
+  cipher: auto
+  network: ws
   ws-opts:
     path: /
     headers:
@@ -1051,6 +1051,18 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
+- name: OpenRay  HK-188
+  type: vmess
+  server: 47.244.120.197
+  port: 44867
+  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /arki?ed=2048
+    headers:
+      Host: 47.244.120.197
 - name: OpenRay  DE-2971
   type: vless
   server: 188.34.193.153
@@ -1064,18 +1076,6 @@ proxies:
     public-key: gZGVp5PUdafgsmi1gawa1yLuha_XhXRc_W9SvPiGmTY
     short-id: 7cad5040
   client-fingerprint: chrome
-- name: OpenRay  HK-188
-  type: vmess
-  server: 47.244.120.197
-  port: 44867
-  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /arki?ed=2048
-    headers:
-      Host: 47.244.120.197
 - name: OpenRay  HK-231
   type: vmess
   server: 47.242.192.233
@@ -1150,8 +1150,8 @@ proxy-groups:
   - OpenRay Dynamic-11334
   - OpenRay  CA-11890
   - OpenRay  US-11298
-  - OpenRay Dynamic-11612
   - OpenRay Dynamic-11818
+  - OpenRay Dynamic-11612
   - OpenRay Dynamic-12217
   - OpenRay  FR-489
   - OpenRay  HK-222
@@ -1190,8 +1190,8 @@ proxy-groups:
   - OpenRay  HK-229
   - OpenRay  MY-20
   - OpenRay  HK-233
-  - OpenRay  DE-2971
   - OpenRay  HK-188
+  - OpenRay  DE-2971
   - OpenRay  HK-231
   - OpenRay  HK-240
 - name: PROXY
@@ -1242,8 +1242,8 @@ proxy-groups:
   - OpenRay Dynamic-11334
   - OpenRay  CA-11890
   - OpenRay  US-11298
-  - OpenRay Dynamic-11612
   - OpenRay Dynamic-11818
+  - OpenRay Dynamic-11612
   - OpenRay Dynamic-12217
   - OpenRay  FR-489
   - OpenRay  HK-222
@@ -1282,8 +1282,8 @@ proxy-groups:
   - OpenRay  HK-229
   - OpenRay  MY-20
   - OpenRay  HK-233
-  - OpenRay  DE-2971
   - OpenRay  HK-188
+  - OpenRay  DE-2971
   - OpenRay  HK-231
   - OpenRay  HK-240
 rules:
