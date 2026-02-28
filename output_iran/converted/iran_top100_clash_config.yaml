@@ -610,18 +610,6 @@ proxies:
     path: /vless/
     headers:
       Host: ov-france1.09vpn.com
-- name: OpenRay Dynamic-12217
-  type: vless
-  server: vip2.kaixincloud.top
-  port: 2096
-  uuid: 686c62d9-17a7-43c9-a40a-f6747df60a9f
-  network: ws
-  tls: true
-  servername: ca.adobe-connect.top
-  ws-opts:
-    path: /
-    headers:
-      Host: ca.adobe-connect.top
 - name: OpenRay  HK-222
   type: vmess
   server: 47.243.244.164
@@ -636,6 +624,18 @@ proxies:
     path: /
     headers:
       Host: n1761214908.wpg27.xyz
+- name: OpenRay Dynamic-12217
+  type: vless
+  server: vip2.kaixincloud.top
+  port: 2096
+  uuid: 686c62d9-17a7-43c9-a40a-f6747df60a9f
+  network: ws
+  tls: true
+  servername: ca.adobe-connect.top
+  ws-opts:
+    path: /
+    headers:
+      Host: ca.adobe-connect.top
 - name: OpenRay  CA-12460
   type: vless
   server: 172.66.128.70
@@ -1135,8 +1135,8 @@ proxy-groups:
   - OpenRay Dynamic-11612
   - OpenRay Dynamic-11818
   - OpenRay  FR-489
-  - OpenRay Dynamic-12217
   - OpenRay  HK-222
+  - OpenRay Dynamic-12217
   - OpenRay  CA-12460
   - OpenRay  US-11416
   - OpenRay  FR-507
@@ -1224,8 +1224,8 @@ proxy-groups:
   - OpenRay Dynamic-11612
   - OpenRay Dynamic-11818
   - OpenRay  FR-489
-  - OpenRay Dynamic-12217
   - OpenRay  HK-222
+  - OpenRay Dynamic-12217
   - OpenRay  CA-12460
   - OpenRay  US-11416
   - OpenRay  FR-507
