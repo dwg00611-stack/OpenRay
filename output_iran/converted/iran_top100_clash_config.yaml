@@ -921,18 +921,6 @@ proxies:
     public-key: TY6w1zP-qUFKVCAQdQT2ZEJsZBrPO4hZjZYBSS6h6DU
     short-id: 1aab45
   client-fingerprint: chrome
-- name: OpenRay  CA-12382
-  type: vless
-  server: 104.16.250.22
-  port: 2096
-  uuid: 686c62d9-17a7-43c9-a40a-f6747df60a9f
-  network: ws
-  tls: true
-  servername: ca.adobe-connect.top
-  ws-opts:
-    path: /
-    headers:
-      Host: ca.adobe-connect.top
 - name: OpenRay  KZ-57
   type: vmess
   server: 38.107.234.57
@@ -945,6 +933,18 @@ proxies:
     path: /vmess/
     headers:
       Host: google.com
+- name: OpenRay  CA-12382
+  type: vless
+  server: 104.16.250.22
+  port: 2096
+  uuid: 686c62d9-17a7-43c9-a40a-f6747df60a9f
+  network: ws
+  tls: true
+  servername: ca.adobe-connect.top
+  ws-opts:
+    path: /
+    headers:
+      Host: ca.adobe-connect.top
 - name: OpenRay  KZ-53
   type: vmess
   server: 38.107.234.57
@@ -1162,8 +1162,8 @@ proxy-groups:
   - OpenRay  TR-67
   - OpenRay  CA-12562
   - OpenRay  FR-389
-  - OpenRay  CA-12382
   - OpenRay  KZ-57
+  - OpenRay  CA-12382
   - OpenRay  KZ-53
   - OpenRay  CA-12587
   - OpenRay  KZ-64
@@ -1251,8 +1251,8 @@ proxy-groups:
   - OpenRay  TR-67
   - OpenRay  CA-12562
   - OpenRay  FR-389
-  - OpenRay  CA-12382
   - OpenRay  KZ-57
+  - OpenRay  CA-12382
   - OpenRay  KZ-53
   - OpenRay  CA-12587
   - OpenRay  KZ-64
