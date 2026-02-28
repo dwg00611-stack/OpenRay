@@ -333,18 +333,6 @@ proxies:
     path: /vmessws
     headers:
       Host: 209.126.84.189
-- name: OpenRay  US-11431
-  type: vmess
-  server: 209.126.84.189
-  port: 443
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /vmessws
-    headers:
-      Host: AZERB.NET
 - name: OpenRay  JP-433
   type: vless
   server: 45.89.109.25
@@ -357,6 +345,18 @@ proxies:
     public-key: 8Fglzc7t2LS4r1vQWlVMNe_EsFdhMawlxeDacbhmiAg
     short-id: f0
   client-fingerprint: chrome
+- name: OpenRay  US-11431
+  type: vmess
+  server: 209.126.84.189
+  port: 443
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vmessws
+    headers:
+      Host: AZERB.NET
 - name: OpenRay  CA-9952
   type: vless
   server: 104.16.9.20
@@ -574,6 +574,18 @@ proxies:
     public-key: kKX1o7FhJLyDaVE6sqXUcYpUIuFUgij_ueRYc_E4JhM
     short-id: 1a24af87
   client-fingerprint: chrome
+- name: OpenRay Dynamic-11612
+  type: vmess
+  server: cf.090227.xyz
+  port: 443
+  uuid: 290cc691-3ac6-4387-98a1-25c8eb8ca2ea
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: sgal.dagrate.eu.org
 - name: OpenRay Dynamic-11818
   type: vmess
   server: cf.090227.xyz
@@ -584,18 +596,6 @@ proxies:
   network: ws
   tls: true
   servername: sgal.dagrate.eu.org
-  ws-opts:
-    path: /
-    headers:
-      Host: sgal.dagrate.eu.org
-- name: OpenRay Dynamic-11612
-  type: vmess
-  server: cf.090227.xyz
-  port: 443
-  uuid: 290cc691-3ac6-4387-98a1-25c8eb8ca2ea
-  alterId: 0
-  cipher: auto
-  network: ws
   ws-opts:
     path: /
     headers:
@@ -921,18 +921,6 @@ proxies:
     public-key: TY6w1zP-qUFKVCAQdQT2ZEJsZBrPO4hZjZYBSS6h6DU
     short-id: 1aab45
   client-fingerprint: chrome
-- name: OpenRay  KZ-57
-  type: vmess
-  server: 38.107.234.57
-  port: 80
-  uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /vmess/
-    headers:
-      Host: google.com
 - name: OpenRay  CA-12382
   type: vless
   server: 104.16.250.22
@@ -945,6 +933,18 @@ proxies:
     path: /
     headers:
       Host: ca.adobe-connect.top
+- name: OpenRay  KZ-57
+  type: vmess
+  server: 38.107.234.57
+  port: 80
+  uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: google.com
 - name: OpenRay  KZ-53
   type: vmess
   server: 38.107.234.57
@@ -1111,8 +1111,8 @@ proxy-groups:
   - OpenRay  CA-12302
   - OpenRay  US-10828
   - OpenRay  US-11402
-  - OpenRay  US-11431
   - OpenRay  JP-433
+  - OpenRay  US-11431
   - OpenRay  CA-9952
   - OpenRay  US-11505
   - OpenRay Dynamic-11336
@@ -1132,8 +1132,8 @@ proxy-groups:
   - OpenRay  DE-3505
   - OpenRay  CA-11890
   - OpenRay  US-11298
-  - OpenRay Dynamic-11818
   - OpenRay Dynamic-11612
+  - OpenRay Dynamic-11818
   - OpenRay  FR-489
   - OpenRay Dynamic-12217
   - OpenRay  HK-222
@@ -1162,8 +1162,8 @@ proxy-groups:
   - OpenRay  TR-67
   - OpenRay  CA-12562
   - OpenRay  FR-389
-  - OpenRay  KZ-57
   - OpenRay  CA-12382
+  - OpenRay  KZ-57
   - OpenRay  KZ-53
   - OpenRay  CA-12587
   - OpenRay  KZ-64
@@ -1200,8 +1200,8 @@ proxy-groups:
   - OpenRay  CA-12302
   - OpenRay  US-10828
   - OpenRay  US-11402
-  - OpenRay  US-11431
   - OpenRay  JP-433
+  - OpenRay  US-11431
   - OpenRay  CA-9952
   - OpenRay  US-11505
   - OpenRay Dynamic-11336
@@ -1221,8 +1221,8 @@ proxy-groups:
   - OpenRay  DE-3505
   - OpenRay  CA-11890
   - OpenRay  US-11298
-  - OpenRay Dynamic-11818
   - OpenRay Dynamic-11612
+  - OpenRay Dynamic-11818
   - OpenRay  FR-489
   - OpenRay Dynamic-12217
   - OpenRay  HK-222
@@ -1251,8 +1251,8 @@ proxy-groups:
   - OpenRay  TR-67
   - OpenRay  CA-12562
   - OpenRay  FR-389
-  - OpenRay  KZ-57
   - OpenRay  CA-12382
+  - OpenRay  KZ-57
   - OpenRay  KZ-53
   - OpenRay  CA-12587
   - OpenRay  KZ-64
