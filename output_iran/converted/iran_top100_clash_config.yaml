@@ -333,6 +333,14 @@ proxies:
     path: /vmessws
     headers:
       Host: 209.126.84.189
+- name: OpenRay  CA-9952
+  type: vless
+  server: 104.16.9.20
+  port: 443
+  uuid: e4824193-4f54-453b-d037-88368e85ef0e
+  network: grpc
+  tls: true
+  servername: pqh30v5.carwashipdir.shop
 - name: OpenRay  JP-433
   type: vless
   server: 45.89.109.25
@@ -345,14 +353,6 @@ proxies:
     public-key: 8Fglzc7t2LS4r1vQWlVMNe_EsFdhMawlxeDacbhmiAg
     short-id: f0
   client-fingerprint: chrome
-- name: OpenRay  CA-9952
-  type: vless
-  server: 104.16.9.20
-  port: 443
-  uuid: e4824193-4f54-453b-d037-88368e85ef0e
-  network: grpc
-  tls: true
-  servername: pqh30v5.carwashipdir.shop
 - name: OpenRay  US-11431
   type: vmess
   server: 209.126.84.189
@@ -525,18 +525,6 @@ proxies:
   network: grpc
   tls: true
   servername: pqh30v4.carwashipdir.shop
-- name: OpenRay Dynamic-11334
-  type: vless
-  server: s1.db-link.in
-  port: 443
-  uuid: 305419ed-4ef5-3e5a-8d48-b803c58853d3
-  network: ws
-  tls: true
-  servername: s6.oboob.cn
-  ws-opts:
-    path: /db10248afdcb0daf
-    headers:
-      Host: s6.oboob.cn
 - name: OpenRay  DE-3505
   type: vless
   server: 57.129.49.1
@@ -550,6 +538,18 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
   client-fingerprint: chrome
+- name: OpenRay Dynamic-11334
+  type: vless
+  server: s1.db-link.in
+  port: 443
+  uuid: 305419ed-4ef5-3e5a-8d48-b803c58853d3
+  network: ws
+  tls: true
+  servername: s6.oboob.cn
+  ws-opts:
+    path: /db10248afdcb0daf
+    headers:
+      Host: s6.oboob.cn
 - name: OpenRay  CA-11890
   type: vmess
   server: 15.235.41.200
@@ -1109,8 +1109,8 @@ proxy-groups:
   - OpenRay  CA-12302
   - OpenRay  US-10828
   - OpenRay  US-11402
-  - OpenRay  JP-433
   - OpenRay  CA-9952
+  - OpenRay  JP-433
   - OpenRay  US-11431
   - OpenRay  US-11505
   - OpenRay Dynamic-11336
@@ -1126,8 +1126,8 @@ proxy-groups:
   - OpenRay Dynamic-11598
   - OpenRay  AT-9
   - OpenRay Dynamic-11357
-  - OpenRay Dynamic-11334
   - OpenRay  DE-3505
+  - OpenRay Dynamic-11334
   - OpenRay  CA-11890
   - OpenRay  US-11298
   - OpenRay Dynamic-11612
@@ -1198,8 +1198,8 @@ proxy-groups:
   - OpenRay  CA-12302
   - OpenRay  US-10828
   - OpenRay  US-11402
-  - OpenRay  JP-433
   - OpenRay  CA-9952
+  - OpenRay  JP-433
   - OpenRay  US-11431
   - OpenRay  US-11505
   - OpenRay Dynamic-11336
@@ -1215,8 +1215,8 @@ proxy-groups:
   - OpenRay Dynamic-11598
   - OpenRay  AT-9
   - OpenRay Dynamic-11357
-  - OpenRay Dynamic-11334
   - OpenRay  DE-3505
+  - OpenRay Dynamic-11334
   - OpenRay  CA-11890
   - OpenRay  US-11298
   - OpenRay Dynamic-11612
