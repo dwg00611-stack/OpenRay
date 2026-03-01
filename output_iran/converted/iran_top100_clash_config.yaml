@@ -395,18 +395,6 @@ proxies:
     public-key: ZsswZuBV8bEGQWFrpShCilSytnDUj0kwHFhTSLXzOwc
     short-id: d21e7c
   client-fingerprint: chrome
-- name: OpenRay  CA-11815
-  type: vmess
-  server: 15.235.41.200
-  port: 80
-  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /IOebhLMhl1CTbFHbL95myfRX2
-    headers:
-      Host: 15.235.41.200
 - name: OpenRay  FR-445
   type: vless
   server: 157.173.127.225
@@ -419,6 +407,18 @@ proxies:
     public-key: v3EwzA9RIIh5Ndxm-gypRY6RCJhOpQ-2WO7KaH8nsC8
     short-id: eab26c4a32
   client-fingerprint: random
+- name: OpenRay  CA-11815
+  type: vmess
+  server: 15.235.41.200
+  port: 80
+  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /IOebhLMhl1CTbFHbL95myfRX2
+    headers:
+      Host: 15.235.41.200
 - name: OpenRay  NL-363
   type: vless
   server: 188.253.26.39
@@ -550,18 +550,6 @@ proxies:
     path: /db10248afdcb0daf
     headers:
       Host: s6.oboob.cn
-- name: OpenRay  CA-11890
-  type: vmess
-  server: 15.235.41.200
-  port: 80
-  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /IOebhLMhl1CTbFHbL95myfRX2
-    headers:
-      Host: 15.235.41.200
 - name: OpenRay  US-11298
   type: vless
   server: 172.234.130.82
@@ -574,6 +562,18 @@ proxies:
     public-key: kKX1o7FhJLyDaVE6sqXUcYpUIuFUgij_ueRYc_E4JhM
     short-id: 1a24af87
   client-fingerprint: chrome
+- name: OpenRay  CA-11890
+  type: vmess
+  server: 15.235.41.200
+  port: 80
+  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /IOebhLMhl1CTbFHbL95myfRX2
+    headers:
+      Host: 15.235.41.200
 - name: OpenRay Dynamic-11612
   type: vmess
   server: cf.090227.xyz
@@ -860,6 +860,18 @@ proxies:
     path: /vless/
     headers:
       Host: pq-albania1.09vpn.com
+- name: OpenRay Dynamic-12271
+  type: vless
+  server: v1.dabache.top
+  port: 2096
+  uuid: 686c62d9-17a7-43c9-a40a-f6747df60a9f
+  network: ws
+  tls: true
+  servername: ca.adobe-connect.top
+  ws-opts:
+    path: /
+    headers:
+      Host: ca.adobe-connect.top
 - name: OpenRay  TR-67
   type: vless
   server: 94.131.123.167
@@ -873,18 +885,6 @@ proxies:
     public-key: i5a8i2AWUSMZ-rYA6hGBRCBBoe7W5ah33SCdF5JkMk4
     short-id: 8bcfe256cf216fd8
   client-fingerprint: chrome
-- name: OpenRay Dynamic-12271
-  type: vless
-  server: v1.dabache.top
-  port: 2096
-  uuid: 686c62d9-17a7-43c9-a40a-f6747df60a9f
-  network: ws
-  tls: true
-  servername: ca.adobe-connect.top
-  ws-opts:
-    path: /
-    headers:
-      Host: ca.adobe-connect.top
 - name: OpenRay  CA-12562
   type: vless
   server: 104.18.185.26
@@ -1115,8 +1115,8 @@ proxy-groups:
   - OpenRay  US-11505
   - OpenRay Dynamic-11336
   - OpenRay  US-11387
-  - OpenRay  CA-11815
   - OpenRay  FR-445
+  - OpenRay  CA-11815
   - OpenRay  NL-363
   - OpenRay  US-11241
   - OpenRay  US-11414
@@ -1128,8 +1128,8 @@ proxy-groups:
   - OpenRay Dynamic-11357
   - OpenRay  DE-3505
   - OpenRay Dynamic-11334
-  - OpenRay  CA-11890
   - OpenRay  US-11298
+  - OpenRay  CA-11890
   - OpenRay Dynamic-11612
   - OpenRay Dynamic-11818
   - OpenRay  FR-489
@@ -1155,8 +1155,8 @@ proxy-groups:
   - OpenRay Dynamic-11820
   - OpenRay Dynamic-12195
   - OpenRay  AL-7
-  - OpenRay  TR-67
   - OpenRay Dynamic-12271
+  - OpenRay  TR-67
   - OpenRay  CA-12562
   - OpenRay  FR-389
   - OpenRay  KZ-57
@@ -1204,8 +1204,8 @@ proxy-groups:
   - OpenRay  US-11505
   - OpenRay Dynamic-11336
   - OpenRay  US-11387
-  - OpenRay  CA-11815
   - OpenRay  FR-445
+  - OpenRay  CA-11815
   - OpenRay  NL-363
   - OpenRay  US-11241
   - OpenRay  US-11414
@@ -1217,8 +1217,8 @@ proxy-groups:
   - OpenRay Dynamic-11357
   - OpenRay  DE-3505
   - OpenRay Dynamic-11334
-  - OpenRay  CA-11890
   - OpenRay  US-11298
+  - OpenRay  CA-11890
   - OpenRay Dynamic-11612
   - OpenRay Dynamic-11818
   - OpenRay  FR-489
@@ -1244,8 +1244,8 @@ proxy-groups:
   - OpenRay Dynamic-11820
   - OpenRay Dynamic-12195
   - OpenRay  AL-7
-  - OpenRay  TR-67
   - OpenRay Dynamic-12271
+  - OpenRay  TR-67
   - OpenRay  CA-12562
   - OpenRay  FR-389
   - OpenRay  KZ-57
