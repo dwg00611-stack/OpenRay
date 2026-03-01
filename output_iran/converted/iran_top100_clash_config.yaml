@@ -207,14 +207,6 @@ proxies:
     path: /db1024a105975707
     headers:
       Host: dabaihk.webn.cc
-- name: OpenRay Dynamic-9652
-  type: vless
-  server: all.tellmethetrue.shop
-  port: 443
-  uuid: e4824193-4f54-453b-d037-88368e85ef0e
-  network: grpc
-  tls: true
-  servername: pqh30v5.carwashipdir.shop
 - name: OpenRay Dynamic-11337
   type: vless
   server: s1.db-link.in
@@ -227,6 +219,14 @@ proxies:
     path: /db10248a03e8db1b
     headers:
       Host: dabaif0.webn.cc
+- name: OpenRay Dynamic-9652
+  type: vless
+  server: all.tellmethetrue.shop
+  port: 443
+  uuid: e4824193-4f54-453b-d037-88368e85ef0e
+  network: grpc
+  tls: true
+  servername: pqh30v5.carwashipdir.shop
 - name: OpenRay Dynamic-11335
   type: vless
   server: s1.db-link.in
@@ -333,6 +333,14 @@ proxies:
     path: /vmessws
     headers:
       Host: 209.126.84.189
+- name: OpenRay  CA-9952
+  type: vless
+  server: 104.16.9.20
+  port: 443
+  uuid: e4824193-4f54-453b-d037-88368e85ef0e
+  network: grpc
+  tls: true
+  servername: pqh30v5.carwashipdir.shop
 - name: OpenRay  JP-433
   type: vless
   server: 45.89.109.25
@@ -345,14 +353,6 @@ proxies:
     public-key: 8Fglzc7t2LS4r1vQWlVMNe_EsFdhMawlxeDacbhmiAg
     short-id: f0
   client-fingerprint: chrome
-- name: OpenRay  CA-9952
-  type: vless
-  server: 104.16.9.20
-  port: 443
-  uuid: e4824193-4f54-453b-d037-88368e85ef0e
-  network: grpc
-  tls: true
-  servername: pqh30v5.carwashipdir.shop
 - name: OpenRay  US-11431
   type: vmess
   server: 209.126.84.189
@@ -945,18 +945,6 @@ proxies:
     path: /
     headers:
       Host: ir1.airpanel.top
-- name: OpenRay  CA-12382
-  type: vless
-  server: 104.16.250.22
-  port: 2096
-  uuid: 686c62d9-17a7-43c9-a40a-f6747df60a9f
-  network: ws
-  tls: true
-  servername: ca.adobe-connect.top
-  ws-opts:
-    path: /
-    headers:
-      Host: ca.adobe-connect.top
 - name: OpenRay  KZ-64
   type: vmess
   server: 3h-kazakhstan1.09vpn.com
@@ -970,6 +958,18 @@ proxies:
     headers:
       Host: 
         wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+- name: OpenRay  CA-12382
+  type: vless
+  server: 104.16.250.22
+  port: 2096
+  uuid: 686c62d9-17a7-43c9-a40a-f6747df60a9f
+  network: ws
+  tls: true
+  servername: ca.adobe-connect.top
+  ws-opts:
+    path: /
+    headers:
+      Host: ca.adobe-connect.top
 - name: OpenRay  MY-20
   type: vmess
   server: 47.250.45.234
@@ -1098,8 +1098,8 @@ proxy-groups:
   - OpenRay  US-11385
   - OpenRay  KZ-9
   - OpenRay Dynamic-11536
-  - OpenRay Dynamic-9652
   - OpenRay Dynamic-11337
+  - OpenRay Dynamic-9652
   - OpenRay Dynamic-11335
   - OpenRay  HK-151
   - OpenRay Dynamic-11801
@@ -1109,8 +1109,8 @@ proxy-groups:
   - OpenRay  CA-12302
   - OpenRay  US-10828
   - OpenRay  US-11402
-  - OpenRay  JP-433
   - OpenRay  CA-9952
+  - OpenRay  JP-433
   - OpenRay  US-11431
   - OpenRay  US-11505
   - OpenRay Dynamic-11336
@@ -1162,8 +1162,8 @@ proxy-groups:
   - OpenRay  KZ-57
   - OpenRay  KZ-53
   - OpenRay  CA-12587
-  - OpenRay  CA-12382
   - OpenRay  KZ-64
+  - OpenRay  CA-12382
   - OpenRay  MY-20
   - OpenRay  HK-188
   - OpenRay  HK-240
@@ -1187,8 +1187,8 @@ proxy-groups:
   - OpenRay  US-11385
   - OpenRay  KZ-9
   - OpenRay Dynamic-11536
-  - OpenRay Dynamic-9652
   - OpenRay Dynamic-11337
+  - OpenRay Dynamic-9652
   - OpenRay Dynamic-11335
   - OpenRay  HK-151
   - OpenRay Dynamic-11801
@@ -1198,8 +1198,8 @@ proxy-groups:
   - OpenRay  CA-12302
   - OpenRay  US-10828
   - OpenRay  US-11402
-  - OpenRay  JP-433
   - OpenRay  CA-9952
+  - OpenRay  JP-433
   - OpenRay  US-11431
   - OpenRay  US-11505
   - OpenRay Dynamic-11336
@@ -1251,8 +1251,8 @@ proxy-groups:
   - OpenRay  KZ-57
   - OpenRay  KZ-53
   - OpenRay  CA-12587
-  - OpenRay  CA-12382
   - OpenRay  KZ-64
+  - OpenRay  CA-12382
   - OpenRay  MY-20
   - OpenRay  HK-188
   - OpenRay  HK-240
