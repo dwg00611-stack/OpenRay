@@ -207,6 +207,14 @@ proxies:
     path: /db1024a105975707
     headers:
       Host: dabaihk.webn.cc
+- name: OpenRay Dynamic-9652
+  type: vless
+  server: all.tellmethetrue.shop
+  port: 443
+  uuid: e4824193-4f54-453b-d037-88368e85ef0e
+  network: grpc
+  tls: true
+  servername: pqh30v5.carwashipdir.shop
 - name: OpenRay Dynamic-11337
   type: vless
   server: s1.db-link.in
@@ -219,14 +227,6 @@ proxies:
     path: /db10248a03e8db1b
     headers:
       Host: dabaif0.webn.cc
-- name: OpenRay Dynamic-9652
-  type: vless
-  server: all.tellmethetrue.shop
-  port: 443
-  uuid: e4824193-4f54-453b-d037-88368e85ef0e
-  network: grpc
-  tls: true
-  servername: pqh30v5.carwashipdir.shop
 - name: OpenRay Dynamic-11335
   type: vless
   server: s1.db-link.in
@@ -419,19 +419,6 @@ proxies:
     path: /IOebhLMhl1CTbFHbL95myfRX2
     headers:
       Host: 15.235.41.200
-- name: OpenRay  NL-363
-  type: vless
-  server: 188.253.26.39
-  port: 442
-  uuid: e929f51d-5a95-5432-b66f-cfe725ea1f61
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  reality-opts:
-    public-key: T_gyZwngrYUe24q6-mieGT9WJfzja0PQad_y_SnhBk0
-    short-id: 6ac998b514
-  client-fingerprint: chrome
 - name: OpenRay  US-11241
   type: vless
   server: 137.184.218.169
@@ -444,6 +431,19 @@ proxies:
   reality-opts:
     public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
     short-id: ''
+  client-fingerprint: chrome
+- name: OpenRay  NL-363
+  type: vless
+  server: 188.253.26.39
+  port: 442
+  uuid: e929f51d-5a95-5432-b66f-cfe725ea1f61
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  servername: yahoo.com
+  reality-opts:
+    public-key: T_gyZwngrYUe24q6-mieGT9WJfzja0PQad_y_SnhBk0
+    short-id: 6ac998b514
   client-fingerprint: chrome
 - name: OpenRay  US-11414
   type: vless
@@ -840,16 +840,6 @@ proxies:
     path: /?ed
     headers:
       Host: CREDibLe-pLaNt7ddV4jJ7et.OnEeaT.CO.
-- name: OpenRay Dynamic-12195
-  type: vless
-  server: nodejs.org
-  port: 80
-  uuid: 2a2a8023-3b4b-407d-a00a-7beb5a158148
-  network: ws
-  ws-opts:
-    path: /?ed
-    headers:
-      Host: SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.
 - name: OpenRay  AL-7
   type: vless
   server: pq-albania1.09vpn.com
@@ -860,6 +850,16 @@ proxies:
     path: /vless/
     headers:
       Host: pq-albania1.09vpn.com
+- name: OpenRay Dynamic-12195
+  type: vless
+  server: nodejs.org
+  port: 80
+  uuid: 2a2a8023-3b4b-407d-a00a-7beb5a158148
+  network: ws
+  ws-opts:
+    path: /?ed
+    headers:
+      Host: SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.
 - name: OpenRay  TR-67
   type: vless
   server: 94.131.123.167
@@ -1098,8 +1098,8 @@ proxy-groups:
   - OpenRay  US-11385
   - OpenRay  KZ-9
   - OpenRay Dynamic-11536
-  - OpenRay Dynamic-11337
   - OpenRay Dynamic-9652
+  - OpenRay Dynamic-11337
   - OpenRay Dynamic-11335
   - OpenRay  HK-151
   - OpenRay Dynamic-11801
@@ -1117,8 +1117,8 @@ proxy-groups:
   - OpenRay  US-11387
   - OpenRay  FR-445
   - OpenRay  CA-11815
-  - OpenRay  NL-363
   - OpenRay  US-11241
+  - OpenRay  NL-363
   - OpenRay  US-11414
   - OpenRay  CA-12291
   - OpenRay  CA-12443
@@ -1153,8 +1153,8 @@ proxy-groups:
   - OpenRay  NL-406
   - OpenRay Dynamic-11820
   - OpenRay Dynamic-12190
-  - OpenRay Dynamic-12195
   - OpenRay  AL-7
+  - OpenRay Dynamic-12195
   - OpenRay  TR-67
   - OpenRay Dynamic-12271
   - OpenRay  CA-12562
@@ -1187,8 +1187,8 @@ proxy-groups:
   - OpenRay  US-11385
   - OpenRay  KZ-9
   - OpenRay Dynamic-11536
-  - OpenRay Dynamic-11337
   - OpenRay Dynamic-9652
+  - OpenRay Dynamic-11337
   - OpenRay Dynamic-11335
   - OpenRay  HK-151
   - OpenRay Dynamic-11801
@@ -1206,8 +1206,8 @@ proxy-groups:
   - OpenRay  US-11387
   - OpenRay  FR-445
   - OpenRay  CA-11815
-  - OpenRay  NL-363
   - OpenRay  US-11241
+  - OpenRay  NL-363
   - OpenRay  US-11414
   - OpenRay  CA-12291
   - OpenRay  CA-12443
@@ -1242,8 +1242,8 @@ proxy-groups:
   - OpenRay  NL-406
   - OpenRay Dynamic-11820
   - OpenRay Dynamic-12190
-  - OpenRay Dynamic-12195
   - OpenRay  AL-7
+  - OpenRay Dynamic-12195
   - OpenRay  TR-67
   - OpenRay Dynamic-12271
   - OpenRay  CA-12562
