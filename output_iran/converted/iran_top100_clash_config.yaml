@@ -279,6 +279,18 @@ proxies:
     path: /
     headers:
       Host: n1761214912.wpg27.xyz
+- name: OpenRay  US-11485
+  type: vmess
+  server: 69.63.210.35
+  port: 24943
+  uuid: a89feda9-ec30-48c1-ae6b-1a6f5b573f6b
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /a89feda9-ec30-48c1-ae6b-1a6f5b573f6b-vm
+    headers:
+      Host: www.bing.com
 - name: OpenRay  HK-186
   type: vmess
   server: n1761214919.mv7wh.tech
@@ -293,18 +305,6 @@ proxies:
     path: /
     headers:
       Host: n1761214919.mv7wh.tech
-- name: OpenRay  US-11485
-  type: vmess
-  server: 69.63.210.35
-  port: 24943
-  uuid: a89feda9-ec30-48c1-ae6b-1a6f5b573f6b
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /a89feda9-ec30-48c1-ae6b-1a6f5b573f6b-vm
-    headers:
-      Host: www.bing.com
 - name: OpenRay  CA-12302
   type: vless
   server: 172.66.128.70
@@ -994,19 +994,6 @@ proxies:
     path: /arki?ed=2048
     headers:
       Host: 47.244.120.197
-- name: OpenRay  DE-2971
-  type: vless
-  server: 188.34.193.153
-  port: 443
-  uuid: 309fa273-6579-4cb2-9143-7cad50401eba
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  reality-opts:
-    public-key: gZGVp5PUdafgsmi1gawa1yLuha_XhXRc_W9SvPiGmTY
-    short-id: 7cad5040
-  client-fingerprint: chrome
 - name: OpenRay  HK-240
   type: vmess
   server: 8.210.165.109
@@ -1021,6 +1008,19 @@ proxies:
     path: /
     headers:
       Host: n1761214918.74qxv.top
+- name: OpenRay  DE-2971
+  type: vless
+  server: 188.34.193.153
+  port: 443
+  uuid: 309fa273-6579-4cb2-9143-7cad50401eba
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: gZGVp5PUdafgsmi1gawa1yLuha_XhXRc_W9SvPiGmTY
+    short-id: 7cad5040
+  client-fingerprint: chrome
 - name: OpenRay Dynamic-12560
   type: vless
   server: v1.dabache.top
@@ -1104,8 +1104,8 @@ proxy-groups:
   - OpenRay  HK-151
   - OpenRay Dynamic-11801
   - OpenRay  HK-169
-  - OpenRay  HK-186
   - OpenRay  US-11485
+  - OpenRay  HK-186
   - OpenRay  CA-12302
   - OpenRay  US-10828
   - OpenRay  US-11402
@@ -1166,8 +1166,8 @@ proxy-groups:
   - OpenRay  CA-12382
   - OpenRay  MY-20
   - OpenRay  HK-188
-  - OpenRay  DE-2971
   - OpenRay  HK-240
+  - OpenRay  DE-2971
   - OpenRay Dynamic-12560
   - OpenRay  KZ-67
   - OpenRay  FR-469
@@ -1193,8 +1193,8 @@ proxy-groups:
   - OpenRay  HK-151
   - OpenRay Dynamic-11801
   - OpenRay  HK-169
-  - OpenRay  HK-186
   - OpenRay  US-11485
+  - OpenRay  HK-186
   - OpenRay  CA-12302
   - OpenRay  US-10828
   - OpenRay  US-11402
@@ -1255,8 +1255,8 @@ proxy-groups:
   - OpenRay  CA-12382
   - OpenRay  MY-20
   - OpenRay  HK-188
-  - OpenRay  DE-2971
   - OpenRay  HK-240
+  - OpenRay  DE-2971
   - OpenRay Dynamic-12560
   - OpenRay  KZ-67
   - OpenRay  FR-469
