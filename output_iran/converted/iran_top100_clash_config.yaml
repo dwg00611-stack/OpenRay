@@ -834,18 +834,6 @@ proxies:
     path: /
     headers:
       Host: ir1.airpanel.top
-- name: OpenRay Dynamic-12271
-  type: vless
-  server: v1.dabache.top
-  port: 2096
-  uuid: 686c62d9-17a7-43c9-a40a-f6747df60a9f
-  network: ws
-  tls: true
-  servername: ca.adobe-connect.top
-  ws-opts:
-    path: /
-    headers:
-      Host: ca.adobe-connect.top
 - name: OpenRay  KZ-64
   type: vmess
   server: 3h-kazakhstan1.09vpn.com
@@ -859,6 +847,18 @@ proxies:
     headers:
       Host: 
         wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+- name: OpenRay Dynamic-12271
+  type: vless
+  server: v1.dabache.top
+  port: 2096
+  uuid: 686c62d9-17a7-43c9-a40a-f6747df60a9f
+  network: ws
+  tls: true
+  servername: ca.adobe-connect.top
+  ws-opts:
+    path: /
+    headers:
+      Host: ca.adobe-connect.top
 - name: OpenRay  CA-12382
   type: vless
   server: 104.16.250.22
@@ -1138,8 +1138,8 @@ proxy-groups:
   - OpenRay  KZ-57
   - OpenRay  KZ-53
   - OpenRay  CA-12587
-  - OpenRay Dynamic-12271
   - OpenRay  KZ-64
+  - OpenRay Dynamic-12271
   - OpenRay  CA-12382
   - OpenRay  HK-188
   - OpenRay  MY-20
@@ -1225,8 +1225,8 @@ proxy-groups:
   - OpenRay  KZ-57
   - OpenRay  KZ-53
   - OpenRay  CA-12587
-  - OpenRay Dynamic-12271
   - OpenRay  KZ-64
+  - OpenRay Dynamic-12271
   - OpenRay  CA-12382
   - OpenRay  HK-188
   - OpenRay  MY-20
