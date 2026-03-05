@@ -811,6 +811,31 @@ proxies:
     path: /arki?ed=2048
     headers:
       Host: 47.244.120.197
+- name: OpenRay  CA-12382
+  type: vless
+  server: 104.16.250.22
+  port: 2096
+  uuid: 686c62d9-17a7-43c9-a40a-f6747df60a9f
+  network: ws
+  tls: true
+  servername: ca.adobe-connect.top
+  ws-opts:
+    path: /
+    headers:
+      Host: ca.adobe-connect.top
+- name: OpenRay  DE-2971
+  type: vless
+  server: 188.34.193.153
+  port: 443
+  uuid: 309fa273-6579-4cb2-9143-7cad50401eba
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: gZGVp5PUdafgsmi1gawa1yLuha_XhXRc_W9SvPiGmTY
+    short-id: 7cad5040
+  client-fingerprint: chrome
 - name: OpenRay  HK-240
   type: vmess
   server: 8.210.165.109
@@ -825,31 +850,6 @@ proxies:
     path: /
     headers:
       Host: n1761214918.74qxv.top
-- name: OpenRay  DE-2971
-  type: vless
-  server: 188.34.193.153
-  port: 443
-  uuid: 309fa273-6579-4cb2-9143-7cad50401eba
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  reality-opts:
-    public-key: gZGVp5PUdafgsmi1gawa1yLuha_XhXRc_W9SvPiGmTY
-    short-id: 7cad5040
-  client-fingerprint: chrome
-- name: OpenRay  CA-12382
-  type: vless
-  server: 104.16.250.22
-  port: 2096
-  uuid: 686c62d9-17a7-43c9-a40a-f6747df60a9f
-  network: ws
-  tls: true
-  servername: ca.adobe-connect.top
-  ws-opts:
-    path: /
-    headers:
-      Host: ca.adobe-connect.top
 - name: OpenRay  MY-20
   type: vmess
   server: 47.250.45.234
@@ -1140,9 +1140,9 @@ proxy-groups:
   - OpenRay  KZ-64
   - OpenRay Dynamic-12271
   - OpenRay  HK-188
-  - OpenRay  HK-240
-  - OpenRay  DE-2971
   - OpenRay  CA-12382
+  - OpenRay  DE-2971
+  - OpenRay  HK-240
   - OpenRay  MY-20
   - OpenRay  KZ-67
   - OpenRay  FR-469
@@ -1227,9 +1227,9 @@ proxy-groups:
   - OpenRay  KZ-64
   - OpenRay Dynamic-12271
   - OpenRay  HK-188
-  - OpenRay  HK-240
-  - OpenRay  DE-2971
   - OpenRay  CA-12382
+  - OpenRay  DE-2971
+  - OpenRay  HK-240
   - OpenRay  MY-20
   - OpenRay  KZ-67
   - OpenRay  FR-469
