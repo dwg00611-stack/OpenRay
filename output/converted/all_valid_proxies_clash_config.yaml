@@ -16532,19 +16532,6 @@ proxies:
     path: /vless-ntls
     headers:
       Host: nnet.online
-- name: OpenRay Dynamic-1195
-  type: vless
-  server: jp.cdn.stun.su
-  port: 443
-  uuid: eb071647-72a6-46be-8e89-ff3d228d52f6
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  servername: jp.cdn.stun.su
-  reality-opts:
-    public-key: 2Q0J_OPL73qhEIYf3YBLCuY4RIBurgz5QDVchQ8e9ks
-    short-id: f189d91760bb6663
-  client-fingerprint: chrome
 - name: OpenRay Dynamic-16173
   type: vless
   server: mfa.gov.ua
@@ -26726,6 +26713,18 @@ proxies:
     path: /
     headers:
       Host: end-gfw.com
+- name: OpenRay  US-13616
+  type: vmess
+  server: 35.165.150.223
+  port: 8686
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: end-gfw.com
 - name: OpenRay  NL-4
   type: vless
   server: 51.158.206.96
@@ -29239,16 +29238,6 @@ proxies:
     public-key: djTtGqd0XWqtt_WHukU7BTPQSn9o7gIpAosAxMy8tUo
     short-id: ea1058117be12087
   client-fingerprint: chrome
-- name: OpenRay  NL-2471
-  type: vless
-  server: nl1.vpnjantit.com
-  port: 10004
-  uuid: e38d4168-141f-11f1-aa5e-52ac00d0e60c
-  network: ws
-  ws-opts:
-    path: /vpnjantit
-    headers:
-      Host: nl1.vpnjantit.com
 - name: OpenRay  NL-2477
   type: vless
   server: 77.239.109.65
@@ -37387,6 +37376,18 @@ proxies:
     public-key: ho7BivYLLBlfgtWEaRqF_g6OOHiKINEyAFDm6wbPDXI
     short-id: b8357afdce856d30
   client-fingerprint: qq
+- name: OpenRay  RU-10149
+  type: vless
+  server: 51.250.33.254
+  port: 443
+  uuid: bda3d5b6-9d16-427d-889e-5f5052487cf8
+  network: tcp
+  tls: true
+  servername: disk.yandex.ru
+  reality-opts:
+    public-key: EZEL0umQbBVZu5rqAXXET77yJNZel2dFXDMrhQ1oPWo
+    short-id: 6ffbc446f8a0
+  client-fingerprint: random
 - name: OpenRay  KR-50
   type: vless
   server: 61.111.247.233
@@ -39023,6 +39024,18 @@ proxies:
 - name: OpenRay  KR-725
   type: vmess
   server: 43.201.110.228
+  port: 8686
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: end-gfw.com
+- name: OpenRay  KR-726
+  type: vmess
+  server: 43.202.50.7
   port: 8686
   uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
   alterId: 0
@@ -53155,7 +53168,6 @@ proxy-groups:
   - OpenRay Dynamic-16157
   - OpenRay Dynamic-16162
   - OpenRay Dynamic-16163
-  - OpenRay Dynamic-1195
   - OpenRay Dynamic-16173
   - OpenRay Dynamic-16174
   - OpenRay Dynamic-16177
@@ -54023,6 +54035,7 @@ proxy-groups:
   - OpenRay  US-13612
   - OpenRay  US-13613
   - OpenRay  US-13615
+  - OpenRay  US-13616
   - OpenRay  NL-4
   - OpenRay  NL-6
   - OpenRay  NL-7
@@ -54230,7 +54243,6 @@ proxy-groups:
   - OpenRay  NL-2421
   - OpenRay  NL-2452
   - OpenRay  NL-2453
-  - OpenRay  NL-2471
   - OpenRay  NL-2477
   - OpenRay  NL-2489
   - OpenRay  NL-2498
@@ -54875,6 +54887,7 @@ proxy-groups:
   - OpenRay  RU-10146
   - OpenRay  RU-10147
   - OpenRay  RU-10148
+  - OpenRay  RU-10149
   - OpenRay  KR-50
   - OpenRay  KR-63
   - OpenRay  KR-70
@@ -55014,6 +55027,7 @@ proxy-groups:
   - OpenRay  KR-723
   - OpenRay  KR-724
   - OpenRay  KR-725
+  - OpenRay  KR-726
   - OpenRay  JP-390
   - OpenRay  JP-433
   - OpenRay  JP-453
@@ -57429,7 +57443,6 @@ proxy-groups:
   - OpenRay Dynamic-16157
   - OpenRay Dynamic-16162
   - OpenRay Dynamic-16163
-  - OpenRay Dynamic-1195
   - OpenRay Dynamic-16173
   - OpenRay Dynamic-16174
   - OpenRay Dynamic-16177
@@ -58297,6 +58310,7 @@ proxy-groups:
   - OpenRay  US-13612
   - OpenRay  US-13613
   - OpenRay  US-13615
+  - OpenRay  US-13616
   - OpenRay  NL-4
   - OpenRay  NL-6
   - OpenRay  NL-7
@@ -58504,7 +58518,6 @@ proxy-groups:
   - OpenRay  NL-2421
   - OpenRay  NL-2452
   - OpenRay  NL-2453
-  - OpenRay  NL-2471
   - OpenRay  NL-2477
   - OpenRay  NL-2489
   - OpenRay  NL-2498
@@ -59149,6 +59162,7 @@ proxy-groups:
   - OpenRay  RU-10146
   - OpenRay  RU-10147
   - OpenRay  RU-10148
+  - OpenRay  RU-10149
   - OpenRay  KR-50
   - OpenRay  KR-63
   - OpenRay  KR-70
@@ -59288,6 +59302,7 @@ proxy-groups:
   - OpenRay  KR-723
   - OpenRay  KR-724
   - OpenRay  KR-725
+  - OpenRay  KR-726
   - OpenRay  JP-390
   - OpenRay  JP-433
   - OpenRay  JP-453
