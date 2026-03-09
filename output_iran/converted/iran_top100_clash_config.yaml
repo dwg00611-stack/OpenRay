@@ -811,19 +811,6 @@ proxies:
     path: /arki?ed=2048
     headers:
       Host: 47.244.120.197
-- name: OpenRay  DE-2971
-  type: vless
-  server: 188.34.193.153
-  port: 443
-  uuid: 309fa273-6579-4cb2-9143-7cad50401eba
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  reality-opts:
-    public-key: gZGVp5PUdafgsmi1gawa1yLuha_XhXRc_W9SvPiGmTY
-    short-id: 7cad5040
-  client-fingerprint: chrome
 - name: OpenRay  HK-240
   type: vmess
   server: 8.210.165.109
@@ -838,6 +825,19 @@ proxies:
     path: /
     headers:
       Host: n1761214918.74qxv.top
+- name: OpenRay  DE-2971
+  type: vless
+  server: 188.34.193.153
+  port: 443
+  uuid: 309fa273-6579-4cb2-9143-7cad50401eba
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: gZGVp5PUdafgsmi1gawa1yLuha_XhXRc_W9SvPiGmTY
+    short-id: 7cad5040
+  client-fingerprint: chrome
 - name: OpenRay  CA-12382
   type: vless
   server: 104.16.250.22
@@ -1140,8 +1140,8 @@ proxy-groups:
   - OpenRay  CA-12587
   - OpenRay Dynamic-12271
   - OpenRay  HK-188
-  - OpenRay  DE-2971
   - OpenRay  HK-240
+  - OpenRay  DE-2971
   - OpenRay  CA-12382
   - OpenRay  KZ-67
   - OpenRay  MY-20
@@ -1227,8 +1227,8 @@ proxy-groups:
   - OpenRay  CA-12587
   - OpenRay Dynamic-12271
   - OpenRay  HK-188
-  - OpenRay  DE-2971
   - OpenRay  HK-240
+  - OpenRay  DE-2971
   - OpenRay  CA-12382
   - OpenRay  KZ-67
   - OpenRay  MY-20
