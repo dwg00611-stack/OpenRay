@@ -349,6 +349,18 @@ proxies:
     path: /IOebhLMhl1CTbFHbL95myfRX2
     headers:
       Host: 15.235.41.200
+- name: OpenRay  FR-445
+  type: vless
+  server: 157.173.127.225
+  port: 443
+  uuid: 11beaf11-726d-4c11-8ce9-27308c1c608c
+  network: tcp
+  tls: true
+  servername: analytics.google.com
+  reality-opts:
+    public-key: v3EwzA9RIIh5Ndxm-gypRY6RCJhOpQ-2WO7KaH8nsC8
+    short-id: eab26c4a32
+  client-fingerprint: random
 - name: OpenRay  US-11241
   type: vless
   server: 137.184.218.169
@@ -362,18 +374,6 @@ proxies:
     public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
     short-id: ''
   client-fingerprint: chrome
-- name: OpenRay  FR-445
-  type: vless
-  server: 157.173.127.225
-  port: 443
-  uuid: 11beaf11-726d-4c11-8ce9-27308c1c608c
-  network: tcp
-  tls: true
-  servername: analytics.google.com
-  reality-opts:
-    public-key: v3EwzA9RIIh5Ndxm-gypRY6RCJhOpQ-2WO7KaH8nsC8
-    short-id: eab26c4a32
-  client-fingerprint: random
 - name: OpenRay  US-11414
   type: vless
   server: 159.89.87.21
@@ -1090,8 +1090,8 @@ proxy-groups:
   - OpenRay Dynamic-11336
   - OpenRay  US-11387
   - OpenRay  CA-11815
-  - OpenRay  US-11241
   - OpenRay  FR-445
+  - OpenRay  US-11241
   - OpenRay  US-11414
   - OpenRay  HK-53
   - OpenRay Dynamic-11598
@@ -1176,8 +1176,8 @@ proxy-groups:
   - OpenRay Dynamic-11336
   - OpenRay  US-11387
   - OpenRay  CA-11815
-  - OpenRay  US-11241
   - OpenRay  FR-445
+  - OpenRay  US-11241
   - OpenRay  US-11414
   - OpenRay  HK-53
   - OpenRay Dynamic-11598
