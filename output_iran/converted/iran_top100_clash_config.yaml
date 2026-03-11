@@ -245,18 +245,6 @@ proxies:
     path: /
     headers:
       Host: n1761214919.mv7wh.tech
-- name: OpenRay  US-11485
-  type: vmess
-  server: 69.63.210.35
-  port: 24943
-  uuid: a89feda9-ec30-48c1-ae6b-1a6f5b573f6b
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /a89feda9-ec30-48c1-ae6b-1a6f5b573f6b-vm
-    headers:
-      Host: www.bing.com
 - name: OpenRay  US-10828
   type: vless
   server: 45.82.251.208
@@ -350,18 +338,6 @@ proxies:
     public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
     short-id: ''
   client-fingerprint: chrome
-- name: OpenRay  FR-445
-  type: vless
-  server: 157.173.127.225
-  port: 443
-  uuid: 11beaf11-726d-4c11-8ce9-27308c1c608c
-  network: tcp
-  tls: true
-  servername: analytics.google.com
-  reality-opts:
-    public-key: v3EwzA9RIIh5Ndxm-gypRY6RCJhOpQ-2WO7KaH8nsC8
-    short-id: eab26c4a32
-  client-fingerprint: random
 - name: OpenRay  CA-11815
   type: vmess
   server: 15.235.41.200
@@ -374,6 +350,18 @@ proxies:
     path: /IOebhLMhl1CTbFHbL95myfRX2
     headers:
       Host: 15.235.41.200
+- name: OpenRay  FR-445
+  type: vless
+  server: 157.173.127.225
+  port: 443
+  uuid: 11beaf11-726d-4c11-8ce9-27308c1c608c
+  network: tcp
+  tls: true
+  servername: analytics.google.com
+  reality-opts:
+    public-key: v3EwzA9RIIh5Ndxm-gypRY6RCJhOpQ-2WO7KaH8nsC8
+    short-id: eab26c4a32
+  client-fingerprint: random
 - name: OpenRay  US-11414
   type: vless
   server: 159.89.87.21
@@ -1071,6 +1059,18 @@ proxies:
     path: /vmess/
     headers:
       Host: 61.245.11.60
+- name: OpenRay  AU-3
+  type: vmess
+  server: 45.15.185.17
+  port: 80
+  uuid: c503a96a-a2f5-4847-a31f-20c17ecf3be4
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: 45.15.185.17
 
 proxy-groups:
 - name: AUTO
@@ -1092,7 +1092,6 @@ proxy-groups:
   - OpenRay Dynamic-11801
   - OpenRay  HK-169
   - OpenRay  HK-186
-  - OpenRay  US-11485
   - OpenRay  US-10828
   - OpenRay  US-11402
   - OpenRay  CA-9952
@@ -1102,8 +1101,8 @@ proxy-groups:
   - OpenRay Dynamic-11336
   - OpenRay  US-11387
   - OpenRay  US-11241
-  - OpenRay  FR-445
   - OpenRay  CA-11815
+  - OpenRay  FR-445
   - OpenRay  US-11414
   - OpenRay  HK-53
   - OpenRay Dynamic-11598
@@ -1162,6 +1161,7 @@ proxy-groups:
   - OpenRay  US-11678
   - OpenRay  NL-530
   - OpenRay  PH-6
+  - OpenRay  AU-3
 - name: PROXY
   type: select
   proxies:
@@ -1179,7 +1179,6 @@ proxy-groups:
   - OpenRay Dynamic-11801
   - OpenRay  HK-169
   - OpenRay  HK-186
-  - OpenRay  US-11485
   - OpenRay  US-10828
   - OpenRay  US-11402
   - OpenRay  CA-9952
@@ -1189,8 +1188,8 @@ proxy-groups:
   - OpenRay Dynamic-11336
   - OpenRay  US-11387
   - OpenRay  US-11241
-  - OpenRay  FR-445
   - OpenRay  CA-11815
+  - OpenRay  FR-445
   - OpenRay  US-11414
   - OpenRay  HK-53
   - OpenRay Dynamic-11598
@@ -1249,6 +1248,7 @@ proxy-groups:
   - OpenRay  US-11678
   - OpenRay  NL-530
   - OpenRay  PH-6
+  - OpenRay  AU-3
 rules:
 - DOMAIN-SUFFIX,ir,DIRECT
 - DOMAIN-SUFFIX,aparat.com,DIRECT
