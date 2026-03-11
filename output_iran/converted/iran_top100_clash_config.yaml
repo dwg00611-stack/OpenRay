@@ -350,18 +350,6 @@ proxies:
     public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
     short-id: ''
   client-fingerprint: chrome
-- name: OpenRay  FR-445
-  type: vless
-  server: 157.173.127.225
-  port: 443
-  uuid: 11beaf11-726d-4c11-8ce9-27308c1c608c
-  network: tcp
-  tls: true
-  servername: analytics.google.com
-  reality-opts:
-    public-key: v3EwzA9RIIh5Ndxm-gypRY6RCJhOpQ-2WO7KaH8nsC8
-    short-id: eab26c4a32
-  client-fingerprint: random
 - name: OpenRay  CA-11815
   type: vmess
   server: 15.235.41.200
@@ -374,6 +362,18 @@ proxies:
     path: /IOebhLMhl1CTbFHbL95myfRX2
     headers:
       Host: 15.235.41.200
+- name: OpenRay  FR-445
+  type: vless
+  server: 157.173.127.225
+  port: 443
+  uuid: 11beaf11-726d-4c11-8ce9-27308c1c608c
+  network: tcp
+  tls: true
+  servername: analytics.google.com
+  reality-opts:
+    public-key: v3EwzA9RIIh5Ndxm-gypRY6RCJhOpQ-2WO7KaH8nsC8
+    short-id: eab26c4a32
+  client-fingerprint: random
 - name: OpenRay  US-11414
   type: vless
   server: 159.89.87.21
@@ -1059,6 +1059,18 @@ proxies:
     public-key: wNcFqVd4_PkgJbfgJJeouSU6Pn_Swuce4q4Chw5T0hY
     short-id: f7aa9e61197d3ac6
   client-fingerprint: random
+- name: OpenRay  PH-6
+  type: vmess
+  server: 61.245.11.60
+  port: 80
+  uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: 61.245.11.60
 
 proxy-groups:
 - name: AUTO
@@ -1090,8 +1102,8 @@ proxy-groups:
   - OpenRay Dynamic-11336
   - OpenRay  US-11387
   - OpenRay  US-11241
-  - OpenRay  FR-445
   - OpenRay  CA-11815
+  - OpenRay  FR-445
   - OpenRay  US-11414
   - OpenRay  HK-53
   - OpenRay Dynamic-11598
@@ -1149,6 +1161,7 @@ proxy-groups:
   - OpenRay Dynamic-11535
   - OpenRay  US-11678
   - OpenRay  NL-530
+  - OpenRay  PH-6
 - name: PROXY
   type: select
   proxies:
@@ -1176,8 +1189,8 @@ proxy-groups:
   - OpenRay Dynamic-11336
   - OpenRay  US-11387
   - OpenRay  US-11241
-  - OpenRay  FR-445
   - OpenRay  CA-11815
+  - OpenRay  FR-445
   - OpenRay  US-11414
   - OpenRay  HK-53
   - OpenRay Dynamic-11598
@@ -1235,6 +1248,7 @@ proxy-groups:
   - OpenRay Dynamic-11535
   - OpenRay  US-11678
   - OpenRay  NL-530
+  - OpenRay  PH-6
 rules:
 - DOMAIN-SUFFIX,ir,DIRECT
 - DOMAIN-SUFFIX,aparat.com,DIRECT
