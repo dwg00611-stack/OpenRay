@@ -338,18 +338,6 @@ proxies:
     public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
     short-id: ''
   client-fingerprint: chrome
-- name: OpenRay  CA-11815
-  type: vmess
-  server: 15.235.41.200
-  port: 80
-  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /IOebhLMhl1CTbFHbL95myfRX2
-    headers:
-      Host: 15.235.41.200
 - name: OpenRay  FR-445
   type: vless
   server: 157.173.127.225
@@ -362,6 +350,18 @@ proxies:
     public-key: v3EwzA9RIIh5Ndxm-gypRY6RCJhOpQ-2WO7KaH8nsC8
     short-id: eab26c4a32
   client-fingerprint: random
+- name: OpenRay  CA-11815
+  type: vmess
+  server: 15.235.41.200
+  port: 80
+  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /IOebhLMhl1CTbFHbL95myfRX2
+    headers:
+      Host: 15.235.41.200
 - name: OpenRay  US-11414
   type: vless
   server: 159.89.87.21
@@ -775,18 +775,6 @@ proxies:
     path: /
     headers:
       Host: ca.adobe-connect.top
-- name: OpenRay  CA-12587
-  type: vless
-  server: 104.16.250.22
-  port: 2053
-  uuid: e5f8a9f6-f164-479b-b3b5-b90f213c7145
-  network: ws
-  tls: true
-  servername: ir1.airpanel.top
-  ws-opts:
-    path: /
-    headers:
-      Host: ir1.airpanel.top
 - name: OpenRay  HK-188
   type: vmess
   server: 47.244.120.197
@@ -799,6 +787,18 @@ proxies:
     path: /arki?ed=2048
     headers:
       Host: 47.244.120.197
+- name: OpenRay  CA-12587
+  type: vless
+  server: 104.16.250.22
+  port: 2053
+  uuid: e5f8a9f6-f164-479b-b3b5-b90f213c7145
+  network: ws
+  tls: true
+  servername: ir1.airpanel.top
+  ws-opts:
+    path: /
+    headers:
+      Host: ir1.airpanel.top
 - name: OpenRay  DE-2971
   type: vless
   server: 188.34.193.153
@@ -1059,18 +1059,18 @@ proxies:
     path: /vmess/
     headers:
       Host: 61.245.11.60
-- name: OpenRay Dynamic-12496
-  type: vless
-  server: vip2.kaixincloud.top
-  port: 2053
-  uuid: e5f8a9f6-f164-479b-b3b5-b90f213c7145
+- name: OpenRay  AU-3
+  type: vmess
+  server: 45.15.185.17
+  port: 80
+  uuid: c503a96a-a2f5-4847-a31f-20c17ecf3be4
+  alterId: 0
+  cipher: auto
   network: ws
-  tls: true
-  servername: ir1.airpanel.top
   ws-opts:
-    path: /
+    path: /vmess/
     headers:
-      Host: ir1.airpanel.top
+      Host: 45.15.185.17
 
 proxy-groups:
 - name: AUTO
@@ -1101,8 +1101,8 @@ proxy-groups:
   - OpenRay Dynamic-11336
   - OpenRay  US-11387
   - OpenRay  US-11241
-  - OpenRay  CA-11815
   - OpenRay  FR-445
+  - OpenRay  CA-11815
   - OpenRay  US-11414
   - OpenRay  HK-53
   - OpenRay Dynamic-11598
@@ -1138,8 +1138,8 @@ proxy-groups:
   - OpenRay  KZ-64
   - OpenRay  CA-12562
   - OpenRay Dynamic-12271
-  - OpenRay  CA-12587
   - OpenRay  HK-188
+  - OpenRay  CA-12587
   - OpenRay  DE-2971
   - OpenRay  HK-240
   - OpenRay  CA-12382
@@ -1161,7 +1161,7 @@ proxy-groups:
   - OpenRay  US-11678
   - OpenRay  NL-530
   - OpenRay  PH-6
-  - OpenRay Dynamic-12496
+  - OpenRay  AU-3
 - name: PROXY
   type: select
   proxies:
@@ -1188,8 +1188,8 @@ proxy-groups:
   - OpenRay Dynamic-11336
   - OpenRay  US-11387
   - OpenRay  US-11241
-  - OpenRay  CA-11815
   - OpenRay  FR-445
+  - OpenRay  CA-11815
   - OpenRay  US-11414
   - OpenRay  HK-53
   - OpenRay Dynamic-11598
@@ -1225,8 +1225,8 @@ proxy-groups:
   - OpenRay  KZ-64
   - OpenRay  CA-12562
   - OpenRay Dynamic-12271
-  - OpenRay  CA-12587
   - OpenRay  HK-188
+  - OpenRay  CA-12587
   - OpenRay  DE-2971
   - OpenRay  HK-240
   - OpenRay  CA-12382
@@ -1248,7 +1248,7 @@ proxy-groups:
   - OpenRay  US-11678
   - OpenRay  NL-530
   - OpenRay  PH-6
-  - OpenRay Dynamic-12496
+  - OpenRay  AU-3
 rules:
 - DOMAIN-SUFFIX,ir,DIRECT
 - DOMAIN-SUFFIX,aparat.com,DIRECT
