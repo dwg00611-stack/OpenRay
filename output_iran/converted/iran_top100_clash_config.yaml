@@ -338,18 +338,6 @@ proxies:
     public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
     short-id: ''
   client-fingerprint: chrome
-- name: OpenRay  FR-445
-  type: vless
-  server: 157.173.127.225
-  port: 443
-  uuid: 11beaf11-726d-4c11-8ce9-27308c1c608c
-  network: tcp
-  tls: true
-  servername: analytics.google.com
-  reality-opts:
-    public-key: v3EwzA9RIIh5Ndxm-gypRY6RCJhOpQ-2WO7KaH8nsC8
-    short-id: eab26c4a32
-  client-fingerprint: random
 - name: OpenRay  CA-11815
   type: vmess
   server: 15.235.41.200
@@ -362,6 +350,18 @@ proxies:
     path: /IOebhLMhl1CTbFHbL95myfRX2
     headers:
       Host: 15.235.41.200
+- name: OpenRay  FR-445
+  type: vless
+  server: 157.173.127.225
+  port: 443
+  uuid: 11beaf11-726d-4c11-8ce9-27308c1c608c
+  network: tcp
+  tls: true
+  servername: analytics.google.com
+  reality-opts:
+    public-key: v3EwzA9RIIh5Ndxm-gypRY6RCJhOpQ-2WO7KaH8nsC8
+    short-id: eab26c4a32
+  client-fingerprint: random
 - name: OpenRay  US-11414
   type: vless
   server: 159.89.87.21
@@ -763,18 +763,6 @@ proxies:
     path: /
     headers:
       Host: ca.adobe-connect.top
-- name: OpenRay  CA-12562
-  type: vless
-  server: 104.18.185.26
-  port: 2053
-  uuid: e5f8a9f6-f164-479b-b3b5-b90f213c7145
-  network: ws
-  tls: true
-  servername: ir1.airpanel.top
-  ws-opts:
-    path: /
-    headers:
-      Host: ir1.airpanel.top
 - name: OpenRay  HK-188
   type: vmess
   server: 47.244.120.197
@@ -787,6 +775,18 @@ proxies:
     path: /arki?ed=2048
     headers:
       Host: 47.244.120.197
+- name: OpenRay  CA-12562
+  type: vless
+  server: 104.18.185.26
+  port: 2053
+  uuid: e5f8a9f6-f164-479b-b3b5-b90f213c7145
+  network: ws
+  tls: true
+  servername: ir1.airpanel.top
+  ws-opts:
+    path: /
+    headers:
+      Host: ir1.airpanel.top
 - name: OpenRay  DE-2971
   type: vless
   server: 188.34.193.153
@@ -1101,8 +1101,8 @@ proxy-groups:
   - OpenRay  US-11387
   - OpenRay Dynamic-11336
   - OpenRay  US-11241
-  - OpenRay  FR-445
   - OpenRay  CA-11815
+  - OpenRay  FR-445
   - OpenRay  US-11414
   - OpenRay  HK-53
   - OpenRay Dynamic-11598
@@ -1137,8 +1137,8 @@ proxy-groups:
   - OpenRay  KZ-53
   - OpenRay  KZ-64
   - OpenRay Dynamic-12271
-  - OpenRay  CA-12562
   - OpenRay  HK-188
+  - OpenRay  CA-12562
   - OpenRay  DE-2971
   - OpenRay  HK-240
   - OpenRay  CA-12587
@@ -1188,8 +1188,8 @@ proxy-groups:
   - OpenRay  US-11387
   - OpenRay Dynamic-11336
   - OpenRay  US-11241
-  - OpenRay  FR-445
   - OpenRay  CA-11815
+  - OpenRay  FR-445
   - OpenRay  US-11414
   - OpenRay  HK-53
   - OpenRay Dynamic-11598
@@ -1224,8 +1224,8 @@ proxy-groups:
   - OpenRay  KZ-53
   - OpenRay  KZ-64
   - OpenRay Dynamic-12271
-  - OpenRay  CA-12562
   - OpenRay  HK-188
+  - OpenRay  CA-12562
   - OpenRay  DE-2971
   - OpenRay  HK-240
   - OpenRay  CA-12587
