@@ -775,18 +775,6 @@ proxies:
     path: /arki?ed=2048
     headers:
       Host: 47.244.120.197
-- name: OpenRay  CA-12562
-  type: vless
-  server: 104.18.185.26
-  port: 2053
-  uuid: e5f8a9f6-f164-479b-b3b5-b90f213c7145
-  network: ws
-  tls: true
-  servername: ir1.airpanel.top
-  ws-opts:
-    path: /
-    headers:
-      Host: ir1.airpanel.top
 - name: OpenRay  DE-2971
   type: vless
   server: 188.34.193.153
@@ -800,6 +788,18 @@ proxies:
     public-key: gZGVp5PUdafgsmi1gawa1yLuha_XhXRc_W9SvPiGmTY
     short-id: 7cad5040
   client-fingerprint: chrome
+- name: OpenRay  CA-12562
+  type: vless
+  server: 104.18.185.26
+  port: 2053
+  uuid: e5f8a9f6-f164-479b-b3b5-b90f213c7145
+  network: ws
+  tls: true
+  servername: ir1.airpanel.top
+  ws-opts:
+    path: /
+    headers:
+      Host: ir1.airpanel.top
 - name: OpenRay  HK-240
   type: vmess
   server: 8.210.165.109
@@ -970,18 +970,6 @@ proxies:
     path: /db10240eb751d6ab
     headers:
       Host: dabaius2.sylu.net
-- name: OpenRay Dynamic-11798
-  type: vless
-  server: chatgpt.com
-  port: 443
-  uuid: 3f9c8463-8610-3ed8-86c8-a26713067825
-  network: ws
-  tls: true
-  servername: dabaius2.sylu.net
-  ws-opts:
-    path: /db10240eb751d6ab
-    headers:
-      Host: chatgpt.com
 - name: OpenRay  JP-454
   type: vmess
   server: n1753598452.wpg27.xyz
@@ -996,6 +984,18 @@ proxies:
     path: /
     headers:
       Host: n1753598452.wpg27.xyz
+- name: OpenRay Dynamic-11798
+  type: vless
+  server: chatgpt.com
+  port: 443
+  uuid: 3f9c8463-8610-3ed8-86c8-a26713067825
+  network: ws
+  tls: true
+  servername: dabaius2.sylu.net
+  ws-opts:
+    path: /db10240eb751d6ab
+    headers:
+      Host: chatgpt.com
 - name: OpenRay  DE-4592
   type: vless
   server: 192.76.160.216
@@ -1138,8 +1138,8 @@ proxy-groups:
   - OpenRay  KZ-64
   - OpenRay Dynamic-12271
   - OpenRay  HK-188
-  - OpenRay  CA-12562
   - OpenRay  DE-2971
+  - OpenRay  CA-12562
   - OpenRay  HK-240
   - OpenRay  CA-12587
   - OpenRay  CA-12382
@@ -1154,8 +1154,8 @@ proxy-groups:
   - OpenRay  DE-3278
   - OpenRay  HK-163
   - OpenRay Dynamic-10797
-  - OpenRay Dynamic-11798
   - OpenRay  JP-454
+  - OpenRay Dynamic-11798
   - OpenRay  DE-4592
   - OpenRay Dynamic-11535
   - OpenRay  US-11678
@@ -1225,8 +1225,8 @@ proxy-groups:
   - OpenRay  KZ-64
   - OpenRay Dynamic-12271
   - OpenRay  HK-188
-  - OpenRay  CA-12562
   - OpenRay  DE-2971
+  - OpenRay  CA-12562
   - OpenRay  HK-240
   - OpenRay  CA-12587
   - OpenRay  CA-12382
@@ -1241,8 +1241,8 @@ proxy-groups:
   - OpenRay  DE-3278
   - OpenRay  HK-163
   - OpenRay Dynamic-10797
-  - OpenRay Dynamic-11798
   - OpenRay  JP-454
+  - OpenRay Dynamic-11798
   - OpenRay  DE-4592
   - OpenRay Dynamic-11535
   - OpenRay  US-11678
