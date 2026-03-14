@@ -982,6 +982,18 @@ proxies:
     public-key: 3O9CVvzD_0omAKw17VJoL0NlezpzxRAHNIbOWGBto2I
     short-id: faf804ddc2e49f6c
   client-fingerprint: firefox
+- name: OpenRay Dynamic-11798
+  type: vless
+  server: chatgpt.com
+  port: 443
+  uuid: 3f9c8463-8610-3ed8-86c8-a26713067825
+  network: ws
+  tls: true
+  servername: dabaius2.sylu.net
+  ws-opts:
+    path: /db10240eb751d6ab
+    headers:
+      Host: chatgpt.com
 - name: OpenRay  JP-454
   type: vmess
   server: n1753598452.wpg27.xyz
@@ -996,18 +1008,18 @@ proxies:
     path: /
     headers:
       Host: n1753598452.wpg27.xyz
-- name: OpenRay Dynamic-11798
-  type: vless
-  server: chatgpt.com
+- name: OpenRay  US-11678
+  type: vmess
+  server: 209.126.84.189
   port: 443
-  uuid: 3f9c8463-8610-3ed8-86c8-a26713067825
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
   network: ws
-  tls: true
-  servername: dabaius2.sylu.net
   ws-opts:
-    path: /db10240eb751d6ab
+    path: /vmessws
     headers:
-      Host: chatgpt.com
+      Host: 209.126.84.189
 - name: OpenRay Dynamic-11535
   type: vmess
   server: cf.090227.xyz
@@ -1022,18 +1034,6 @@ proxies:
     path: /
     headers:
       Host: sgal.dagrate.eu.org
-- name: OpenRay  US-11678
-  type: vmess
-  server: 209.126.84.189
-  port: 443
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /vmessws
-    headers:
-      Host: 209.126.84.189
 - name: OpenRay  NL-530
   type: vless
   server: midorinote.ru
@@ -1155,10 +1155,10 @@ proxy-groups:
   - OpenRay  HK-163
   - OpenRay Dynamic-10797
   - OpenRay  DE-4592
-  - OpenRay  JP-454
   - OpenRay Dynamic-11798
-  - OpenRay Dynamic-11535
+  - OpenRay  JP-454
   - OpenRay  US-11678
+  - OpenRay Dynamic-11535
   - OpenRay  NL-530
   - OpenRay  PH-6
   - OpenRay  AU-3
@@ -1242,10 +1242,10 @@ proxy-groups:
   - OpenRay  HK-163
   - OpenRay Dynamic-10797
   - OpenRay  DE-4592
-  - OpenRay  JP-454
   - OpenRay Dynamic-11798
-  - OpenRay Dynamic-11535
+  - OpenRay  JP-454
   - OpenRay  US-11678
+  - OpenRay Dynamic-11535
   - OpenRay  NL-530
   - OpenRay  PH-6
   - OpenRay  AU-3
