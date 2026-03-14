@@ -1008,18 +1008,6 @@ proxies:
     path: /db10240eb751d6ab
     headers:
       Host: chatgpt.com
-- name: OpenRay  US-11678
-  type: vmess
-  server: 209.126.84.189
-  port: 443
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /vmessws
-    headers:
-      Host: 209.126.84.189
 - name: OpenRay Dynamic-11535
   type: vmess
   server: cf.090227.xyz
@@ -1034,6 +1022,18 @@ proxies:
     path: /
     headers:
       Host: sgal.dagrate.eu.org
+- name: OpenRay  US-11678
+  type: vmess
+  server: 209.126.84.189
+  port: 443
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vmessws
+    headers:
+      Host: 209.126.84.189
 - name: OpenRay  NL-530
   type: vless
   server: midorinote.ru
@@ -1157,8 +1157,8 @@ proxy-groups:
   - OpenRay  DE-4592
   - OpenRay  JP-454
   - OpenRay Dynamic-11798
-  - OpenRay  US-11678
   - OpenRay Dynamic-11535
+  - OpenRay  US-11678
   - OpenRay  NL-530
   - OpenRay  PH-6
   - OpenRay  AU-3
@@ -1244,8 +1244,8 @@ proxy-groups:
   - OpenRay  DE-4592
   - OpenRay  JP-454
   - OpenRay Dynamic-11798
-  - OpenRay  US-11678
   - OpenRay Dynamic-11535
+  - OpenRay  US-11678
   - OpenRay  NL-530
   - OpenRay  PH-6
   - OpenRay  AU-3
