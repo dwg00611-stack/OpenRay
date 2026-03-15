@@ -826,6 +826,18 @@ proxies:
     path: /
     headers:
       Host: ca.adobe-connect.top
+- name: OpenRay  CA-12587
+  type: vless
+  server: 104.16.250.22
+  port: 2053
+  uuid: e5f8a9f6-f164-479b-b3b5-b90f213c7145
+  network: ws
+  tls: true
+  servername: ir1.airpanel.top
+  ws-opts:
+    path: /
+    headers:
+      Host: ir1.airpanel.top
 - name: OpenRay  KZ-67
   type: vmess
   server: 38.107.234.57
@@ -839,18 +851,6 @@ proxies:
     headers:
       Host: 
         wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-- name: OpenRay  CA-12587
-  type: vless
-  server: 104.16.250.22
-  port: 2053
-  uuid: e5f8a9f6-f164-479b-b3b5-b90f213c7145
-  network: ws
-  tls: true
-  servername: ir1.airpanel.top
-  ws-opts:
-    path: /
-    headers:
-      Host: ir1.airpanel.top
 - name: OpenRay  MY-20
   type: vmess
   server: 47.250.45.234
@@ -1008,18 +1008,6 @@ proxies:
     path: /
     headers:
       Host: n1753598452.wpg27.xyz
-- name: OpenRay  US-11678
-  type: vmess
-  server: 209.126.84.189
-  port: 443
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /vmessws
-    headers:
-      Host: 209.126.84.189
 - name: OpenRay Dynamic-11535
   type: vmess
   server: cf.090227.xyz
@@ -1034,6 +1022,18 @@ proxies:
     path: /
     headers:
       Host: sgal.dagrate.eu.org
+- name: OpenRay  US-11678
+  type: vmess
+  server: 209.126.84.189
+  port: 443
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vmessws
+    headers:
+      Host: 209.126.84.189
 - name: OpenRay  NL-530
   type: vless
   server: midorinote.ru
@@ -1142,8 +1142,8 @@ proxy-groups:
   - OpenRay  HK-240
   - OpenRay  CA-12562
   - OpenRay  CA-12382
-  - OpenRay  KZ-67
   - OpenRay  CA-12587
+  - OpenRay  KZ-67
   - OpenRay  MY-20
   - OpenRay  CA-12446
   - OpenRay Dynamic-12041
@@ -1157,8 +1157,8 @@ proxy-groups:
   - OpenRay  DE-4592
   - OpenRay Dynamic-11798
   - OpenRay  JP-454
-  - OpenRay  US-11678
   - OpenRay Dynamic-11535
+  - OpenRay  US-11678
   - OpenRay  NL-530
   - OpenRay  PH-6
   - OpenRay  AU-3
@@ -1229,8 +1229,8 @@ proxy-groups:
   - OpenRay  HK-240
   - OpenRay  CA-12562
   - OpenRay  CA-12382
-  - OpenRay  KZ-67
   - OpenRay  CA-12587
+  - OpenRay  KZ-67
   - OpenRay  MY-20
   - OpenRay  CA-12446
   - OpenRay Dynamic-12041
@@ -1244,8 +1244,8 @@ proxy-groups:
   - OpenRay  DE-4592
   - OpenRay Dynamic-11798
   - OpenRay  JP-454
-  - OpenRay  US-11678
   - OpenRay Dynamic-11535
+  - OpenRay  US-11678
   - OpenRay  NL-530
   - OpenRay  PH-6
   - OpenRay  AU-3
