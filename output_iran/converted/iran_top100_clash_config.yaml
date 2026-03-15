@@ -982,6 +982,18 @@ proxies:
     public-key: 3O9CVvzD_0omAKw17VJoL0NlezpzxRAHNIbOWGBto2I
     short-id: faf804ddc2e49f6c
   client-fingerprint: firefox
+- name: OpenRay Dynamic-11798
+  type: vless
+  server: chatgpt.com
+  port: 443
+  uuid: 3f9c8463-8610-3ed8-86c8-a26713067825
+  network: ws
+  tls: true
+  servername: dabaius2.sylu.net
+  ws-opts:
+    path: /db10240eb751d6ab
+    headers:
+      Host: chatgpt.com
 - name: OpenRay  JP-454
   type: vmess
   server: n1753598452.wpg27.xyz
@@ -996,18 +1008,6 @@ proxies:
     path: /
     headers:
       Host: n1753598452.wpg27.xyz
-- name: OpenRay Dynamic-11798
-  type: vless
-  server: chatgpt.com
-  port: 443
-  uuid: 3f9c8463-8610-3ed8-86c8-a26713067825
-  network: ws
-  tls: true
-  servername: dabaius2.sylu.net
-  ws-opts:
-    path: /db10240eb751d6ab
-    headers:
-      Host: chatgpt.com
 - name: OpenRay  US-11678
   type: vmess
   server: 209.126.84.189
@@ -1155,8 +1155,8 @@ proxy-groups:
   - OpenRay  HK-163
   - OpenRay Dynamic-10797
   - OpenRay  DE-4592
-  - OpenRay  JP-454
   - OpenRay Dynamic-11798
+  - OpenRay  JP-454
   - OpenRay  US-11678
   - OpenRay Dynamic-11535
   - OpenRay  NL-530
@@ -1242,8 +1242,8 @@ proxy-groups:
   - OpenRay  HK-163
   - OpenRay Dynamic-10797
   - OpenRay  DE-4592
-  - OpenRay  JP-454
   - OpenRay Dynamic-11798
+  - OpenRay  JP-454
   - OpenRay  US-11678
   - OpenRay Dynamic-11535
   - OpenRay  NL-530
