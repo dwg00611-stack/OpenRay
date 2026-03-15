@@ -338,18 +338,6 @@ proxies:
     public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
     short-id: ''
   client-fingerprint: chrome
-- name: OpenRay  FR-445
-  type: vless
-  server: 157.173.127.225
-  port: 443
-  uuid: 11beaf11-726d-4c11-8ce9-27308c1c608c
-  network: tcp
-  tls: true
-  servername: analytics.google.com
-  reality-opts:
-    public-key: v3EwzA9RIIh5Ndxm-gypRY6RCJhOpQ-2WO7KaH8nsC8
-    short-id: eab26c4a32
-  client-fingerprint: random
 - name: OpenRay  CA-11815
   type: vmess
   server: 15.235.41.200
@@ -362,6 +350,18 @@ proxies:
     path: /IOebhLMhl1CTbFHbL95myfRX2
     headers:
       Host: 15.235.41.200
+- name: OpenRay  FR-445
+  type: vless
+  server: 157.173.127.225
+  port: 443
+  uuid: 11beaf11-726d-4c11-8ce9-27308c1c608c
+  network: tcp
+  tls: true
+  servername: analytics.google.com
+  reality-opts:
+    public-key: v3EwzA9RIIh5Ndxm-gypRY6RCJhOpQ-2WO7KaH8nsC8
+    short-id: eab26c4a32
+  client-fingerprint: random
 - name: OpenRay  US-11414
   type: vless
   server: 159.89.87.21
@@ -1008,6 +1008,18 @@ proxies:
     path: /
     headers:
       Host: n1753598452.wpg27.xyz
+- name: OpenRay  US-11678
+  type: vmess
+  server: 209.126.84.189
+  port: 443
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vmessws
+    headers:
+      Host: 209.126.84.189
 - name: OpenRay Dynamic-11535
   type: vmess
   server: cf.090227.xyz
@@ -1022,18 +1034,6 @@ proxies:
     path: /
     headers:
       Host: sgal.dagrate.eu.org
-- name: OpenRay  US-11678
-  type: vmess
-  server: 209.126.84.189
-  port: 443
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /vmessws
-    headers:
-      Host: 209.126.84.189
 - name: OpenRay  NL-530
   type: vless
   server: midorinote.ru
@@ -1101,8 +1101,8 @@ proxy-groups:
   - OpenRay  US-11387
   - OpenRay Dynamic-11336
   - OpenRay  US-11241
-  - OpenRay  FR-445
   - OpenRay  CA-11815
+  - OpenRay  FR-445
   - OpenRay  US-11414
   - OpenRay  HK-53
   - OpenRay Dynamic-11598
@@ -1157,8 +1157,8 @@ proxy-groups:
   - OpenRay  DE-4592
   - OpenRay Dynamic-11798
   - OpenRay  JP-454
-  - OpenRay Dynamic-11535
   - OpenRay  US-11678
+  - OpenRay Dynamic-11535
   - OpenRay  NL-530
   - OpenRay  PH-6
   - OpenRay  AU-3
@@ -1188,8 +1188,8 @@ proxy-groups:
   - OpenRay  US-11387
   - OpenRay Dynamic-11336
   - OpenRay  US-11241
-  - OpenRay  FR-445
   - OpenRay  CA-11815
+  - OpenRay  FR-445
   - OpenRay  US-11414
   - OpenRay  HK-53
   - OpenRay Dynamic-11598
@@ -1244,8 +1244,8 @@ proxy-groups:
   - OpenRay  DE-4592
   - OpenRay Dynamic-11798
   - OpenRay  JP-454
-  - OpenRay Dynamic-11535
   - OpenRay  US-11678
+  - OpenRay Dynamic-11535
   - OpenRay  NL-530
   - OpenRay  PH-6
   - OpenRay  AU-3
