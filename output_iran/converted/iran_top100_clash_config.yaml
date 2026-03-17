@@ -815,18 +815,6 @@ proxies:
     headers:
       Host: 
         wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-- name: OpenRay  CA-12562
-  type: vless
-  server: 104.18.185.26
-  port: 2053
-  uuid: e5f8a9f6-f164-479b-b3b5-b90f213c7145
-  network: ws
-  tls: true
-  servername: ir1.airpanel.top
-  ws-opts:
-    path: /
-    headers:
-      Host: ir1.airpanel.top
 - name: OpenRay  CA-12382
   type: vless
   server: 104.16.250.22
@@ -839,6 +827,18 @@ proxies:
     path: /
     headers:
       Host: ca.adobe-connect.top
+- name: OpenRay  CA-12562
+  type: vless
+  server: 104.18.185.26
+  port: 2053
+  uuid: e5f8a9f6-f164-479b-b3b5-b90f213c7145
+  network: ws
+  tls: true
+  servername: ir1.airpanel.top
+  ws-opts:
+    path: /
+    headers:
+      Host: ir1.airpanel.top
 - name: OpenRay  CA-12587
   type: vless
   server: 104.16.250.22
@@ -1141,8 +1141,8 @@ proxy-groups:
   - OpenRay  DE-2971
   - OpenRay  HK-240
   - OpenRay  KZ-67
-  - OpenRay  CA-12562
   - OpenRay  CA-12382
+  - OpenRay  CA-12562
   - OpenRay  CA-12587
   - OpenRay  MY-20
   - OpenRay  CA-12446
@@ -1228,8 +1228,8 @@ proxy-groups:
   - OpenRay  DE-2971
   - OpenRay  HK-240
   - OpenRay  KZ-67
-  - OpenRay  CA-12562
   - OpenRay  CA-12382
+  - OpenRay  CA-12562
   - OpenRay  CA-12587
   - OpenRay  MY-20
   - OpenRay  CA-12446
