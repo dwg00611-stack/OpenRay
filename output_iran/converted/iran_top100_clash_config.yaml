@@ -751,18 +751,6 @@ proxies:
     headers:
       Host: 
         wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-- name: OpenRay Dynamic-12271
-  type: vless
-  server: v1.dabache.top
-  port: 2096
-  uuid: 686c62d9-17a7-43c9-a40a-f6747df60a9f
-  network: ws
-  tls: true
-  servername: ca.adobe-connect.top
-  ws-opts:
-    path: /
-    headers:
-      Host: ca.adobe-connect.top
 - name: OpenRay  HK-188
   type: vmess
   server: 47.244.120.197
@@ -775,6 +763,18 @@ proxies:
     path: /arki?ed=2048
     headers:
       Host: 47.244.120.197
+- name: OpenRay Dynamic-12271
+  type: vless
+  server: v1.dabache.top
+  port: 2096
+  uuid: 686c62d9-17a7-43c9-a40a-f6747df60a9f
+  network: ws
+  tls: true
+  servername: ca.adobe-connect.top
+  ws-opts:
+    path: /
+    headers:
+      Host: ca.adobe-connect.top
 - name: OpenRay  DE-2971
   type: vless
   server: 188.34.193.153
@@ -1136,8 +1136,8 @@ proxy-groups:
   - OpenRay  KZ-57
   - OpenRay  KZ-53
   - OpenRay  KZ-64
-  - OpenRay Dynamic-12271
   - OpenRay  HK-188
+  - OpenRay Dynamic-12271
   - OpenRay  DE-2971
   - OpenRay  HK-240
   - OpenRay  CA-12562
@@ -1223,8 +1223,8 @@ proxy-groups:
   - OpenRay  KZ-57
   - OpenRay  KZ-53
   - OpenRay  KZ-64
-  - OpenRay Dynamic-12271
   - OpenRay  HK-188
+  - OpenRay Dynamic-12271
   - OpenRay  DE-2971
   - OpenRay  HK-240
   - OpenRay  CA-12562
